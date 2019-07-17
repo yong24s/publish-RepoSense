@@ -1862,7 +1862,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "* **`--formats, -f LIST_OF_FORMATS`**: A space-separated list of file extensions that should be included in the analysis (`-f` as alias). Default: `adoc cs css fxml gradle html java js json jsp md py tag txt xml`\u003cbr\u003e"
+        "content": "* **`--formats, -f LIST_OF_FORMATS`**: A space-separated list of file extensions that should be included in the analysis (`-f` as alias). Default: all file formats\u003cbr\u003e"
       },
       {
         "lineNumber": 267,
@@ -7510,7 +7510,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "            if (Format.isInsideWhiteList(filePath, config.getFormats())) {"
+        "content": "            if (config.getFormats().isEmpty() || Format.isInsideWhiteList(filePath, config.getFormats())) {"
       },
       {
         "lineNumber": 117,
@@ -7986,332 +7986,339 @@
         "author": {
           "gitId": "-"
         },
-        "content": "            if (Format.isInsideWhiteList(relativePath.toString(), config.getFormats())) {"
+        "content": "            if (config.getFormats().isEmpty()"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "-"
         },
-        "content": "                fileInfos.add(generateFileInfo(config.getRepoRoot(), relativePath.toString()));"
+        "content": "                    || Format.isInsideWhiteList(relativePath.toString(), config.getFormats())) {"
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "-"
         },
-        "content": "            }"
+        "content": "                fileInfos.add(generateFileInfo(config.getRepoRoot(), relativePath.toString()));"
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            }"
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 190,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 191,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Generates and returns a {@code FileInfo} with a list of {@code LineInfo} for each line content in the"
+        "content": "    /**"
       },
       {
         "lineNumber": 192,
         "author": {
           "gitId": "-"
         },
-        "content": "     * {@code relativePath} file."
+        "content": "     * Generates and returns a {@code FileInfo} with a list of {@code LineInfo} for each line content in the"
       },
       {
         "lineNumber": 193,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * {@code relativePath} file."
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static FileInfo generateFileInfo(String repoRoot, String relativePath) {"
+        "content": "     */"
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "-"
         },
-        "content": "        FileInfo fileInfo \u003d new FileInfo(relativePath);"
+        "content": "    public static FileInfo generateFileInfo(String repoRoot, String relativePath) {"
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "-"
         },
-        "content": "        Path path \u003d Paths.get(repoRoot, fileInfo.getPath());"
+        "content": "        FileInfo fileInfo \u003d new FileInfo(relativePath);"
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        Path path \u003d Paths.get(repoRoot, fileInfo.getPath());"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "-"
         },
-        "content": "        try (BufferedReader br \u003d new BufferedReader(new FileReader(path.toFile()))) {"
+        "content": ""
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "-"
         },
-        "content": "            String line;"
+        "content": "        try (BufferedReader br \u003d new BufferedReader(new FileReader(path.toFile()))) {"
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "-"
         },
-        "content": "            int lineNum \u003d 1;"
+        "content": "            String line;"
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "-"
         },
-        "content": "            while ((line \u003d br.readLine()) !\u003d null) {"
+        "content": "            int lineNum \u003d 1;"
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "-"
         },
-        "content": "                fileInfo.addLine(new LineInfo(lineNum++, line));"
+        "content": "            while ((line \u003d br.readLine()) !\u003d null) {"
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "-"
         },
-        "content": "            }"
+        "content": "                fileInfo.addLine(new LineInfo(lineNum++, line));"
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "-"
         },
-        "content": "        } catch (IOException ioe) {"
+        "content": "            }"
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "-"
         },
-        "content": "            logger.log(Level.SEVERE, ioe.getMessage(), ioe);"
+        "content": "        } catch (IOException ioe) {"
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            logger.log(Level.SEVERE, ioe.getMessage(), ioe);"
       },
       {
         "lineNumber": 207,
         "author": {
           "gitId": "-"
         },
-        "content": "        return fileInfo;"
+        "content": "        }"
       },
       {
         "lineNumber": 208,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return fileInfo;"
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 210,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 211,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns the starting line changed number, within the file diff result, by matching the pattern inside"
+        "content": "    /**"
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "-"
         },
-        "content": "     * {@code linesChanged}."
+        "content": "     * Returns the starting line changed number, within the file diff result, by matching the pattern inside"
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * {@code linesChanged}."
       },
       {
         "lineNumber": 214,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static int getStartingLineNumber(String linesChanged) {"
+        "content": "     */"
       },
       {
         "lineNumber": 215,
         "author": {
           "gitId": "-"
         },
-        "content": "        Matcher chunkHeaderMatcher \u003d STARTING_LINE_NUMBER_PATTERN.matcher(linesChanged);"
+        "content": "    private static int getStartingLineNumber(String linesChanged) {"
       },
       {
         "lineNumber": 216,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        Matcher chunkHeaderMatcher \u003d STARTING_LINE_NUMBER_PATTERN.matcher(linesChanged);"
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (!chunkHeaderMatcher.find()) {"
+        "content": ""
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "-"
         },
-        "content": "            logger.severe(String.format(MATCH_GROUP_FAIL_MESSAGE_FORMAT, \"line changed\", linesChanged));"
+        "content": "        if (!chunkHeaderMatcher.find()) {"
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "-"
         },
-        "content": "            throw new AssertionError(\"Should not have error matching line number pattern inside chunk header!\");"
+        "content": "            logger.severe(String.format(MATCH_GROUP_FAIL_MESSAGE_FORMAT, \"line changed\", linesChanged));"
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            throw new AssertionError(\"Should not have error matching line number pattern inside chunk header!\");"
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "-"
         },
-        "content": "        return Integer.parseInt(chunkHeaderMatcher.group(STARTING_LINE_NUMBER_GROUP_NAME));"
+        "content": ""
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return Integer.parseInt(chunkHeaderMatcher.group(STARTING_LINE_NUMBER_GROUP_NAME));"
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 225,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 226,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns true if {@code filePath} is valid and the file is not in binary."
+        "content": "    /**"
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * Returns true if {@code filePath} is valid and the file is not in binary."
       },
       {
         "lineNumber": 228,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static boolean isValidAndNonBinaryFile(String filePath, Set\u003cPath\u003e nonBinaryFilesSet) {"
+        "content": "     */"
       },
       {
         "lineNumber": 229,
         "author": {
           "gitId": "-"
         },
-        "content": "        return FileUtil.isValidPath(filePath) \u0026\u0026 nonBinaryFilesSet.contains(Paths.get(filePath));"
+        "content": "    private static boolean isValidAndNonBinaryFile(String filePath, Set\u003cPath\u003e nonBinaryFilesSet) {"
       },
       {
         "lineNumber": 230,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return FileUtil.isValidPath(filePath) \u0026\u0026 nonBinaryFilesSet.contains(Paths.get(filePath));"
       },
       {
         "lineNumber": 231,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 232,
         "author": {
           "gitId": "-"
         },
@@ -8320,7 +8327,7 @@
     ],
     "authorContributionMap": {
       "yamidark": 3,
-      "-": 228
+      "-": 229
     }
   }
 ]
