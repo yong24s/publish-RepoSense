@@ -63,7 +63,7 @@ window.vAuthorship = {
       const repo = window.REPOS[this.info.repo];
 
       this.getRepoProps(repo);
-      if (!repo || !this.info.author) {
+      if (!repo || !this.info.name) {
         window.app.isTabActive = false;
         return;
       }
@@ -87,15 +87,18 @@ window.vAuthorship = {
       if (repo) {
         const author = repo.users.filter((user) => user.name === this.info.author);
         if (author.length > 0) {
+          this.info.name = author[0].displayName;
           this.filesLinesObj = author[0].fileFormatContribution;
         }
+        this.info.location = repo.location.location;
       }
     },
 
     setInfoHash() {
-      const { addHash } = window;
+      const { addHash, removeHash } = window;
       addHash('tabAuthor', this.info.author);
       addHash('tabRepo', this.info.repo);
+      removeHash('tabOpen');
     },
 
     expandAll(isActive) {
@@ -127,14 +130,13 @@ window.vAuthorship = {
       const segments = [];
       let blankLineCount = 0;
 
-      lines.forEach((line, lineCount) => {
+      lines.forEach((line) => {
         const authored = (line.author && line.author.gitId === this.info.author);
 
         if (authored !== lastState || lastId === -1) {
           segments.push({
             authored,
             lines: [],
-            lineNumbers: [],
           });
 
           lastId += 1;
@@ -143,8 +145,6 @@ window.vAuthorship = {
 
         const content = line.content || ' ';
         segments[lastId].lines.push(content);
-
-        segments[lastId].lineNumbers.push(lineCount + 1);
 
         if (line.content === '' && authored) {
           blankLineCount += 1;
@@ -199,7 +199,7 @@ window.vAuthorship = {
     },
 
     addBlankLineCountToFileFormat(path, lineCount, filesInfoObj) {
-      let fileFormat = path.split(/[./\\]/).pop();
+      let fileFormat = path.split('.').pop();
       fileFormat = (fileFormat.length === 0) ? 'others' : fileFormat;
 
       if (!filesInfoObj[fileFormat]) {
@@ -273,7 +273,7 @@ window.vAuthorship = {
     },
 
     isSelected(filePath) {
-      const fileExt = filePath.split(/[./\\]/).pop();
+      const fileExt = filePath.split('.').pop();
       return this.selectedFileFormats.includes(fileExt);
     },
 
@@ -304,22 +304,17 @@ window.vAuthorship = {
           .sort(this.sortingFunction);
     },
     getExistingLinesObj() {
-      const numLinesModified = {};
-      Object.entries(this.filesLinesObj)
-          .filter(([, value]) => value > 0)
-          .forEach(([langType, value]) => {
-            numLinesModified[langType] = value;
-          });
-      return numLinesModified;
+      return Object.keys(this.filesLinesObj)
+          .filter((type) => this.filesLinesObj[type] > 0)
+          .reduce((acc, key) => ({
+            ...acc, [key]: this.filesLinesObj[key],
+          }), {});
     },
   },
 
   created() {
     this.initiate();
     this.setInfoHash();
-  },
-  components: {
-    v_segment: window.vSegment,
   },
 };
 
