@@ -1828,11 +1828,11 @@
     ]
   },
   "authorFinalContributionMap": {
-    "ongspxm": 730,
+    "ongspxm": 696,
     "AdityaA1998": 373,
     "yamidark": 1774,
-    "yong24s": 1919,
-    "eugenepeh": 2537
+    "yong24s": 1918,
+    "eugenepeh": 2220
   },
   "authorFileFormatContributionMap": {
     "ongspxm": {
@@ -1840,9 +1840,9 @@
       "jade": 0,
       "java": 93,
       "js": 435,
-      "md": 84,
-      "scss": 111,
-      "yml": 1
+      "md": 82,
+      "scss": 80,
+      "yml": 0
     },
     "AdityaA1998": {
       "gradle": 2,
@@ -1869,7 +1869,7 @@
       "js": 0,
       "md": 130,
       "scss": 0,
-      "yml": 42
+      "yml": 41
     },
     "eugenepeh": {
       "gradle": 8,
@@ -1877,7 +1877,7 @@
       "java": 1463,
       "js": 359,
       "md": 129,
-      "scss": 548,
+      "scss": 231,
       "yml": 30
     }
   },
