@@ -4025,9 +4025,9 @@
       {
         "lineNumber": 248,
         "author": {
-          "gitId": "ongspxm"
+          "gitId": "-"
         },
-        "content": "The main HTML file is generated from [`frontend/src/index.jade`](../frontend/src/index.jade)."
+        "content": "The main HTML file is generated from [`frontend/src/index.pug`](../frontend/src/index.pug)."
       },
       {
         "lineNumber": 249,
@@ -4041,56 +4041,56 @@
         "author": {
           "gitId": "-"
         },
-        "content": "[Vue](https://vuejs.org/v2/api/) (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. It is heavily utilized in the report to dynamically update the information in the various views. (Style guide available [here](https://vuejs.org/v2/style-guide/), Developer tool available [here](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd))."
+        "content": "[Vue](https://vuejs.org/v2/api/) (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. It is heavily utilized in the report to dynamically update the information in the various views. (Style guide available [here](https://vuejs.org/v2/style-guide/), Developer tool available [here](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)). Vue lifecycle hooks are the defined methods which gets executed in a certain stage of the Vue object lifespan. The following is the Vue lifecycle diagram taken from [here](https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram) indicating the hook sequence:"
       },
       {
         "lineNumber": 251,
         "author": {
-          "gitId": "ongspxm"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "![vue lifecycle diagram](images/vue-lifecycle-diagram.png)"
       },
       {
         "lineNumber": 252,
         "author": {
-          "gitId": "-"
+          "gitId": "ongspxm"
         },
-        "content": "![report screenshot](images/report-summary.png)"
+        "content": ""
       },
       {
         "lineNumber": 253,
         "author": {
-          "gitId": "ongspxm"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "The following is a snapshot of the report:"
       },
       {
         "lineNumber": 254,
         "author": {
           "gitId": "-"
         },
-        "content": "### Report Architecture"
+        "content": "![report screenshot](images/report-summary.png)"
       },
       {
         "lineNumber": 255,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "![report architecture](images/report-architecture.png)"
-      },
-      {
-        "lineNumber": 256,
         "author": {
           "gitId": "ongspxm"
         },
         "content": ""
       },
       {
+        "lineNumber": 256,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "### Report Architecture"
+      },
+      {
         "lineNumber": 257,
         "author": {
           "gitId": "-"
         },
-        "content": "The main Vue object (`window.app`) is responsible for the loading of the report (through `summary.json`). Its `repos` attribute is tied to the global `window.REPOS`, and is passed into the various other modules when the information is needed."
+        "content": "![report architecture](images/report-architecture.png)"
       },
       {
         "lineNumber": 258,
@@ -4102,121 +4102,121 @@
       {
         "lineNumber": 259,
         "author": {
-          "gitId": "ongspxm"
+          "gitId": "-"
         },
-        "content": "`window.app` is broken down into two main parts"
+        "content": "The main Vue object (`window.app`) is responsible for the loading of the report (through `summary.json`). Its `repos` attribute is tied to the global `window.REPOS`, and is passed into the various other modules when the information is needed."
       },
       {
         "lineNumber": 260,
         "author": {
           "gitId": "ongspxm"
         },
-        "content": "- the summary view"
+        "content": ""
       },
       {
         "lineNumber": 261,
         "author": {
           "gitId": "ongspxm"
         },
-        "content": "- and the tabbed interface"
+        "content": "`window.app` is broken down into two main parts"
       },
       {
         "lineNumber": 262,
         "author": {
           "gitId": "ongspxm"
         },
-        "content": ""
+        "content": "- the summary view"
       },
       {
         "lineNumber": 263,
         "author": {
-          "gitId": "-"
+          "gitId": "ongspxm"
         },
-        "content": "Summary view act as the main report which shows the various calculations. \u003c/br\u003e"
+        "content": "- and the tabbed interface"
       },
       {
         "lineNumber": 264,
         "author": {
           "gitId": "ongspxm"
         },
-        "content": "Tabbed interface is responsible for loading various modules such as authorship to display additional information."
+        "content": ""
       },
       {
         "lineNumber": 265,
         "author": {
-          "gitId": "ongspxm"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "The summary view acts as the main report which shows the various calculations. \u003c/br\u003e"
       },
       {
         "lineNumber": 266,
         "author": {
-          "gitId": "ongspxm"
+          "gitId": "-"
         },
-        "content": "### Javascript Files"
+        "content": "The tabbed interface is responsible for loading various modules such as authorship and zoom to display additional information."
       },
       {
         "lineNumber": 267,
         "author": {
           "gitId": "ongspxm"
         },
-        "content": "- [**main.js**](../frontend/src/static/js/main.js) - main controller that pushes content into different modules"
+        "content": ""
       },
       {
         "lineNumber": 268,
         "author": {
-          "gitId": "-"
+          "gitId": "ongspxm"
         },
-        "content": "- [**api.js**](../frontend/src/static/js/api.js)- loading and parsing of the report content"
+        "content": "### Javascript Files"
       },
       {
         "lineNumber": 269,
         "author": {
-          "gitId": "ongspxm"
+          "gitId": "-"
         },
-        "content": "- [**v_summary.js**](../frontend/src/static/js/v_summary.js) - module that supports the ramp chart view"
+        "content": "- [**main.js**](#main-mainjs) - main controller that pushes content into different modules"
       },
       {
         "lineNumber": 270,
         "author": {
-          "gitId": "ongspxm"
+          "gitId": "-"
         },
-        "content": "- [**v_authorship.js**](../frontend/src/static/js/v_authorship.js) - module that supports the authorship view"
+        "content": "- [**api.js**](#data-loader-apijs) - loading and parsing of the report content"
       },
       {
         "lineNumber": 271,
         "author": {
-          "gitId": "ongspxm"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "- [**v_summary.js**](#summary-view-v_summaryjs) - module that supports the summary view"
       },
       {
         "lineNumber": 272,
         "author": {
-          "gitId": "ongspxm"
+          "gitId": "-"
         },
-        "content": "### JSON Report Files"
+        "content": "- [**v_authorship.js**](#authorship-view-v_authorshipjs) - module that supports the authorship tab view"
       },
       {
         "lineNumber": 273,
         "author": {
-          "gitId": "ongspxm"
+          "gitId": "-"
         },
-        "content": "- **summary.json** - a list of all the repositories and their respective details"
+        "content": "- [**v_zoom.js**](#zoom-view-v_zoomjs) - module that supports the zoom tab view"
       },
       {
         "lineNumber": 274,
         "author": {
-          "gitId": "ongspxm"
+          "gitId": "-"
         },
-        "content": "- **projName/commits.json** - contains information of the users\u0027 commits information (e.g. line deletion, insertion, etc), grouped by date"
+        "content": "- [**v_ramp.js**](#ramp-view-v_rampjs) - module that supports the ramp chart view"
       },
       {
         "lineNumber": 275,
         "author": {
-          "gitId": "ongspxm"
+          "gitId": "-"
         },
-        "content": "- **projName/authorship.json** - contains information from git blame, detailing the author of each line for all the processed files"
+        "content": "- [**v_segment.js**](#segment-view-v_segmentjs) - module that supports the code segment view"
       },
       {
         "lineNumber": 276,
@@ -4230,28 +4230,28 @@
         "author": {
           "gitId": "ongspxm"
         },
-        "content": "### Main (main.js)"
+        "content": "### JSON Report Files"
       },
       {
         "lineNumber": 278,
         "author": {
           "gitId": "ongspxm"
         },
-        "content": "This contains the logic for main VueJS object, `window.app`, which is responsible for passing the necessary data into the relevant modules to be loaded."
+        "content": "- **summary.json** - a list of all the repositories and their respective details"
       },
       {
         "lineNumber": 279,
         "author": {
           "gitId": "ongspxm"
         },
-        "content": ""
+        "content": "- **projName/commits.json** - contains information of the users\u0027 commits information (e.g. line deletion, insertion, etc), grouped by date"
       },
       {
         "lineNumber": 280,
         "author": {
-          "gitId": "-"
+          "gitId": "ongspxm"
         },
-        "content": "`v_summary` and `v_authorship` are components which will be embedded into report and will render the corresponding content based on the data passed into it from the main `window.app`."
+        "content": "- **projName/authorship.json** - contains information from git blame, detailing the author of each line for all the processed files"
       },
       {
         "lineNumber": 281,
@@ -4265,14 +4265,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "#### Loading of report information"
+        "content": "### Main ([main.js](../frontend/src/static/js/main.js))"
       },
       {
         "lineNumber": 283,
         "author": {
           "gitId": "ongspxm"
         },
-        "content": "The main Vue object depends on the `summary.json` data to determine the right `commits.json` files to load into memory. This is handled by `api.js` which loads the relevant file information from the network files if it is available, otherwise a report archive, `archive.zip`, have to be used."
+        "content": "This contains the logic for main VueJS object, `window.app`, which is responsible for passing the necessary data into the relevant modules to be loaded."
       },
       {
         "lineNumber": 284,
@@ -4284,9 +4284,9 @@
       {
         "lineNumber": 285,
         "author": {
-          "gitId": "ongspxm"
+          "gitId": "-"
         },
-        "content": "Once the relevant `commit.json` files are loaded, all the repo information will be passed into `v_summary` to be loaded in the summary view as the relevant ramp charts."
+        "content": "`v_summary`, `v_authorship`, `v_zoom`, `v_segment` and `v_ramp` are components which will be embedded into report and will render the corresponding content based on the data passed into it from the main `window.app`."
       },
       {
         "lineNumber": 286,
@@ -4298,16 +4298,16 @@
       {
         "lineNumber": 287,
         "author": {
-          "gitId": "ongspxm"
+          "gitId": "-"
         },
-        "content": "#### Activating additional view modules"
+        "content": "#### Loading of report information"
       },
       {
         "lineNumber": 288,
         "author": {
           "gitId": "ongspxm"
         },
-        "content": "Most activity or actions should happen within the module itself, but in the case where there is a need to spawn or alter the view of another module, an event is emitted from the first module to the main Vue object (`window.app`), which then handles the data received and passes it along to the relevant modules."
+        "content": "The main Vue object depends on the `summary.json` data to determine the right `commits.json` files to load into memory. This is handled by `api.js` which loads the relevant file information from the network files if it is available, otherwise a report archive, `archive.zip`, have to be used."
       },
       {
         "lineNumber": 289,
@@ -4321,70 +4321,70 @@
         "author": {
           "gitId": "ongspxm"
         },
-        "content": "#### Hash link"
+        "content": "Once the relevant `commit.json` files are loaded, all the repo information will be passed into `v_summary` to be loaded in the summary view as the relevant ramp charts."
       },
       {
         "lineNumber": 291,
         "author": {
-          "gitId": "-"
+          "gitId": "ongspxm"
         },
-        "content": "Other than the global main Vue object, another global variable we have is the `window.hashParams`. This object is reponsible for generating the relevant permalink for a specific view of the summary module for the report."
+        "content": ""
       },
       {
         "lineNumber": 292,
         "author": {
           "gitId": "ongspxm"
         },
-        "content": ""
+        "content": "#### Activating additional view modules"
       },
       {
         "lineNumber": 293,
         "author": {
           "gitId": "ongspxm"
         },
-        "content": "### Data loader (api.js)"
+        "content": "Most activity or actions should happen within the module itself, but in the case where there is a need to spawn or alter the view of another module, an event is emitted from the first module to the main Vue object (`window.app`), which then handles the data received and passes it along to the relevant modules."
       },
       {
         "lineNumber": 294,
         "author": {
           "gitId": "ongspxm"
         },
-        "content": "This is the module that is in charged of loading and parsing the data files generated as part of the report."
+        "content": ""
       },
       {
         "lineNumber": 295,
         "author": {
           "gitId": "ongspxm"
         },
-        "content": ""
+        "content": "#### Hash link"
       },
       {
         "lineNumber": 296,
         "author": {
-          "gitId": "ongspxm"
+          "gitId": "-"
         },
-        "content": "#### Loading from ZIP file"
+        "content": "Other than the global main Vue object, another global variable we have is the `window.hashParams`. This object is reponsible for generating the relevant permalink for a specific view of the summary module for the report."
       },
       {
         "lineNumber": 297,
         "author": {
           "gitId": "ongspxm"
         },
-        "content": "Due to security design, most modern browsers (e.g. Chrome) do not allow web pages to obtain local files using the directory alone. As such, a ZIP archive of the report information will be produced alongside the report generation."
+        "content": ""
       },
       {
         "lineNumber": 298,
         "author": {
-          "gitId": "ongspxm"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "### Data loader ([api.js](../frontend/src/static/js/api.js))"
       },
       {
         "lineNumber": 299,
         "author": {
           "gitId": "-"
         },
-        "content": "This archive will be used in place of the network files to load information into the report, in the case when the network files are unavailable."
+        "content": "This is the module that is in charge of loading and parsing the data files generated as part of the report."
       },
       {
         "lineNumber": 300,
@@ -4398,28 +4398,28 @@
         "author": {
           "gitId": "ongspxm"
         },
-        "content": "The API module will be handling all request for all the JSON data files. If the network file is not available, the files will be obtained from the zip archive provided."
+        "content": "#### Loading from ZIP file"
       },
       {
         "lineNumber": 302,
         "author": {
           "gitId": "ongspxm"
         },
-        "content": ""
+        "content": "Due to security design, most modern browsers (e.g. Chrome) do not allow web pages to obtain local files using the directory alone. As such, a ZIP archive of the report information will be produced alongside the report generation."
       },
       {
         "lineNumber": 303,
         "author": {
           "gitId": "ongspxm"
         },
-        "content": "#### Retrieving and parsing information"
+        "content": ""
       },
       {
         "lineNumber": 304,
         "author": {
-          "gitId": "ongspxm"
+          "gitId": "-"
         },
-        "content": "After the JSON files are loaded from their respective sources, the data will be parsed as objects and included inside the global storage object, `window.REPOS`,  in the right format."
+        "content": "This archive will be used in place of the network files to load information into the report, in the case when the network files are unavailable."
       },
       {
         "lineNumber": 305,
@@ -4433,7 +4433,7 @@
         "author": {
           "gitId": "ongspxm"
         },
-        "content": "For the basic skeleton of `window.REPOS`, refer to the generated `summary.json` file in the report for more details."
+        "content": "The API module will be handling all request for all the JSON data files. If the network file is not available, the files will be obtained from the zip archive provided."
       },
       {
         "lineNumber": 307,
@@ -4447,14 +4447,14 @@
         "author": {
           "gitId": "ongspxm"
         },
-        "content": "### Summary View (v_summary.js)"
+        "content": "#### Retrieving and parsing information"
       },
       {
         "lineNumber": 309,
         "author": {
           "gitId": "ongspxm"
         },
-        "content": "The `v_summary` module is in charge of loading the ramp charts from the corresponding `commits.json`."
+        "content": "After the JSON files are loaded from their respective sources, the data will be parsed as objects and included inside the global storage object, `window.REPOS`,  in the right format."
       },
       {
         "lineNumber": 310,
@@ -4466,9 +4466,9 @@
       {
         "lineNumber": 311,
         "author": {
-          "gitId": "-"
+          "gitId": "ongspxm"
         },
-        "content": "![summary architecture](images/report-architecture-summary.png)"
+        "content": "For the basic skeleton of `window.REPOS`, refer to the generated `summary.json` file in the report for more details."
       },
       {
         "lineNumber": 312,
@@ -4480,16 +4480,16 @@
       {
         "lineNumber": 313,
         "author": {
-          "gitId": "ongspxm"
+          "gitId": "-"
         },
-        "content": "#### Initializing the data for the ramp charts"
+        "content": "### Summary View ([v_summary.js](../frontend/src/static/js/v_summary.js))"
       },
       {
         "lineNumber": 314,
         "author": {
           "gitId": "ongspxm"
         },
-        "content": "The summary module is activated after the information is loaded from the main Vue.JS object. At creation, the `repo` attribute is populated with the `window.REPOS` object, which contains information loaded from `summary.json`."
+        "content": "The `v_summary` module is in charge of loading the ramp charts from the corresponding `commits.json`."
       },
       {
         "lineNumber": 315,
@@ -4501,72 +4501,72 @@
       {
         "lineNumber": 316,
         "author": {
-          "gitId": "ongspxm"
+          "gitId": "-"
         },
-        "content": "#### Filtering users and repositories"
+        "content": "![summary architecture](images/report-architecture-summary.png)"
       },
       {
         "lineNumber": 317,
         "author": {
           "gitId": "ongspxm"
         },
-        "content": "The commits information is retrieved from the corresponding project folders for each repository. These information will be filtered and sorted before passed into the template to be displayed as ramp charts."
+        "content": ""
       },
       {
         "lineNumber": 318,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "ongspxm"
         },
-        "content": ""
+        "content": "#### Initializing the data for the ramp charts"
       },
       {
         "lineNumber": 319,
         "author": {
           "gitId": "ongspxm"
         },
-        "content": "#### Padding for dates"
+        "content": "The summary module is activated after the information is loaded from the main Vue.JS object. At creation, the `repo` attribute is populated with the `window.REPOS` object, which contains information loaded from `summary.json`."
       },
       {
         "lineNumber": 320,
         "author": {
           "gitId": "ongspxm"
         },
-        "content": "For ramps between the date ranges, the slices will be selected and it will be pre and post padded with empty slices to align the ramp slice between the `sinceDate` and `untilDate`. The ramps will then be rendered with the slices in the right position."
+        "content": ""
       },
       {
         "lineNumber": 321,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "ongspxm"
         },
-        "content": ""
+        "content": "#### Filtering users and repositories"
       },
       {
         "lineNumber": 322,
         "author": {
           "gitId": "ongspxm"
         },
-        "content": "### Authorship View (v_authorship.js)"
+        "content": "The commits information is retrieved from the corresponding project folders for each repository. These information will be filtered and sorted before passed into the template to be displayed as ramp charts."
       },
       {
         "lineNumber": 323,
-        "author": {
-          "gitId": "ongspxm"
-        },
-        "content": "The authorship module retrieves the relevant information from the corresponding `authorship.json` file if it is not yet loaded. If it has been loaded, the data will be written into `window.REPOS` and be read from there instead."
-      },
-      {
-        "lineNumber": 324,
         "author": {
           "gitId": "yamidark"
         },
         "content": ""
       },
       {
-        "lineNumber": 325,
+        "lineNumber": 324,
         "author": {
           "gitId": "-"
         },
-        "content": "![authorship architecture](images/report-architecture-authorship.png)"
+        "content": "### Authorship View ([v_authorship.js](../frontend/src/static/js/v_authorship.js))"
+      },
+      {
+        "lineNumber": 325,
+        "author": {
+          "gitId": "ongspxm"
+        },
+        "content": "The authorship module retrieves the relevant information from the corresponding `authorship.json` file if it is not yet loaded. If it has been loaded, the data will be written into `window.REPOS` and be read from there instead."
       },
       {
         "lineNumber": 326,
@@ -4578,24 +4578,122 @@
       {
         "lineNumber": 327,
         "author": {
+          "gitId": "-"
+        },
+        "content": "![authorship architecture](images/report-architecture-authorship.png)"
+      },
+      {
+        "lineNumber": 328,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 329,
+        "author": {
           "gitId": "ongspxm"
         },
         "content": "#### Showing relevant information by authors"
       },
       {
-        "lineNumber": 328,
+        "lineNumber": 330,
         "author": {
-          "gitId": "ongspxm"
+          "gitId": "-"
         },
-        "content": "The files will be filtered, picking only files the selected author has written in. The lines are then split into chunks of \"touched\" and \"untouched\" code to be displayed in the tab view which will be popped up on the right side of the screen."
+        "content": "The files will be filtered, picking only files the selected author has written in. The lines are then split into chunks of \"touched\" and \"untouched\" code segments to be displayed in the tab view which will be popped up on the right side of the screen."
+      },
+      {
+        "lineNumber": 331,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 332,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "### Zoom View ([v_zoom.js](../frontend/src/static/js/v_zoom.js))"
+      },
+      {
+        "lineNumber": 333,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "The `v_zoom` module is in charge of filtering and displaying the commits from selected sub-range of a ramp chart. "
+      },
+      {
+        "lineNumber": 334,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 335,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "### Ramp View ([v_ramp.js](../frontend/src/static/js/v_ramp.js))"
+      },
+      {
+        "lineNumber": 336,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "The `v_ramp` module is responsible for receiving the relevant information from `v_summary` and generating ramp charts that contain ramp slices."
+      },
+      {
+        "lineNumber": 337,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 338,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "#### Padding for dates"
+      },
+      {
+        "lineNumber": 339,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "For ramps between the date ranges, the slices will be selected and it will be pre and post padded with empty slices to align the ramp slice between the `sinceDate` and `untilDate`. The ramps will then be rendered with the slices in the right position."
+      },
+      {
+        "lineNumber": 340,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 341,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "### Segment View ([v_segment.js](../frontend/src/static/js/v_segment.js))"
+      },
+      {
+        "lineNumber": 342,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "The `v-segment` module is used as a component in `v_authorship`. It separates the code in terms of \"touched\" and \"untouched\" segments and only loads each \"untouched\" segment when it is toggled. "
       }
     ],
     "authorContributionMap": {
-      "ongspxm": 76,
-      "yamidark": 108,
+      "ongspxm": 63,
+      "yamidark": 107,
       "yong24s": 17,
       "eugenepeh": 11,
-      "-": 116
+      "-": 144
     }
   },
   {
