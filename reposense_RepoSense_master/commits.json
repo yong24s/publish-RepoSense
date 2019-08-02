@@ -1828,11 +1828,11 @@
     ]
   },
   "authorFinalContributionMap": {
-    "ongspxm": 642,
+    "ongspxm": 641,
     "AdityaA1998": 373,
     "yamidark": 1742,
     "yong24s": 1859,
-    "eugenepeh": 2195
+    "eugenepeh": 2192
   },
   "authorFileFormatContributionMap": {
     "ongspxm": {
@@ -1840,7 +1840,7 @@
       "jade": 0,
       "java": 91,
       "js": 397,
-      "md": 69,
+      "md": 68,
       "scss": 80,
       "yml": 0
     },
@@ -1877,7 +1877,7 @@
       "java": 1444,
       "js": 353,
       "md": 129,
-      "scss": 231,
+      "scss": 228,
       "yml": 30
     }
   },
