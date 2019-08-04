@@ -36,12 +36,6 @@ window.api = {
           window.app.sinceDate = data.sinceDate;
           window.app.untilDate = data.untilDate;
           window.app.repoSenseVersion = data.repoSenseVersion;
-          window.app.isSinceDateProvided = data.isSinceDateProvided;
-          window.app.isUntilDateProvided = data.isUntilDateProvided;
-
-          Object.entries(data.errorList).forEach(([repoName, message]) => {
-            window.app.errorMessages[repoName] = message;
-          });
 
           const names = [];
           data.repos.forEach((repo) => {
@@ -54,8 +48,7 @@ window.api = {
   },
 
   loadCommits(repoName) {
-    const folderName = window.REPOS[repoName].outputFolderName;
-    return loadJSON(`${REPORT_DIR}/${folderName}/commits.json`).then((commits) => {
+    return loadJSON(`${REPORT_DIR}/${repoName}/commits.json`).then((commits) => {
       const res = [];
       const repo = window.REPOS[repoName];
 
@@ -77,6 +70,7 @@ window.api = {
           ];
 
           obj.searchPath = searchParams.join('_').toLowerCase();
+          obj.repoPath = `${repo.displayName}`;
           obj.repoName = `${repo.displayName}`;
           obj.location = `${repo.location.location}`;
 
@@ -92,8 +86,7 @@ window.api = {
   },
 
   loadAuthorship(repoName) {
-    const folderName = window.REPOS[repoName].outputFolderName;
-    return loadJSON(`${REPORT_DIR}/${folderName}/authorship.json`)
+    return loadJSON(`${REPORT_DIR}/${repoName}/authorship.json`)
         .then((files) => {
           window.REPOS[repoName].files = files;
           return files;
