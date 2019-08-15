@@ -1,5 +1,6 @@
 window.REPORT_ZIP = null;
 window.REPOS = {};
+window.isMacintosh = navigator.platform.includes('Mac');
 
 window.hashParams = {};
 window.addHash = function addHash(newKey, newVal) {
@@ -98,6 +99,7 @@ window.app = new window.Vue({
   el: '#app',
   data: {
     repos: {},
+    users: [],
     repoLength: 0,
     loadedRepo: 0,
     userUpdated: false,
@@ -109,6 +111,8 @@ window.app = new window.Vue({
     tabType: 'empty',
     tabInfo: {},
     creationDate: '',
+
+    errorMessages: {},
   },
   methods: {
     // model functions //
@@ -118,6 +122,9 @@ window.app = new window.Vue({
       window.JSZip.loadAsync(evt.target.files[0])
           .then((zip) => {
             window.REPORT_ZIP = zip;
+          }, () => {
+            window.alert('Either the .zip file is corrupted, or you uploaded a .zip file that is not generated '
+                + 'by RepoSense.');
           })
           .then(() => this.updateReportView());
     },
@@ -144,6 +151,7 @@ window.app = new window.Vue({
       }).then(() => {
         this.userUpdated = true;
         this.isLoading = false;
+        this.getUsers();
       }).catch((error) => {
         this.userUpdated = false;
         this.isLoading = false;
@@ -157,24 +165,38 @@ window.app = new window.Vue({
           full.push(this.repos[repo]);
         }
       });
-      return full;
+      this.users = full;
     },
 
-    deactivateTab() {
+    // handle opening of sidebar //
+    activateTab(tabName) {
+      // changing isTabActive to trigger redrawing of component
       this.isTabActive = false;
       if (document.getElementById('tabs-wrapper')) {
         document.getElementById('tabs-wrapper').scrollTop = 0;
       }
-    },
-
-    updateTabAuthorship(obj) {
-      this.deactivateTab();
-      this.tabInfo.tabAuthorship = Object.assign({}, obj);
 
       this.isTabActive = true;
       this.isCollapsed = false;
-      this.tabType = 'authorship';
+      this.tabType = tabName;
+
+      window.addHash('tabType', this.tabType);
     },
+
+    updateTabAuthorship(obj) {
+      this.tabInfo.tabAuthorship = Object.assign({}, obj);
+      this.activateTab('authorship');
+    },
+    updateTabZoom(obj) {
+      this.tabInfo.tabZoom = Object.assign({}, obj);
+      this.activateTab('zoom');
+    },
+
+    // updating summary view
+    updateSummaryDates(since, until) {
+      this.$refs.summary.updateDateRange(since, until);
+    },
+
     renderAuthorShipTabHash(minDate, maxDate) {
       const hash = window.hashParams;
       const info = {
@@ -188,6 +210,23 @@ window.app = new window.Vue({
         this.updateTabAuthorship(info);
       } else if (hash.tabOpen === 'false' || tabInfoLength > 2) {
         window.app.isTabActive = false;
+      }
+    },
+
+    renderTabHash() {
+      window.decodeHash();
+      const hash = window.hashParams;
+      if (!hash.tabOpen) {
+        return;
+      }
+      this.isTabActive = hash.tabOpen === 'true';
+
+      if (this.isTabActive) {
+        if (hash.tabType === 'authorship') {
+          this.renderAuthorShipTabHash(hash.since, hash.until);
+        } else {
+          // handle zoom tab if needed
+        }
       }
     },
 
@@ -208,17 +247,21 @@ window.app = new window.Vue({
 
     receiveDates(dates) {
       const [minDate, maxDate] = dates;
-      this.renderAuthorShipTabHash(minDate, maxDate);
+
+      if (this.tabType === 'authorship') {
+        this.renderAuthorShipTabHash(minDate, maxDate);
+      }
     },
   },
   components: {
+    v_zoom: window.vZoom,
     v_summary: window.vSummary,
     v_authorship: window.vAuthorship,
     CircleSpinner: window.VueLoadingSpinner.Circle,
   },
   created() {
     this.updateReportDir();
-    window.decodeHash();
+    this.renderTabHash();
   },
   updated() {
     this.$nextTick(() => {
@@ -229,8 +272,9 @@ window.app = new window.Vue({
     if (!this.isTabActive) {
       window.removeHash('tabAuthor');
       window.removeHash('tabRepo');
-      window.addHash('tabOpen', this.isTabActive);
-      window.encodeHash();
+      window.removeHash('tabType');
     }
+    window.addHash('tabOpen', this.isTabActive);
+    window.encodeHash();
   },
 });
