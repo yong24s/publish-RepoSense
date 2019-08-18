@@ -1824,22 +1824,35 @@
             "deletions": 10
           }
         ]
+      },
+      {
+        "insertions": 94,
+        "deletions": 12,
+        "date": "2019-08-18",
+        "commitResults": [
+          {
+            "hash": "0637f4b826428e6565deeca59131f1c9a3637037",
+            "message": "AboutUs: update team members (#867)",
+            "insertions": 94,
+            "deletions": 12
+          }
+        ]
       }
     ]
   },
   "authorFinalContributionMap": {
-    "ongspxm": 638,
+    "ongspxm": 637,
     "AdityaA1998": 373,
-    "yamidark": 1734,
-    "yong24s": 1859,
-    "eugenepeh": 2191
+    "yamidark": 1727,
+    "yong24s": 1852,
+    "eugenepeh": 2276
   },
   "authorFileFormatContributionMap": {
     "ongspxm": {
       "gradle": 5,
       "jade": 0,
       "java": 91,
-      "js": 394,
+      "js": 393,
       "md": 68,
       "scss": 80,
       "yml": 0
@@ -1856,7 +1869,7 @@
     "yamidark": {
       "gradle": 28,
       "jade": 0,
-      "java": 1562,
+      "java": 1555,
       "js": 3,
       "md": 140,
       "scss": 0,
@@ -1865,7 +1878,7 @@
     "yong24s": {
       "gradle": 34,
       "jade": 0,
-      "java": 1654,
+      "java": 1647,
       "js": 0,
       "md": 130,
       "scss": 0,
@@ -1874,19 +1887,19 @@
     "eugenepeh": {
       "gradle": 8,
       "jade": 0,
-      "java": 1444,
+      "java": 1442,
       "js": 353,
-      "md": 128,
+      "md": 215,
       "scss": 228,
       "yml": 30
     }
   },
   "authorContributionVariance": {
-    "ongspxm": 2921.3657,
-    "AdityaA1998": 360.62234,
-    "yamidark": 11436.279,
-    "yong24s": 3468.1587,
-    "eugenepeh": 3.84138464E8
+    "ongspxm": 2501.6104,
+    "AdityaA1998": 308.49905,
+    "yamidark": 9785.236,
+    "yong24s": 2976.4675,
+    "eugenepeh": 3.28216224E8
   },
   "authorDisplayNameMap": {
     "ongspxm": "Metta",
