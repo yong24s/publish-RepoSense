@@ -1,6 +1,6 @@
 {
-  "repoSenseVersion": "v1.10rc2",
-  "reportGeneratedTime": "Thu Aug 22 14:15:58 2019 UTC",
+  "repoSenseVersion": "v1.9",
+  "reportGeneratedTime": "Fri Aug 23 14:15:26 2019 UTC",
   "repos": [
     {
       "location": {
@@ -9,13 +9,9 @@
         "organization": "reposense"
       },
       "branch": "master",
-      "displayName": "reposense/RepoSense[master]",
-      "outputFolderName": "reposense_RepoSense_master"
+      "displayName": "reposense_RepoSense_master"
     }
   ],
-  "errorList": [],
-  "sinceDate": "2019-07-22",
-  "untilDate": "2019-08-22",
-  "isSinceDateProvided": false,
-  "isUntilDateProvided": false
+  "sinceDate": "2018-05-03",
+  "untilDate": "2019-08-18"
 }
