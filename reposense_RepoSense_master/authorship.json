@@ -27204,7 +27204,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "      const sortingWithinOption \u003d this.sortingWithinOption \u003d\u003d\u003d \u0027title\u0027 ? \u0027name\u0027 : this.sortingWithinOption;"
+        "content": "      const sortingWithinOption \u003d this.sortingWithinOption \u003d\u003d\u003d \u0027title\u0027 ? \u0027displayName\u0027 : this.sortingWithinOption;"
       },
       {
         "lineNumber": 698,
@@ -27512,7 +27512,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "      const sortingOption \u003d this.sortingOption \u003d\u003d\u003d \u0027groupTitle\u0027 ? \u0027name\u0027 : this.sortingOption;"
+        "content": "      const sortingOption \u003d this.sortingOption \u003d\u003d\u003d \u0027groupTitle\u0027 ? \u0027displayName\u0027 : this.sortingOption;"
       },
       {
         "lineNumber": 742,
