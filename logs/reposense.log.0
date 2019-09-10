@@ -1,18 +1,18 @@
-Sep 09, 2019 2:27:27 PM reposense.report.RepoCloner spawnCloneProcess
+Sep 10, 2019 2:26:38 PM reposense.report.RepoCloner spawnCloneProcess
 INFO: Cloning in parallel from https://github.com/reposense/RepoSense.git...
-Sep 09, 2019 2:27:27 PM reposense.report.RepoCloner waitForCloneProcess
+Sep 10, 2019 2:26:38 PM reposense.report.RepoCloner waitForCloneProcess
 INFO: Waiting for cloning of https://github.com/reposense/RepoSense.git to complete...
-Sep 09, 2019 2:27:29 PM reposense.report.RepoCloner waitForCloneProcess
+Sep 10, 2019 2:26:40 PM reposense.report.RepoCloner waitForCloneProcess
 INFO: Cloning of https://github.com/reposense/RepoSense.git completed!
-Sep 09, 2019 2:27:29 PM reposense.report.ReportGenerator analyzeRepos
+Sep 10, 2019 2:26:40 PM reposense.report.ReportGenerator analyzeRepos
 INFO: [1/1] Analyzing https://github.com/reposense/RepoSense.git (master)...
-Sep 09, 2019 2:27:29 PM reposense.commits.CommitInfoExtractor extractCommitInfos
+Sep 10, 2019 2:26:41 PM reposense.commits.CommitInfoExtractor extractCommitInfos
 INFO: Extracting commits info for https://github.com/reposense/RepoSense.git (master)...
-Sep 09, 2019 2:27:29 PM reposense.commits.CommitInfoAnalyzer analyzeCommits
+Sep 10, 2019 2:26:41 PM reposense.commits.CommitInfoAnalyzer analyzeCommits
 INFO: Analyzing commits info for https://github.com/reposense/RepoSense.git (master)...
-Sep 09, 2019 2:27:29 PM reposense.authorship.FileInfoExtractor extractFileInfos
+Sep 10, 2019 2:26:41 PM reposense.authorship.FileInfoExtractor extractFileInfos
 INFO: Extracting relevant file info from https://github.com/reposense/RepoSense.git (master)...
-Sep 09, 2019 2:27:31 PM reposense.report.ReportGenerator analyzeRepo
+Sep 10, 2019 2:26:43 PM reposense.report.ReportGenerator analyzeRepo
 INFO: Analysis of https://github.com/reposense/RepoSense.git (master) completed!
-Sep 09, 2019 2:27:31 PM reposense.report.ReportGenerator generateReposReport
+Sep 10, 2019 2:26:43 PM reposense.report.ReportGenerator generateReposReport
 INFO: The report is generated at /home/travis/build/yong24s/publish-RepoSense/reposense-report
