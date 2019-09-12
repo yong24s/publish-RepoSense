@@ -1,0 +1,1270 @@
+[
+  {
+    "path": "README.md",
+    "fileType": "md",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "# RepoSense"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "[![Build Status](https://travis-ci.org/reposense/RepoSense.svg?branch\u003dmaster)](https://travis-ci.org/reposense/RepoSense)"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "[![Build status](https://ci.appveyor.com/api/projects/status/gsbkj5qby3pjd6nw/branch/master?svg\u003dtrue)](https://ci.appveyor.com/project/eugenepeh/reposense/branch/master)"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "[![Codacy Badge](https://api.codacy.com/project/badge/Grade/08a3527378464ed4a5ad62e27f590d6a)](https://www.codacy.com/app/reposense/RepoSense?utm_source\u003dgithub.com\u0026amp;utm_medium\u003dreferral\u0026amp;utm_content\u003dreposense/RepoSense\u0026amp;utm_campaign\u003dBadge_Grade)"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "[![deploy on_netlify](https://img.shields.io/badge/deploy-on_netlify-blue.svg)](https://reposense.netlify.com/)"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "[![codecov.io](https://codecov.io/gh/reposense/RepoSense/branch/master/graphs/badge.svg?branch\u003dmaster)](http://codecov.io/github/reposense/RepoSense?branch\u003dmaster)"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "RepoSense is a contribution analysis tool for Git repositories. It generates a static HTML report including contribution information for each author in the repository."
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "The features of the report includes:"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Visualization for contribution frequency"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Visualization for contribution amount"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Code review panel"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Comparison of contribution between authors"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Filtering and sorting of authors"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "## Documentations"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* [**User Guide**](https://github.com/reposense/RepoSense/blob/release/docs/UserGuide.md)"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* [**Developer Guide**](docs/DeveloperGuide.md)"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "## About Us"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "RepoSense is a project based in the [National University of Singapore, School of Computing](http://www.comp.nus.edu.sg/), and is funded by a grant from [NUS Center for Development of Teaching and Learning](http://www.cdtl.nus.edu.sg/)."
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "Our project team and the list of contributors are [here](docs/Team.md)."
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "## Contributing"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "We welcome pull requests. Please read the [contribution guidelines](docs/Process.md#how-to-contribute-to-the-reposense-repository) before starting work on one."
+      }
+    ],
+    "authorContributionMap": {
+      "eugenepeh": 1,
+      "-": 25
+    }
+  },
+  {
+    "path": "docs/Team.md",
+    "fileType": "md",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "# RepoSense Project Team"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "We are a team based in the [School of Computing, National University of Singapore](http://www.comp.nus.edu.sg/)."
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "## Current Team"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "### [Damith C. Rajapakse](http://www.comp.nus.edu.sg/~damithch)"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "![](https://avatars.githubusercontent.com/u/1673303?s\u003d150\u0026v\u003d4)\u003cbr/\u003e"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "**Role**: Project Advisor"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "### [Peh Xian Bin, Eugene](https://github.com/eugenepeh)"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "![](https://avatars.githubusercontent.com/u/19277206?s\u003d150\u0026v\u003d4)\u003cbr/\u003e"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "**Role**: Project Lead [2018 May - ]\u003cbr/\u003e"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "### [Tan Jun An](https://github.com/yamidark)"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "![](https://avatars3.githubusercontent.com/u/18352498?s\u003d150\u0026v\u003d4)\u003cbr/\u003e"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "**Role**: Area Lead for Code Quality [2018 Aug - ]\u003cbr/\u003e"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "Committer [2018 May - 2018 Aug]\u003cbr/\u003e"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "### [Ong Shu Peng](https://github.com/ongspxm)"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "![](https://avatars0.githubusercontent.com/u/1430854?s\u003d150\u0026v\u003d4)\u003cbr/\u003e"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "**Role**: Area Lead for UI [2018 Dec - ]\u003cbr/\u003e"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "Committer [2018 Aug - 2018 Dec]\u003cbr/\u003e"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "Contributor [2018 May - 2018 Aug]\u003cbr/\u003e"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "### [Teng Yong Hao](https://github.com/yong24s)"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "![](https://avatars2.githubusercontent.com/u/2003406?s\u003d150\u0026v\u003d4)\u003cbr/\u003e"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "**Role**: Mentor [2018 Dec - ]\u003cbr/\u003e"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "Committer [2018 Aug - 2018 Dec]\u003cbr/\u003e"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "Contributor [2018 May - 2018 Aug]\u003cbr/\u003e"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "### [Wang Chao](https://github.com/fzdy1914)"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "![](https://avatars3.githubusercontent.com/u/35621726?s\u003d150\u0026v\u003d4)\u003cbr/\u003e"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "**Role**: Committer [2019 May - ]\u003cbr/\u003e"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "Contributor [2018 Dec - 2019 May]\u003cbr/\u003e"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "### [James Pang Mun Wai](https://github.com/jamessspanggg)"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "![](https://avatars1.githubusercontent.com/u/32864116?s\u003d150\u0026v\u003d4)\u003cbr/\u003e"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "**Role**: Contributor [2019 May - ]\u003cbr/\u003e"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "### [Jin Minjia](https://github.com/bluein-green)"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "**Role**: Contributor [2019 May - ]\u003cbr/\u003e"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "### [Lee Jin Yao](https://github.com/jylee-git)"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "![](https://avatars3.githubusercontent.com/u/35756209?s\u003d150\u0026v\u003d4)\u003cbr/\u003e"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "**Role**: Contributor [2019 May - ]\u003cbr/\u003e"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "## Past Members"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "### [Ma Tanghao](https://github.com/harryggg)"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "Main developer for the initial version [2017 May - 2018 May]"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "### [Aditya Agarwal](https://github.com/adityaa1998)"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "Contributor [2018 May - 2018 Aug]"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "### [Apoorva Ullas](https://github.com/apoorva17)"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "Contributor [2018 Aug - 2019 May]"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "### [Chelsey Ong Hee](https://github.com/chelseyong)"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "Contributor [2018 Dec - 2019 May]"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "### [Gilbert Emerson](https://github.com/emer7)"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "Contributor [2018 Dec - 2019 May]"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "### [Teo Ming Yi](https://github.com/myteo)"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "Contributor [2018 Dec - 2019 May]"
+      }
+    ],
+    "authorContributionMap": {
+      "eugenepeh": 93
+    }
+  },
+  {
+    "path": "src/main/java/reposense/authorship/model/AuthorshipSummary.java",
+    "fileType": "java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package reposense.authorship.model;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.HashMap;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.LinkedHashMap;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.Map;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import reposense.model.Author;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import reposense.model.FileType;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * Stores the contribution summary of the authors in the repo."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class AuthorshipSummary {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private final List\u003cFileResult\u003e fileResults;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private final Map\u003cAuthor, Integer\u003e authorFinalContributionMap;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private final Map\u003cAuthor, LinkedHashMap\u003cFileType, Integer\u003e\u003e authorFileTypeContributionMap;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public AuthorshipSummary(List\u003cFileResult\u003e fileResults, List\u003cAuthor\u003e authors, List\u003cFileType\u003e fileTypes) {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.fileResults \u003d fileResults;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        authorFinalContributionMap \u003d new HashMap\u003c\u003e();"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        authorFileTypeContributionMap \u003d new HashMap\u003c\u003e();"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        for (Author author : authors) {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "            // initialise each author contribution to be 0"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            authorFinalContributionMap.put(author, 0);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            LinkedHashMap\u003cFileType, Integer\u003e defaultFileTypeContribution \u003d new LinkedHashMap\u003c\u003e();"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            fileTypes.forEach(fileType -\u003e defaultFileTypeContribution.put(fileType, 0));"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            authorFileTypeContributionMap.put(author, defaultFileTypeContribution);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Increments the contribution count of {@code author} and the corresponding file type specified by"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * {@code filePath} by one."
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void addAuthorContributionCount(Author author, FileType fileType) {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        authorFinalContributionMap.put(author, authorFinalContributionMap.get(author) + 1);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // Add file type contribution count"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Map\u003cFileType, Integer\u003e fileTypeContributionMap \u003d authorFileTypeContributionMap.get(author);"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        fileTypeContributionMap.put(fileType, fileTypeContributionMap.getOrDefault(fileType, 0) + 1);"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public Map\u003cAuthor, Integer\u003e getAuthorFinalContributionMap() {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return authorFinalContributionMap;"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public Map\u003cAuthor, LinkedHashMap\u003cFileType, Integer\u003e\u003e getAuthorFileTypeContributionMap() {"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return authorFileTypeContributionMap;"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public List\u003cFileResult\u003e getFileResults() {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return fileResults;"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "yamidark": 2,
+      "-": 56
+    }
+  }
+]

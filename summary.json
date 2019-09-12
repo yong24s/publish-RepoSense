@@ -1,15 +1,21 @@
 {
   "repoSenseVersion": "816bb1a856",
-  "reportGeneratedTime": "Wed Sep 11 14:27:26 2019 UTC",
-  "repos": [],
-  "errorList": [
+  "reportGeneratedTime": "Thu Sep 12 14:27:21 2019 UTC",
+  "repos": [
     {
-      "repoName": "reposense/RepoSense[master]",
-      "errorMessage": "Failed to clone from https://github.com/reposense/RepoSense.git"
+      "location": {
+        "location": "https://github.com/reposense/RepoSense.git",
+        "repoName": "RepoSense",
+        "organization": "reposense"
+      },
+      "branch": "master",
+      "displayName": "reposense/RepoSense[master]",
+      "outputFolderName": "reposense_RepoSense_master"
     }
   ],
-  "sinceDate": "2019-08-11",
-  "untilDate": "2019-09-11",
+  "errorList": [],
+  "sinceDate": "2019-08-12",
+  "untilDate": "2019-09-12",
   "isSinceDateProvided": false,
   "isUntilDateProvided": false
 }
