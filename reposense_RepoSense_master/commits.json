@@ -4,29 +4,14 @@
     "AdityaA1998": [],
     "yamidark": [],
     "yong24s": [],
-    "eugenepeh": [
-      {
-        "insertions": 94,
-        "deletions": 12,
-        "date": "2019-08-18",
-        "commitResults": [
-          {
-            "hash": "0637f4b826428e6565deeca59131f1c9a3637037",
-            "messageTitle": "AboutUs: update team members (#867)",
-            "messageBody": "As more members join and leave us, it is about time for us to distinct\r\nthe active members so that users can easily seek help from us.\r\n\r\nLet\u0027s move our team list to a new page to separate our active and past\r\nmembers into different section. Also, let\u0027s include and update the\r\nroles to accredit our senior members who have been helping out with\r\nmany of the work, including mentoring the newcomers.",
-            "insertions": 94,
-            "deletions": 12
-          }
-        ]
-      }
-    ]
+    "eugenepeh": []
   },
   "authorFinalContributionMap": {
     "ongspxm": 0,
     "AdityaA1998": 0,
-    "yamidark": 2,
+    "yamidark": 0,
     "yong24s": 0,
-    "eugenepeh": 94
+    "eugenepeh": 0
   },
   "authorFileTypeContributionMap": {
     "ongspxm": {
@@ -50,7 +35,7 @@
     "yamidark": {
       "gradle": 0,
       "jade": 0,
-      "java": 2,
+      "java": 0,
       "js": 0,
       "md": 0,
       "scss": 0,
@@ -70,7 +55,7 @@
       "jade": 0,
       "java": 0,
       "js": 0,
-      "md": 94,
+      "md": 0,
       "scss": 0,
       "yml": 0
     }
