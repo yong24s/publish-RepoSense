@@ -54487,23 +54487,23 @@
       {
         "lineNumber": 3,
         "author": {
+          "gitId": "-"
+        },
+        "content": "import java.io.BufferedReader;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
           "gitId": "yamidark"
         },
         "content": "import java.io.FileReader;"
       },
       {
-        "lineNumber": 4,
+        "lineNumber": 5,
         "author": {
           "gitId": "yong24s"
         },
         "content": "import java.io.IOException;"
-      },
-      {
-        "lineNumber": 5,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "import java.io.Reader;"
       },
       {
         "lineNumber": 6,
@@ -54550,177 +54550,177 @@
       {
         "lineNumber": 12,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "import java.util.logging.Level;"
+        "content": "import java.util.Optional;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "import java.util.logging.Logger;"
+        "content": "import java.util.logging.Level;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "import java.util.stream.Collectors;"
+        "content": "import java.util.logging.Logger;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "yong24s"
         },
-        "content": ""
+        "content": "import java.util.stream.Collectors;"
       },
       {
         "lineNumber": 16,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "import org.apache.commons.csv.CSVFormat;"
+        "content": ""
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "-"
         },
-        "content": "import org.apache.commons.csv.CSVRecord;"
+        "content": "import org.apache.commons.csv.CSVFormat;"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import org.apache.commons.csv.CSVRecord;"
       },
       {
         "lineNumber": 19,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "import reposense.system.LogsManager;"
+        "content": ""
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "yong24s"
         },
-        "content": ""
+        "content": "import reposense.system.LogsManager;"
       },
       {
         "lineNumber": 21,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
-        "content": " * Contains CSV parsing related functionalities."
+        "content": "/**"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
-        "content": " */"
+        "content": " * Contains CSV parsing related functionalities."
       },
       {
         "lineNumber": 24,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "public abstract class CsvParser\u003cT\u003e {"
+        "content": " */"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "    protected static final String COLUMN_VALUES_SEPARATOR \u003d \";\";"
+        "content": "public abstract class CsvParser\u003cT\u003e {"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "    protected static final Logger logger \u003d LogsManager.getLogger(CsvParser.class);"
+        "content": "    protected static final String COLUMN_VALUES_SEPARATOR \u003d \";\";"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "yong24s"
         },
-        "content": ""
+        "content": "    protected static final Logger logger \u003d LogsManager.getLogger(CsvParser.class);"
       },
       {
         "lineNumber": 28,
+        "author": {
+          "gitId": "yong24s"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
         "content": "    private static final String OVERRIDE_KEYWORD \u003d \"override:\";"
       },
       {
-        "lineNumber": 29,
+        "lineNumber": 30,
         "author": {
           "gitId": "yong24s"
         },
         "content": "    private static final String MESSAGE_UNABLE_TO_READ_CSV_FILE \u003d \"Unable to read the supplied CSV file.\";"
       },
       {
-        "lineNumber": 30,
+        "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
         "content": "    private static final String MESSAGE_MALFORMED_LINE_FORMAT \u003d \"Line %d in CSV file, %s, is malformed.\\n\""
       },
       {
-        "lineNumber": 31,
+        "lineNumber": 32,
         "author": {
           "gitId": "eugenepeh"
         },
         "content": "            + \"Content: %s\";"
       },
       {
-        "lineNumber": 32,
+        "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
         "content": "    private static final String MESSAGE_LINE_PARSE_EXCEPTION_FORMAT \u003d \"Error parsing line %d in CSV file, %s.\\n\""
       },
       {
-        "lineNumber": 33,
+        "lineNumber": 34,
         "author": {
           "gitId": "eugenepeh"
         },
         "content": "            + \"Content: %s\\n\""
       },
       {
-        "lineNumber": 34,
+        "lineNumber": 35,
         "author": {
           "gitId": "eugenepeh"
         },
         "content": "            + \"Error: %s\";"
       },
       {
-        "lineNumber": 35,
-        "author": {
-          "gitId": "yong24s"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 36,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "    private Path csvFilePath;"
+        "content": "    private static final String MESSAGE_EMPTY_CSV_FORMAT \u003d \"The CSV file, %s, is empty.\";"
       },
       {
         "lineNumber": 37,
@@ -54732,79 +54732,79 @@
       {
         "lineNumber": 38,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "yong24s"
         },
-        "content": "    /**"
+        "content": "    private Path csvFilePath;"
       },
       {
         "lineNumber": 39,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "     * @throws IOException if {@code csvFilePath} is an invalid path."
+        "content": "    private int numOfLinesBeforeFirstRecord \u003d 0;"
       },
       {
         "lineNumber": 40,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 41,
-        "author": {
-          "gitId": "yong24s"
-        },
-        "content": "    public CsvParser(Path csvFilePath) throws IOException {"
-      },
-      {
-        "lineNumber": 42,
-        "author": {
-          "gitId": "yong24s"
-        },
-        "content": "        if (csvFilePath \u003d\u003d null || !Files.exists(csvFilePath)) {"
-      },
-      {
-        "lineNumber": 43,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            throw new IOException(\"Csv file does not exists in given path.\\n\""
-      },
-      {
-        "lineNumber": 44,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "                    + \"Use \u0027-help\u0027 to list all the available subcommands and some concept guides.\");"
-      },
-      {
-        "lineNumber": 45,
-        "author": {
-          "gitId": "yong24s"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 46,
         "author": {
           "gitId": "yong24s"
         },
         "content": ""
       },
       {
-        "lineNumber": 47,
+        "lineNumber": 41,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 42,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "        this.csvFilePath \u003d csvFilePath;"
+        "content": "     * @throws IOException if {@code csvFilePath} is an invalid path."
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "yong24s"
+        },
+        "content": "    public CsvParser(Path csvFilePath) throws IOException {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "yong24s"
+        },
+        "content": "        if (csvFilePath \u003d\u003d null || !Files.exists(csvFilePath)) {"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            throw new IOException(\"Csv file does not exists in given path.\\n\""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    + \"Use \u0027-help\u0027 to list all the available subcommands and some concept guides.\");"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 49,
@@ -54818,63 +54818,63 @@
         "author": {
           "gitId": "yong24s"
         },
-        "content": "    /**"
+        "content": "        this.csvFilePath \u003d csvFilePath;"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "     * @throws IOException if there are error accessing the given csv file."
+        "content": "    }"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "    public List\u003cT\u003e parse() throws IOException {"
+        "content": "    /**"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "        List\u003cT\u003e results \u003d new ArrayList\u003c\u003e();"
+        "content": "     * @throws IOException if there are error accessing the given csv file."
       },
       {
         "lineNumber": 55,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "        Iterable\u003cCSVRecord\u003e records;"
+        "content": "     */"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "yong24s"
         },
-        "content": ""
+        "content": "    public List\u003cT\u003e parse() throws IOException {"
       },
       {
         "lineNumber": 57,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "        try (Reader csvReader \u003d new FileReader(csvFilePath.toFile())) {"
+        "content": "        List\u003cT\u003e results \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "            records \u003d CSVFormat.DEFAULT.withFirstRecordAsHeader().parse(csvReader);"
+        "content": "        Iterable\u003cCSVRecord\u003e records;"
       },
       {
         "lineNumber": 59,
@@ -54888,567 +54888,567 @@
         "author": {
           "gitId": "-"
         },
-        "content": "            for (CSVRecord record : records) {"
+        "content": "        try (BufferedReader csvReader \u003d new BufferedReader(new FileReader(csvFilePath.toFile()))) {"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": "                if (isLineMalformed(record)) {"
+        "content": "            String[] header \u003d getHeader(csvReader);"
       },
       {
         "lineNumber": 62,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "                    continue;"
+        "content": "            records \u003d CSVFormat.DEFAULT.withIgnoreEmptyLines(false).withHeader(header).parse(csvReader);"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "                }"
+        "content": ""
       },
       {
         "lineNumber": 64,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "-"
         },
-        "content": "                try {"
+        "content": "            for (CSVRecord record : records) {"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": "                    processLine(results, record);"
+        "content": "                if (isLineMalformed(record)) {"
       },
       {
         "lineNumber": 66,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "yong24s"
         },
-        "content": "                } catch (ParseException pe) {"
+        "content": "                    continue;"
       },
       {
         "lineNumber": 67,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "                    logger.warning(String.format(MESSAGE_LINE_PARSE_EXCEPTION_FORMAT, getLineNumber(record),"
+        "content": "                }"
       },
       {
         "lineNumber": 68,
         "author": {
-          "gitId": "-"
+          "gitId": "eugenepeh"
         },
-        "content": "                            csvFilePath.getFileName(), getRowContentAsRawString(record), pe.getMessage()));"
+        "content": "                try {"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": "                } catch (IllegalArgumentException iae) {"
+        "content": "                    processLine(results, record);"
       },
       {
         "lineNumber": 70,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "                } catch (ParseException pe) {"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    logger.warning(String.format(MESSAGE_LINE_PARSE_EXCEPTION_FORMAT, getLineNumber(record),"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                            csvFilePath.getFileName(), getRowContentAsRawString(record), pe.getMessage()));"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                } catch (IllegalArgumentException iae) {"
+      },
+      {
+        "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
         "content": "                    logger.log(Level.WARNING, iae.getMessage(), iae);"
       },
       {
-        "lineNumber": 71,
+        "lineNumber": 75,
         "author": {
           "gitId": "eugenepeh"
         },
         "content": "                }"
       },
       {
-        "lineNumber": 72,
-        "author": {
-          "gitId": "yong24s"
-        },
-        "content": "            }"
-      },
-      {
-        "lineNumber": 73,
-        "author": {
-          "gitId": "yong24s"
-        },
-        "content": "        } catch (IOException ioe) {"
-      },
-      {
-        "lineNumber": 74,
-        "author": {
-          "gitId": "yong24s"
-        },
-        "content": "            throw new IOException(MESSAGE_UNABLE_TO_READ_CSV_FILE, ioe);"
-      },
-      {
-        "lineNumber": 75,
-        "author": {
-          "gitId": "yong24s"
-        },
-        "content": "        }"
-      },
-      {
         "lineNumber": 76,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "        return results;"
+        "content": "            }"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "    }"
+        "content": "        } catch (IOException ioe) {"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "yong24s"
         },
-        "content": ""
+        "content": "            throw new IOException(MESSAGE_UNABLE_TO_READ_CSV_FILE, ioe);"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "        } catch (InvalidCsvException ice) {"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns true if {@code record} does not contain the same number of columns as the header or contains missing"
+        "content": "            throw new IOException(ice.getMessage(), ice);"
       },
       {
         "lineNumber": 81,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "     * values at the mandatory columns in CSV format."
+        "content": "        }"
       },
       {
         "lineNumber": 82,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "     */"
+        "content": "        return results;"
       },
       {
         "lineNumber": 83,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "    private boolean isLineMalformed(CSVRecord record) {"
+        "content": "    }"
       },
       {
         "lineNumber": 84,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "        if (!record.isConsistent()) {"
+        "content": ""
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": "            logger.warning(String.format(MESSAGE_MALFORMED_LINE_FORMAT, getLineNumber(record),"
+        "content": "    /**"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": "                    csvFilePath.getFileName(), getRowContentAsRawString(record)));"
+        "content": "     * Returns the header of a CSV file, which is assumed to be the first non-empty / non-whitespace line in the file."
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "            return true;"
+        "content": "     * The line is split into an array of Strings, using the comma symbol as delimiter."
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "     *"
       },
       {
         "lineNumber": 89,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "        for (int position : mandatoryPositions()) {"
+        "content": "     * @throws IOException if there is an error accessing the file."
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": "            if (record.get(position).isEmpty()) {"
+        "content": "     * @throws InvalidCsvException if the file has only empty or blank lines."
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
-        "content": "                logger.warning(String.format(MESSAGE_MALFORMED_LINE_FORMAT, getLineNumber(record),"
+        "content": "     */"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
-        "content": "                        csvFilePath.getFileName(), getRowContentAsRawString(record)));"
+        "content": "    private String[] getHeader(BufferedReader reader) throws IOException, InvalidCsvException {"
       },
       {
         "lineNumber": 93,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "                return true;"
+        "content": "        String currentLine \u003d \"\";"
       },
       {
         "lineNumber": 94,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "            }"
+        "content": ""
       },
       {
         "lineNumber": 95,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "        }"
+        "content": "        // read from file until we encounter a line that is neither blank nor empty"
       },
       {
         "lineNumber": 96,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "        return false;"
+        "content": "        while (currentLine.isEmpty()) {"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "            currentLine \u003d Optional.ofNullable(reader.readLine())"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "                    .map(String::trim)"
       },
       {
         "lineNumber": 99,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "    /**"
+        "content": "                    .orElseThrow(() -\u003e new InvalidCsvException(String.format("
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns the value of {@code record} at {@code colNum}."
+        "content": "                            MESSAGE_EMPTY_CSV_FORMAT, csvFilePath.getFileName())));"
       },
       {
         "lineNumber": 101,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected String get(final CSVRecord record, int colNum) {"
+        "content": "            numOfLinesBeforeFirstRecord++;"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": "        return record.get(colNum).trim();"
+        "content": "        }"
       },
       {
         "lineNumber": 104,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return currentLine.split(\",\");"
       },
       {
         "lineNumber": 105,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns the value of {@code record} at {@code colNum} if present, or"
+        "content": "    /**"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "     * returns {@code defaultValue} otherwise."
+        "content": "     * Returns true if {@code record} does not contain the same number of columns as the header or contains missing"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * values at the mandatory columns in CSV format."
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected String getOrDefault(final CSVRecord record, int colNum, String defaultValue) {"
+        "content": "     */"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "        return get(record, colNum).isEmpty() ? defaultValue : get(record, colNum);"
+        "content": "    private boolean isLineMalformed(CSVRecord record) {"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        if (!record.isConsistent()) {"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            logger.warning(String.format(MESSAGE_MALFORMED_LINE_FORMAT, getLineNumber(record),"
       },
       {
         "lineNumber": 114,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "    /**"
+        "content": "                    csvFilePath.getFileName(), getRowContentAsRawString(record)));"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns the value of {@code record} at {@code colNum} as a {@code List},"
+        "content": "            return true;"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": "     * delimited by {@code COLUMN_VALUES_SEPARATOR} if it is in {@code record} and not empty, or"
+        "content": "        }"
       },
       {
         "lineNumber": 117,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "     * returns an empty {@code List} otherwise."
+        "content": "        for (int position : mandatoryPositions()) {"
       },
       {
         "lineNumber": 118,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "     */"
+        "content": "            if (record.get(position).isEmpty()) {"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected List\u003cString\u003e getAsList(final CSVRecord record, int colNum) {"
+        "content": "                logger.warning(String.format(MESSAGE_MALFORMED_LINE_FORMAT, getLineNumber(record),"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (get(record, colNum).isEmpty()) {"
+        "content": "                        csvFilePath.getFileName(), getRowContentAsRawString(record)));"
       },
       {
         "lineNumber": 121,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "            return Collections.emptyList();"
+        "content": "                return true;"
       },
       {
         "lineNumber": 122,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "        }"
+        "content": "            }"
       },
       {
         "lineNumber": 123,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "        return Arrays.stream(get(record, colNum).split(COLUMN_VALUES_SEPARATOR))"
+        "content": "        }"
       },
       {
         "lineNumber": 124,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "                .map(String::trim)"
+        "content": "        return false;"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
-        "content": "                .collect(Collectors.toList());"
+        "content": "    }"
       },
       {
         "lineNumber": 126,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "yong24s"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Returns the value of {@code record} at {@code colNum}."
       },
       {
         "lineNumber": 129,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "     * Returns the values in {@code record} as a list with the {@link CsvParser#OVERRIDE_KEYWORD} prefix removed."
+        "content": "     */"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns an empty list if {@code record} at {@code colNum} is empty."
+        "content": "    protected String get(final CSVRecord record, int colNum) {"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "        return record.get(colNum).trim();"
       },
       {
         "lineNumber": 132,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "    protected List\u003cString\u003e getAsListWithoutOverridePrefix(final CSVRecord record, int colNum) {"
+        "content": "    }"
       },
       {
         "lineNumber": 133,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "        List\u003cString\u003e data \u003d getAsList(record, colNum);"
+        "content": ""
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (isElementOverridingStandaloneConfig(record, colNum)) {"
+        "content": "    /**"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "            data.set(0, data.get(0).replaceFirst(OVERRIDE_KEYWORD, \"\"));"
+        "content": "     * Returns the value of {@code record} at {@code colNum} if present, or"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
-        "content": "            data.removeIf(String::isEmpty);"
+        "content": "     * returns {@code defaultValue} otherwise."
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "     */"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
-        "content": "        return data;"
+        "content": "    protected String getOrDefault(final CSVRecord record, int colNum, String defaultValue) {"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return get(record, colNum).isEmpty() ? defaultValue : get(record, colNum);"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 141,
@@ -55460,243 +55460,439 @@
       {
         "lineNumber": 142,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "    private long getLineNumber(final CSVRecord record) {"
+        "content": "    /**"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "        return  record.getRecordNumber() + 1;"
+        "content": "     * Returns the value of {@code record} at {@code colNum} as a {@code List},"
       },
       {
         "lineNumber": 144,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "    }"
+        "content": "     * delimited by {@code COLUMN_VALUES_SEPARATOR} if it is in {@code record} and not empty, or"
       },
       {
         "lineNumber": 145,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "     * returns an empty {@code List} otherwise."
       },
       {
         "lineNumber": 146,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "    /**"
+        "content": "     */"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns true if the {@code record} at {@code colNum} is prefixed with the override keyword."
+        "content": "    protected List\u003cString\u003e getAsList(final CSVRecord record, int colNum) {"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "        if (get(record, colNum).isEmpty()) {"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected boolean isElementOverridingStandaloneConfig(final CSVRecord record, int colNum) {"
+        "content": "            return Collections.emptyList();"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "-"
         },
-        "content": "        return get(record, colNum).startsWith(OVERRIDE_KEYWORD);"
+        "content": "        }"
       },
       {
         "lineNumber": 151,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return Arrays.stream(get(record, colNum).split(COLUMN_VALUES_SEPARATOR))"
       },
       {
         "lineNumber": 152,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "                .map(String::trim)"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "                .collect(Collectors.toList());"
       },
       {
         "lineNumber": 154,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "     * Returns the contents of {@code record} as a raw string."
+        "content": "    }"
       },
       {
         "lineNumber": 155,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
-        "content": "    private String getRowContentAsRawString(final CSVRecord record) {"
+        "content": "    /**"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "-"
         },
-        "content": "        StringBuilder inputRowString \u003d new StringBuilder();"
+        "content": "     * Returns the values in {@code record} as a list with the {@link CsvParser#OVERRIDE_KEYWORD} prefix removed."
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "-"
         },
-        "content": "        for (int colNum \u003d 0; colNum \u003c record.size(); colNum++) {"
+        "content": "     * Returns an empty list if {@code record} at {@code colNum} is empty."
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": "            inputRowString.append(get(record, colNum)).append(\",\");"
+        "content": "     */"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "    protected List\u003cString\u003e getAsListWithoutOverridePrefix(final CSVRecord record, int colNum) {"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": "        return inputRowString.toString();"
+        "content": "        List\u003cString\u003e data \u003d getAsList(record, colNum);"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        if (isElementOverridingStandaloneConfig(record, colNum)) {"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            data.set(0, data.get(0).replaceFirst(OVERRIDE_KEYWORD, \"\"));"
       },
       {
         "lineNumber": 164,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": "    /**"
+        "content": "            data.removeIf(String::isEmpty);"
       },
       {
         "lineNumber": 165,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "     * Gets the list of positions that are mandatory for verification."
+        "content": "        }"
       },
       {
         "lineNumber": 166,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": "     */"
+        "content": "        return data;"
       },
       {
         "lineNumber": 167,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "    protected abstract int[] mandatoryPositions();"
+        "content": "    }"
       },
       {
         "lineNumber": 168,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
         "content": ""
       },
       {
         "lineNumber": 169,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 170,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "     * Processes the csv file line by line."
+        "content": "    private long getLineNumber(final CSVRecord record) {"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "-"
         },
-        "content": "     * All CsvParsers must use {@link CsvParser#get}, {@link CsvParser#getOrDefault},"
+        "content": "        return  record.getRecordNumber() + numOfLinesBeforeFirstRecord;"
       },
       {
         "lineNumber": 172,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "     * {@link CsvParser#getAsList} or {@link CsvParser#getAsListWithoutOverridePrefix} to read contents in"
+        "content": "    }"
       },
       {
         "lineNumber": 173,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "     * {@code record} and add created objects into {@code results}."
+        "content": ""
       },
       {
         "lineNumber": 174,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected abstract void processLine(List\u003cT\u003e results, final CSVRecord record) throws ParseException;"
+        "content": "     * Returns true if the {@code record} at {@code colNum} is prefixed with the override keyword."
       },
       {
         "lineNumber": 176,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    protected boolean isElementOverridingStandaloneConfig(final CSVRecord record, int colNum) {"
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return get(record, colNum).startsWith(OVERRIDE_KEYWORD);"
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "yong24s"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Returns the contents of {@code record} as a raw string."
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private String getRowContentAsRawString(final CSVRecord record) {"
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        StringBuilder inputRowString \u003d new StringBuilder();"
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        for (int colNum \u003d 0; colNum \u003c record.size(); colNum++) {"
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            inputRowString.append(get(record, colNum)).append(\",\");"
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return inputRowString.toString();"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "yong24s"
+        },
+        "content": "     * Gets the list of positions that are mandatory for verification."
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "yong24s"
+        },
+        "content": "    protected abstract int[] mandatoryPositions();"
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "yong24s"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "yong24s"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "yong24s"
+        },
+        "content": "     * Processes the csv file line by line."
+      },
+      {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * All CsvParsers must use {@link CsvParser#get}, {@link CsvParser#getOrDefault},"
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * {@link CsvParser#getAsList} or {@link CsvParser#getAsListWithoutOverridePrefix} to read contents in"
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * {@code record} and add created objects into {@code results}."
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "yong24s"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    protected abstract void processLine(List\u003cT\u003e results, final CSVRecord record) throws ParseException;"
+      },
+      {
+        "lineNumber": 204,
         "author": {
           "gitId": "yong24s"
         },
@@ -55707,7 +55903,7 @@
       "yong24s": 69,
       "yamidark": 7,
       "eugenepeh": 6,
-      "-": 94
+      "-": 122
     }
   },
   {
@@ -83828,182 +84024,182 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final Path AUTHOR_CONFIG_EMPTY_LOCATION_FILE \u003d new File(CsvParserTest.class.getClassLoader()"
+        "content": "    private static final Path REPO_CONFIG_REDUNDANT_LINES_FILE \u003d new File(CsvParserTest.class.getClassLoader()"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "            .getResource(\"CsvParserTest/authorconfig_emptyLocation_test.csv\").getFile()).toPath();"
+        "content": "            .getResource(\"CsvParserTest/require_trailing_whitespaces/repoconfig_redundantLines_test.csv\")"
       },
       {
         "lineNumber": 43,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": "    private static final Path AUTHOR_CONFIG_NO_SPECIAL_CHARACTER_FILE \u003d new File(CsvParserTest.class.getClassLoader()"
+        "content": "            .getFile()).toPath();"
       },
       {
         "lineNumber": 44,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": "            .getResource(\"CsvParserTest/authorconfig_noSpecialCharacter_test.csv\").getFile()).toPath();"
+        "content": "    private static final Path AUTHOR_CONFIG_EMPTY_LOCATION_FILE \u003d new File(CsvParserTest.class.getClassLoader()"
       },
       {
         "lineNumber": 45,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": "    private static final Path AUTHOR_CONFIG_SPECIAL_CHARACTER_FILE \u003d new File(CsvParserTest.class.getClassLoader()"
+        "content": "            .getResource(\"CsvParserTest/authorconfig_emptyLocation_test.csv\").getFile()).toPath();"
       },
       {
         "lineNumber": 46,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": "            .getResource(\"CsvParserTest/authorconfig_specialCharacter_test.csv\").getFile()).toPath();"
+        "content": "    private static final Path AUTHOR_CONFIG_EMPTY_CONFIG_FILE \u003d new File(CsvParserTest.class.getClassLoader()"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final Path AUTHOR_CONFIG_COMMAS_AND_DOUBLEQUOTES_FILE \u003d new File(CsvParserTest.class.getClassLoader()"
+        "content": "            .getResource(\"CsvParserTest/require_trailing_whitespaces/authorconfig_emptyConfig_test.csv\")"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "            .getResource(\"CsvParserTest/authorconfig_commasAndDoubleQuotes_test.csv\").getFile()).toPath();"
+        "content": "            .getFile()).toPath();"
       },
       {
         "lineNumber": 49,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "yamidark"
         },
-        "content": "    private static final Path AUTHOR_CONFIG_MULTIPLE_EMAILS_FILE \u003d new File(CsvParserTest.class.getClassLoader()"
+        "content": "    private static final Path AUTHOR_CONFIG_NO_SPECIAL_CHARACTER_FILE \u003d new File(CsvParserTest.class.getClassLoader()"
       },
       {
         "lineNumber": 50,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "yamidark"
         },
-        "content": "            .getResource(\"CsvParserTest/authorconfig_multipleEmails_test.csv\").getFile()).toPath();"
+        "content": "            .getResource(\"CsvParserTest/authorconfig_noSpecialCharacter_test.csv\").getFile()).toPath();"
       },
       {
         "lineNumber": 51,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "yamidark"
         },
-        "content": "    private static final Path AUTHOR_CONFIG_INVALID_LOCATION \u003d new File(CsvParserTest.class.getClassLoader()"
+        "content": "    private static final Path AUTHOR_CONFIG_SPECIAL_CHARACTER_FILE \u003d new File(CsvParserTest.class.getClassLoader()"
       },
       {
         "lineNumber": 52,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "yamidark"
         },
-        "content": "            .getResource(\"CsvParserTest/authorconfig_invalidLocation_test.csv\").getFile()).toPath();"
+        "content": "            .getResource(\"CsvParserTest/authorconfig_specialCharacter_test.csv\").getFile()).toPath();"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final Path MERGE_EMPTY_LOCATION_FOLDER \u003d new File(CsvParserTest.class.getClassLoader()"
+        "content": "    private static final Path AUTHOR_CONFIG_COMMAS_AND_DOUBLEQUOTES_FILE \u003d new File(CsvParserTest.class.getClassLoader()"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "            .getResource(\"CsvParserTest/repoconfig_merge_empty_location_test\").getFile()).toPath();"
+        "content": "            .getResource(\"CsvParserTest/authorconfig_commasAndDoubleQuotes_test.csv\").getFile()).toPath();"
       },
       {
         "lineNumber": 55,
         "author": {
-          "gitId": "-"
+          "gitId": "eugenepeh"
         },
-        "content": "    private static final Path GROUP_CONFIG_MULTI_LOCATION_FILE \u003d new File(CsvParserTest.class.getClassLoader()"
+        "content": "    private static final Path AUTHOR_CONFIG_MULTIPLE_EMAILS_FILE \u003d new File(CsvParserTest.class.getClassLoader()"
       },
       {
         "lineNumber": 56,
         "author": {
-          "gitId": "-"
+          "gitId": "eugenepeh"
         },
-        "content": "            .getResource(\"CsvParserTest/groupconfig_multipleLocation_test.csv\").getFile()).toPath();"
+        "content": "            .getResource(\"CsvParserTest/authorconfig_multipleEmails_test.csv\").getFile()).toPath();"
       },
       {
         "lineNumber": 57,
         "author": {
-          "gitId": "-"
+          "gitId": "eugenepeh"
         },
-        "content": "    private static final Path GROUP_CONFIG_EMPTY_LOCATION_FILE \u003d new File(CsvParserTest.class.getClassLoader()"
+        "content": "    private static final Path AUTHOR_CONFIG_INVALID_LOCATION \u003d new File(CsvParserTest.class.getClassLoader()"
       },
       {
         "lineNumber": 58,
         "author": {
-          "gitId": "-"
+          "gitId": "eugenepeh"
         },
-        "content": "            .getResource(\"CsvParserTest/groupconfig_emptyLocation_test.csv\").getFile()).toPath();"
+        "content": "            .getResource(\"CsvParserTest/authorconfig_invalidLocation_test.csv\").getFile()).toPath();"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final Path GROUP_CONFIG_INVALID_LOCATION_FILE \u003d new File(CsvParserTest.class.getClassLoader()"
+        "content": "    private static final Path MERGE_EMPTY_LOCATION_FOLDER \u003d new File(CsvParserTest.class.getClassLoader()"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "            .getResource(\"CsvParserTest/groupconfig_invalidLocation_test.csv\").getFile()).toPath();"
+        "content": "            .getResource(\"CsvParserTest/repoconfig_merge_empty_location_test\").getFile()).toPath();"
       },
       {
         "lineNumber": 61,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "    private static final Path GROUP_CONFIG_MULTI_LOCATION_FILE \u003d new File(CsvParserTest.class.getClassLoader()"
       },
       {
         "lineNumber": 62,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "    private static final String TEST_REPO_BETA_LOCATION \u003d \"https://github.com/reposense/testrepo-Beta.git\";"
+        "content": "            .getResource(\"CsvParserTest/groupconfig_multipleLocation_test.csv\").getFile()).toPath();"
       },
       {
         "lineNumber": 63,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "    private static final String TEST_REPO_BETA_BRANCH \u003d \"master\";"
+        "content": "    private static final Path GROUP_CONFIG_EMPTY_LOCATION_FILE \u003d new File(CsvParserTest.class.getClassLoader()"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final List\u003cFileType\u003e TEST_REPO_BETA_GROUPS \u003d Arrays.asList("
+        "content": "            .getResource(\"CsvParserTest/groupconfig_emptyLocation_test.csv\").getFile()).toPath();"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": "            new FileType(\"Code\", Arrays.asList(\"**/*.java\", \"**/*.py\")),"
+        "content": "    private static final Path GROUP_CONFIG_INVALID_LOCATION_FILE \u003d new File(CsvParserTest.class.getClassLoader()"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": "            new FileType(\"Docs\", Collections.singletonList(\"docs/**\")));"
+        "content": "            .getResource(\"CsvParserTest/groupconfig_invalidLocation_test.csv\").getFile()).toPath();"
       },
       {
         "lineNumber": 67,
@@ -84015,128 +84211,128 @@
       {
         "lineNumber": 68,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "    private static final String TEST_REPO_DELTA_LOCATION \u003d \"https://github.com/reposense/testrepo-Delta.git\";"
+        "content": "    private static final String TEST_REPO_BETA_LOCATION \u003d \"https://github.com/reposense/testrepo-Beta.git\";"
       },
       {
         "lineNumber": 69,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "    private static final String TEST_REPO_DELTA_BRANCH \u003d \"HEAD\";"
+        "content": "    private static final String TEST_REPO_BETA_BRANCH \u003d \"master\";"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final List\u003cFileType\u003e TEST_REPO_DELTA_FORMATS \u003d"
+        "content": "    private static final List\u003cFileType\u003e TEST_REPO_BETA_GROUPS \u003d Arrays.asList("
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": "            FileType.convertFormatStringsToFileTypes(Arrays.asList(\"java\", \"fxml\"));"
+        "content": "            new FileType(\"Code\", Arrays.asList(\"**/*.java\", \"**/*.py\")),"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final List\u003cFileType\u003e TEST_REPO_DELTA_GROUPS \u003d Arrays.asList("
+        "content": "            new FileType(\"Docs\", Collections.singletonList(\"docs/**\")));"
       },
       {
         "lineNumber": 73,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "            new FileType(\"Main\", Collections.singletonList(\"src/main/**\")),"
+        "content": ""
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "            new FileType(\"Test\", Arrays.asList(\"src/test/**\", \"src/systest/**\")));"
+        "content": "    private static final String TEST_REPO_DELTA_LOCATION \u003d \"https://github.com/reposense/testrepo-Delta.git\";"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private static final String TEST_REPO_DELTA_BRANCH \u003d \"HEAD\";"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final List\u003cFileType\u003e TEST_REPO_BETA_CONFIG_FORMATS \u003d"
+        "content": "    private static final List\u003cFileType\u003e TEST_REPO_DELTA_FORMATS \u003d"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "            FileType.convertFormatStringsToFileTypes(Arrays.asList(\"java\", \"adoc\", \"md\"));"
+        "content": "            FileType.convertFormatStringsToFileTypes(Arrays.asList(\"java\", \"fxml\"));"
       },
       {
         "lineNumber": 78,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": "    private static final List\u003cString\u003e TEST_REPO_BETA_CONFIG_IGNORED_COMMITS \u003d"
+        "content": "    private static final List\u003cFileType\u003e TEST_REPO_DELTA_GROUPS \u003d Arrays.asList("
       },
       {
         "lineNumber": 79,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": "            Arrays.asList(\"abcde12345\", \"67890fdecba\");"
+        "content": "            new FileType(\"Main\", Collections.singletonList(\"src/main/**\")),"
       },
       {
         "lineNumber": 80,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "            new FileType(\"Test\", Arrays.asList(\"src/test/**\", \"src/systest/**\")));"
       },
       {
         "lineNumber": 81,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "    private static final Author FIRST_AUTHOR \u003d new Author(\"nbriannl\");"
+        "content": ""
       },
       {
         "lineNumber": 82,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "    private static final Author SECOND_AUTHOR \u003d new Author(\"zacharytang\");"
+        "content": "    private static final List\u003cFileType\u003e TEST_REPO_BETA_CONFIG_FORMATS \u003d"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final List\u003cString\u003e SECOND_AUTHOR_ALIASES \u003d Arrays.asList(\"Zachary Tang\");"
+        "content": "            FileType.convertFormatStringsToFileTypes(Arrays.asList(\"java\", \"adoc\", \"md\"));"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "yamidark"
         },
-        "content": "    private static final List\u003cAuthor\u003e AUTHOR_CONFIG_NO_SPECIAL_CHARACTER_AUTHORS \u003d"
+        "content": "    private static final List\u003cString\u003e TEST_REPO_BETA_CONFIG_IGNORED_COMMITS \u003d"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "yamidark"
         },
-        "content": "            Arrays.asList(FIRST_AUTHOR, SECOND_AUTHOR);"
+        "content": "            Arrays.asList(\"abcde12345\", \"67890fdecba\");"
       },
       {
         "lineNumber": 86,
@@ -84148,338 +84344,338 @@
       {
         "lineNumber": 87,
         "author": {
+          "gitId": "-"
+        },
+        "content": "    private static final String TEST_REPO_CHARLIE_LOCATION \u003d \"https://github.com/reposense/testrepo-Charlie.git\";"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private static final String TEST_REPO_CHARLIE_BRANCH \u003d \"HEAD\";"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "yong24s"
+        },
+        "content": "    private static final Author FIRST_AUTHOR \u003d new Author(\"nbriannl\");"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "yong24s"
+        },
+        "content": "    private static final Author SECOND_AUTHOR \u003d new Author(\"zacharytang\");"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private static final List\u003cString\u003e SECOND_AUTHOR_ALIASES \u003d Arrays.asList(\"Zachary Tang\");"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "    private static final List\u003cAuthor\u003e AUTHOR_CONFIG_NO_SPECIAL_CHARACTER_AUTHORS \u003d"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "            Arrays.asList(FIRST_AUTHOR, SECOND_AUTHOR);"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 96,
+        "author": {
           "gitId": "yamidark"
         },
         "content": "    private static final Author FIRST_SPECIAL_CHARACTER_AUTHOR \u003d new Author(\"‘Processed�‘Cooked�\");"
       },
       {
-        "lineNumber": 88,
+        "lineNumber": 97,
         "author": {
           "gitId": "yamidark"
         },
         "content": "    private static final Author SECOND_SPECIAL_CHARACTER_AUTHOR \u003d new Author(\"(codeeong)\");"
       },
       {
-        "lineNumber": 89,
+        "lineNumber": 98,
         "author": {
           "gitId": "yamidark"
         },
         "content": "    private static final Author THIRD_SPECIAL_CHARACTER_AUTHOR \u003d new Author(\"^:jordancjq;$\");"
       },
       {
-        "lineNumber": 90,
+        "lineNumber": 99,
         "author": {
           "gitId": "yamidark"
         },
         "content": "    private static final List\u003cAuthor\u003e AUTHOR_CONFIG_SPECIAL_CHARACTER_AUTHORS \u003d Arrays.asList("
       },
       {
-        "lineNumber": 91,
+        "lineNumber": 100,
         "author": {
           "gitId": "yamidark"
         },
         "content": "            FIRST_SPECIAL_CHARACTER_AUTHOR, SECOND_SPECIAL_CHARACTER_AUTHOR, THIRD_SPECIAL_CHARACTER_AUTHOR);"
       },
       {
-        "lineNumber": 92,
+        "lineNumber": 101,
         "author": {
           "gitId": "yong24s"
         },
         "content": ""
-      },
-      {
-        "lineNumber": 93,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    private static final Author FIRST_COMMAS_AND_DOUBLEQUOTES_AUTHOR \u003d new Author(\"ProcessedCooked\");"
-      },
-      {
-        "lineNumber": 94,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    private static final Author SECOND_COMMAS_AND_DOUBLEQUOTES_AUTHOR \u003d new Author(\"codeeong\");"
-      },
-      {
-        "lineNumber": 95,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    private static final Author THIRD_COMMAS_AND_DOUBLEQUOTES_AUTHOR \u003d new Author(\"jordancjq\");"
-      },
-      {
-        "lineNumber": 96,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    private static final String FIRST_COMMAS_AND_DOUBLEQUOTES_DISPLAY_NAME \u003d \"Tay Fan Gao, Douya\";"
-      },
-      {
-        "lineNumber": 97,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    private static final String SECOND_COMMAS_AND_DOUBLEQUOTES_DISPLAY_NAME \u003d \"\\\"\\\"Tora, S/O,\\\" Doyua, T.\\\"\";"
-      },
-      {
-        "lineNumber": 98,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    private static final String THIRD_COMMAS_AND_DOUBLEQUOTES_DISPLAY_NAME \u003d \"jordancjq\";"
-      },
-      {
-        "lineNumber": 99,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    private static final List\u003cString\u003e FIRST_COMMAS_AND_DOUBLEQUOTES_ALIAS \u003d"
-      },
-      {
-        "lineNumber": 100,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            Collections.singletonList(\"Tay Fan Gao, Douya \\\"SOC, Y2S1\\\"\");"
-      },
-      {
-        "lineNumber": 101,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    private static final List\u003cString\u003e SECOND_COMMAS_AND_DOUBLEQUOTES_ALIAS \u003d Collections.emptyList();"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final List\u003cString\u003e THIRD_COMMAS_AND_DOUBLEQUOTES_ALIAS \u003d"
+        "content": "    private static final Author FIRST_COMMAS_AND_DOUBLEQUOTES_AUTHOR \u003d new Author(\"ProcessedCooked\");"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": "            Arrays.asList(\"Borex T\\\"ony Tong\");"
+        "content": "    private static final Author SECOND_COMMAS_AND_DOUBLEQUOTES_AUTHOR \u003d new Author(\"codeeong\");"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final Map\u003cAuthor, List\u003cString\u003e\u003e AUTHOR_ALIAS_COMMAS_AND_DOUBLE_QUOTES_MAP \u003d"
+        "content": "    private static final Author THIRD_COMMAS_AND_DOUBLEQUOTES_AUTHOR \u003d new Author(\"jordancjq\");"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": "            Stream.of(new Object[][]{"
+        "content": "    private static final String FIRST_COMMAS_AND_DOUBLEQUOTES_DISPLAY_NAME \u003d \"Tay Fan Gao, Douya\";"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": "                    {FIRST_COMMAS_AND_DOUBLEQUOTES_AUTHOR, FIRST_COMMAS_AND_DOUBLEQUOTES_ALIAS},"
+        "content": "    private static final String SECOND_COMMAS_AND_DOUBLEQUOTES_DISPLAY_NAME \u003d \"\\\"\\\"Tora, S/O,\\\" Doyua, T.\\\"\";"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": "                    {SECOND_COMMAS_AND_DOUBLEQUOTES_AUTHOR, SECOND_COMMAS_AND_DOUBLEQUOTES_ALIAS},"
+        "content": "    private static final String THIRD_COMMAS_AND_DOUBLEQUOTES_DISPLAY_NAME \u003d \"jordancjq\";"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "                    {THIRD_COMMAS_AND_DOUBLEQUOTES_AUTHOR, THIRD_COMMAS_AND_DOUBLEQUOTES_ALIAS}"
+        "content": "    private static final List\u003cString\u003e FIRST_COMMAS_AND_DOUBLEQUOTES_ALIAS \u003d"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "            }).collect(Collectors.toMap(data -\u003e (Author) data[0], data -\u003e (List\u003cString\u003e) data[1]));"
+        "content": "            Collections.singletonList(\"Tay Fan Gao, Douya \\\"SOC, Y2S1\\\"\");"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final Map\u003cAuthor, String\u003e AUTHOR_DISPLAY_NAME_COMMAS_AND_DOUBLE_QUOTES_MAP \u003d"
+        "content": "    private static final List\u003cString\u003e SECOND_COMMAS_AND_DOUBLEQUOTES_ALIAS \u003d Collections.emptyList();"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "            Stream.of(new Object[][]{"
+        "content": "    private static final List\u003cString\u003e THIRD_COMMAS_AND_DOUBLEQUOTES_ALIAS \u003d"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": "                    {FIRST_COMMAS_AND_DOUBLEQUOTES_AUTHOR, FIRST_COMMAS_AND_DOUBLEQUOTES_DISPLAY_NAME},"
+        "content": "            Arrays.asList(\"Borex T\\\"ony Tong\");"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": "                    {SECOND_COMMAS_AND_DOUBLEQUOTES_AUTHOR, SECOND_COMMAS_AND_DOUBLEQUOTES_DISPLAY_NAME},"
+        "content": "    private static final Map\u003cAuthor, List\u003cString\u003e\u003e AUTHOR_ALIAS_COMMAS_AND_DOUBLE_QUOTES_MAP \u003d"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
-        "content": "                    {THIRD_COMMAS_AND_DOUBLEQUOTES_AUTHOR, THIRD_COMMAS_AND_DOUBLEQUOTES_DISPLAY_NAME}"
+        "content": "            Stream.of(new Object[][]{"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": "            }).collect(Collectors.toMap(data -\u003e (Author) data[0], data -\u003e (String) data[1]));"
+        "content": "                    {FIRST_COMMAS_AND_DOUBLEQUOTES_AUTHOR, FIRST_COMMAS_AND_DOUBLEQUOTES_ALIAS},"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "                    {SECOND_COMMAS_AND_DOUBLEQUOTES_AUTHOR, SECOND_COMMAS_AND_DOUBLEQUOTES_ALIAS},"
       },
       {
         "lineNumber": 117,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "    private static final List\u003cString\u003e REPO_LEVEL_GLOB_LIST \u003d Arrays.asList(\"collated**\");"
+        "content": "                    {THIRD_COMMAS_AND_DOUBLEQUOTES_AUTHOR, THIRD_COMMAS_AND_DOUBLEQUOTES_ALIAS}"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final List\u003cString\u003e FIRST_AUTHOR_GLOB_LIST \u003d Arrays.asList(\"**.java\", \"collated**\");"
+        "content": "            }).collect(Collectors.toMap(data -\u003e (Author) data[0], data -\u003e (List\u003cString\u003e) data[1]));"
       },
       {
         "lineNumber": 119,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "-"
         },
-        "content": "    private static final List\u003cString\u003e FIRST_AUTHOR_EMAIL_LIST \u003d"
+        "content": "    private static final Map\u003cAuthor, String\u003e AUTHOR_DISPLAY_NAME_COMMAS_AND_DOUBLE_QUOTES_MAP \u003d"
       },
       {
         "lineNumber": 120,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "-"
         },
-        "content": "            Arrays.asList(\"nbr@example.com\", \"nbriannl@test.net\", \"nbriannl@users.noreply.github.com\");"
+        "content": "            Stream.of(new Object[][]{"
       },
       {
         "lineNumber": 121,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "                    {FIRST_COMMAS_AND_DOUBLEQUOTES_AUTHOR, FIRST_COMMAS_AND_DOUBLEQUOTES_DISPLAY_NAME},"
       },
       {
         "lineNumber": 122,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "                    {SECOND_COMMAS_AND_DOUBLEQUOTES_AUTHOR, SECOND_COMMAS_AND_DOUBLEQUOTES_DISPLAY_NAME},"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void repoConfig_noSpecialCharacter_success() throws IOException, InvalidLocationException {"
+        "content": "                    {THIRD_COMMAS_AND_DOUBLEQUOTES_AUTHOR, THIRD_COMMAS_AND_DOUBLEQUOTES_DISPLAY_NAME}"
       },
       {
         "lineNumber": 124,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": "        RepoConfigCsvParser repoConfigCsvParser \u003d new RepoConfigCsvParser(REPO_CONFIG_NO_SPECIAL_CHARACTER_FILE);"
+        "content": "            }).collect(Collectors.toMap(data -\u003e (Author) data[0], data -\u003e (String) data[1]));"
       },
       {
         "lineNumber": 125,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": "        List\u003cRepoConfiguration\u003e configs \u003d repoConfigCsvParser.parse();"
+        "content": ""
       },
       {
         "lineNumber": 126,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "yong24s"
         },
-        "content": ""
+        "content": "    private static final List\u003cString\u003e REPO_LEVEL_GLOB_LIST \u003d Arrays.asList(\"collated**\");"
       },
       {
         "lineNumber": 127,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": "        Assert.assertEquals(1, configs.size());"
+        "content": "    private static final List\u003cString\u003e FIRST_AUTHOR_GLOB_LIST \u003d Arrays.asList(\"**.java\", \"collated**\");"
       },
       {
         "lineNumber": 128,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "eugenepeh"
         },
-        "content": ""
+        "content": "    private static final List\u003cString\u003e FIRST_AUTHOR_EMAIL_LIST \u003d"
       },
       {
         "lineNumber": 129,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "eugenepeh"
         },
-        "content": "        RepoConfiguration config \u003d configs.get(0);"
+        "content": "            Arrays.asList(\"nbr@example.com\", \"nbriannl@test.net\", \"nbriannl@users.noreply.github.com\");"
       },
       {
         "lineNumber": 130,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "yong24s"
         },
         "content": ""
       },
       {
         "lineNumber": 131,
         "author": {
-          "gitId": "-"
+          "gitId": "yamidark"
         },
-        "content": "        Assert.assertEquals(new RepoLocation(TEST_REPO_BETA_LOCATION), config.getLocation());"
+        "content": "    @Test"
       },
       {
         "lineNumber": 132,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": "        Assert.assertEquals(TEST_REPO_BETA_BRANCH, config.getBranch());"
+        "content": "    public void repoConfig_noSpecialCharacter_success() throws IOException, InvalidLocationException {"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "yamidark"
         },
-        "content": ""
+        "content": "        RepoConfigCsvParser repoConfigCsvParser \u003d new RepoConfigCsvParser(REPO_CONFIG_NO_SPECIAL_CHARACTER_FILE);"
       },
       {
         "lineNumber": 134,
         "author": {
-          "gitId": "-"
+          "gitId": "yamidark"
         },
-        "content": "        Assert.assertEquals(TEST_REPO_BETA_CONFIG_FORMATS, config.getFileTypeManager().getFormats());"
+        "content": "        List\u003cRepoConfiguration\u003e configs \u003d repoConfigCsvParser.parse();"
       },
       {
         "lineNumber": 135,
@@ -84493,7 +84689,7 @@
         "author": {
           "gitId": "yamidark"
         },
-        "content": "        Assert.assertTrue(config.isStandaloneConfigIgnored());"
+        "content": "        Assert.assertEquals(1, configs.size());"
       },
       {
         "lineNumber": 137,
@@ -84505,329 +84701,329 @@
       {
         "lineNumber": 138,
         "author": {
-          "gitId": "-"
+          "gitId": "yamidark"
         },
-        "content": "        Assert.assertEquals(config.getIgnoreCommitList(),"
+        "content": "        RepoConfiguration config \u003d configs.get(0);"
       },
       {
         "lineNumber": 139,
         "author": {
-          "gitId": "-"
+          "gitId": "yamidark"
         },
-        "content": "                CommitHash.convertStringsToCommits(TEST_REPO_BETA_CONFIG_IGNORED_COMMITS));"
+        "content": ""
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": ""
-      },
-      {
-        "lineNumber": 141,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        Assert.assertFalse(config.isFormatsOverriding());"
-      },
-      {
-        "lineNumber": 142,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        Assert.assertFalse(config.isIgnoreGlobListOverriding());"
-      },
-      {
-        "lineNumber": 143,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        Assert.assertFalse(config.isIgnoreCommitListOverriding());"
-      },
-      {
-        "lineNumber": 144,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 145,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 146,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "    @Test"
-      },
-      {
-        "lineNumber": 147,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    public void authorConfig_noSpecialCharacter_success() throws IOException, InvalidLocationException {"
-      },
-      {
-        "lineNumber": 148,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "        AuthorConfigCsvParser authorConfigCsvParser \u003d"
-      },
-      {
-        "lineNumber": 149,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "                new AuthorConfigCsvParser(AUTHOR_CONFIG_NO_SPECIAL_CHARACTER_FILE);"
-      },
-      {
-        "lineNumber": 150,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        List\u003cAuthorConfiguration\u003e configs \u003d authorConfigCsvParser.parse();"
-      },
-      {
-        "lineNumber": 151,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 152,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "        Assert.assertEquals(1, configs.size());"
-      },
-      {
-        "lineNumber": 153,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 154,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        AuthorConfiguration config \u003d configs.get(0);"
-      },
-      {
-        "lineNumber": 155,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 156,
-        "author": {
-          "gitId": "-"
-        },
         "content": "        Assert.assertEquals(new RepoLocation(TEST_REPO_BETA_LOCATION), config.getLocation());"
       },
       {
-        "lineNumber": 157,
+        "lineNumber": 141,
         "author": {
           "gitId": "yamidark"
         },
         "content": "        Assert.assertEquals(TEST_REPO_BETA_BRANCH, config.getBranch());"
       },
       {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertEquals(TEST_REPO_BETA_CONFIG_FORMATS, config.getFileTypeManager().getFormats());"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "        Assert.assertTrue(config.isStandaloneConfigIgnored());"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertEquals(config.getIgnoreCommitList(),"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                CommitHash.convertStringsToCommits(TEST_REPO_BETA_CONFIG_IGNORED_COMMITS));"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertFalse(config.isFormatsOverriding());"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertFalse(config.isIgnoreGlobListOverriding());"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertFalse(config.isIgnoreCommitListOverriding());"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void authorConfig_noSpecialCharacter_success() throws IOException, InvalidLocationException {"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "        AuthorConfigCsvParser authorConfigCsvParser \u003d"
+      },
+      {
         "lineNumber": 158,
         "author": {
           "gitId": "yamidark"
         },
-        "content": ""
+        "content": "                new AuthorConfigCsvParser(AUTHOR_CONFIG_NO_SPECIAL_CHARACTER_FILE);"
       },
       {
         "lineNumber": 159,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "        Assert.assertEquals(AUTHOR_CONFIG_NO_SPECIAL_CHARACTER_AUTHORS, config.getAuthorList());"
-      },
-      {
-        "lineNumber": 160,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 161,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 162,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    @Test"
-      },
-      {
-        "lineNumber": 163,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    public void authorConfig_emptyLocation_success() throws ParseException, IOException {"
-      },
-      {
-        "lineNumber": 164,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        AuthorConfiguration expectedConfig \u003d new AuthorConfiguration(new RepoLocation(\"\"));"
-      },
-      {
-        "lineNumber": 165,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 166,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        AuthorConfigCsvParser authorConfigCsvParser \u003d new AuthorConfigCsvParser(AUTHOR_CONFIG_EMPTY_LOCATION_FILE);"
-      },
-      {
-        "lineNumber": 167,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        List\u003cAuthorConfiguration\u003e authorConfigs \u003d authorConfigCsvParser.parse();"
-      },
-      {
-        "lineNumber": 168,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        AuthorConfiguration authorConfig \u003d authorConfigs.get(0);"
-      },
-      {
-        "lineNumber": 169,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 170,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        Assert.assertEquals(1, authorConfigs.size());"
-      },
-      {
-        "lineNumber": 171,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        Assert.assertEquals(expectedConfig.getLocation(), authorConfig.getLocation());"
-      },
-      {
-        "lineNumber": 172,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        Assert.assertEquals(expectedConfig.getBranch(), authorConfig.getBranch());"
-      },
-      {
-        "lineNumber": 173,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        Assert.assertEquals(AUTHOR_CONFIG_NO_SPECIAL_CHARACTER_AUTHORS, authorConfig.getAuthorList());"
-      },
-      {
-        "lineNumber": 174,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 175,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 176,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "    @Test"
-      },
-      {
-        "lineNumber": 177,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    public void authorConfig_specialCharacter_success() throws IOException, InvalidLocationException {"
-      },
-      {
-        "lineNumber": 178,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "        AuthorConfigCsvParser authorConfigCsvParser \u003d new AuthorConfigCsvParser(AUTHOR_CONFIG_SPECIAL_CHARACTER_FILE);"
-      },
-      {
-        "lineNumber": 179,
         "author": {
           "gitId": "-"
         },
         "content": "        List\u003cAuthorConfiguration\u003e configs \u003d authorConfigCsvParser.parse();"
       },
       {
-        "lineNumber": 180,
+        "lineNumber": 160,
         "author": {
           "gitId": "yamidark"
         },
         "content": ""
       },
       {
-        "lineNumber": 181,
+        "lineNumber": 161,
         "author": {
           "gitId": "yamidark"
         },
         "content": "        Assert.assertEquals(1, configs.size());"
       },
       {
-        "lineNumber": 182,
+        "lineNumber": 162,
         "author": {
           "gitId": "yamidark"
         },
         "content": ""
       },
       {
-        "lineNumber": 183,
+        "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
         "content": "        AuthorConfiguration config \u003d configs.get(0);"
       },
       {
-        "lineNumber": 184,
+        "lineNumber": 164,
         "author": {
           "gitId": "yamidark"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertEquals(new RepoLocation(TEST_REPO_BETA_LOCATION), config.getLocation());"
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "        Assert.assertEquals(TEST_REPO_BETA_BRANCH, config.getBranch());"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "        Assert.assertEquals(AUTHOR_CONFIG_NO_SPECIAL_CHARACTER_AUTHORS, config.getAuthorList());"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void authorConfig_emptyLocation_success() throws ParseException, IOException {"
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        AuthorConfiguration expectedConfig \u003d new AuthorConfiguration(new RepoLocation(\"\"));"
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        AuthorConfigCsvParser authorConfigCsvParser \u003d new AuthorConfigCsvParser(AUTHOR_CONFIG_EMPTY_LOCATION_FILE);"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        List\u003cAuthorConfiguration\u003e authorConfigs \u003d authorConfigCsvParser.parse();"
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        AuthorConfiguration authorConfig \u003d authorConfigs.get(0);"
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertEquals(1, authorConfigs.size());"
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertEquals(expectedConfig.getLocation(), authorConfig.getLocation());"
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertEquals(expectedConfig.getBranch(), authorConfig.getBranch());"
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertEquals(AUTHOR_CONFIG_NO_SPECIAL_CHARACTER_AUTHORS, authorConfig.getAuthorList());"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "-"
         },
         "content": ""
       },
@@ -84836,63 +85032,63 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertEquals(new RepoLocation(TEST_REPO_BETA_LOCATION), config.getLocation());"
+        "content": "    @Test (expected \u003d IOException.class)"
       },
       {
         "lineNumber": 186,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": "        Assert.assertEquals(TEST_REPO_BETA_BRANCH, config.getBranch());"
+        "content": "    public void authorConfig_emptyConfig_throwsIoException() throws IOException {"
       },
       {
         "lineNumber": 187,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "        AuthorConfigCsvParser authorConfigCsvParser \u003d new AuthorConfigCsvParser(AUTHOR_CONFIG_EMPTY_CONFIG_FILE);"
       },
       {
         "lineNumber": 188,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": "        Assert.assertEquals(AUTHOR_CONFIG_SPECIAL_CHARACTER_AUTHORS, config.getAuthorList());"
+        "content": "        authorConfigCsvParser.parse();"
       },
       {
         "lineNumber": 189,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
         "content": "    }"
       },
       {
         "lineNumber": 190,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
         "content": ""
       },
       {
         "lineNumber": 191,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "yamidark"
         },
         "content": "    @Test"
       },
       {
         "lineNumber": 192,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "-"
         },
-        "content": "    public void authorConfig_multipleEmails_success() throws IOException {"
+        "content": "    public void authorConfig_specialCharacter_success() throws IOException, InvalidLocationException {"
       },
       {
         "lineNumber": 193,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "yamidark"
         },
-        "content": "        AuthorConfigCsvParser authorConfigCsvParser \u003d new AuthorConfigCsvParser(AUTHOR_CONFIG_MULTIPLE_EMAILS_FILE);"
+        "content": "        AuthorConfigCsvParser authorConfigCsvParser \u003d new AuthorConfigCsvParser(AUTHOR_CONFIG_SPECIAL_CHARACTER_FILE);"
       },
       {
         "lineNumber": 194,
@@ -84904,21 +85100,21 @@
       {
         "lineNumber": 195,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "yamidark"
         },
         "content": ""
       },
       {
         "lineNumber": 196,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "yamidark"
         },
         "content": "        Assert.assertEquals(1, configs.size());"
       },
       {
         "lineNumber": 197,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "yamidark"
         },
         "content": ""
       },
@@ -84932,275 +85128,275 @@
       {
         "lineNumber": 199,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "yamidark"
         },
         "content": ""
       },
       {
         "lineNumber": 200,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "-"
         },
-        "content": "        Author actualAuthor \u003d config.getAuthorList().get(0);"
+        "content": "        Assert.assertEquals(new RepoLocation(TEST_REPO_BETA_LOCATION), config.getLocation());"
       },
       {
         "lineNumber": 201,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "yamidark"
         },
-        "content": "        Assert.assertEquals(FIRST_AUTHOR_EMAIL_LIST.size(), actualAuthor.getEmails().size());"
+        "content": "        Assert.assertEquals(TEST_REPO_BETA_BRANCH, config.getBranch());"
       },
       {
         "lineNumber": 202,
         "author": {
-          "gitId": "eugenepeh"
-        },
-        "content": "        Assert.assertTrue(actualAuthor.getEmails().containsAll(FIRST_AUTHOR_EMAIL_LIST));"
-      },
-      {
-        "lineNumber": 203,
-        "author": {
-          "gitId": "eugenepeh"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 204,
-        "author": {
-          "gitId": "eugenepeh"
+          "gitId": "yamidark"
         },
         "content": ""
       },
       {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "        Assert.assertEquals(AUTHOR_CONFIG_SPECIAL_CHARACTER_AUTHORS, config.getAuthorList());"
+      },
+      {
+        "lineNumber": 204,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "    }"
+      },
+      {
         "lineNumber": 205,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "yamidark"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "eugenepeh"
         },
-        "content": "    public void authorConfig_invalidLocation_success() throws IOException {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 207,
         "author": {
           "gitId": "eugenepeh"
         },
-        "content": "        AuthorConfigCsvParser authorConfigCsvParser \u003d new AuthorConfigCsvParser(AUTHOR_CONFIG_INVALID_LOCATION);"
+        "content": "    public void authorConfig_multipleEmails_success() throws IOException {"
       },
       {
         "lineNumber": 208,
         "author": {
           "gitId": "eugenepeh"
         },
-        "content": "        List\u003cAuthorConfiguration\u003e configs \u003d authorConfigCsvParser.parse();"
+        "content": "        AuthorConfigCsvParser authorConfigCsvParser \u003d new AuthorConfigCsvParser(AUTHOR_CONFIG_MULTIPLE_EMAILS_FILE);"
       },
       {
         "lineNumber": 209,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "        List\u003cAuthorConfiguration\u003e configs \u003d authorConfigCsvParser.parse();"
       },
       {
         "lineNumber": 210,
         "author": {
           "gitId": "eugenepeh"
         },
-        "content": "        Assert.assertEquals(1, configs.size());"
+        "content": ""
       },
       {
         "lineNumber": 211,
         "author": {
           "gitId": "eugenepeh"
         },
-        "content": ""
+        "content": "        Assert.assertEquals(1, configs.size());"
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "eugenepeh"
         },
-        "content": "        AuthorConfiguration config \u003d configs.get(0);"
+        "content": ""
       },
       {
         "lineNumber": 213,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "        AuthorConfiguration config \u003d configs.get(0);"
       },
       {
         "lineNumber": 214,
         "author": {
           "gitId": "eugenepeh"
         },
-        "content": "        Assert.assertEquals(3, config.getAuthorList().size());"
+        "content": ""
       },
       {
         "lineNumber": 215,
         "author": {
           "gitId": "eugenepeh"
         },
-        "content": "    }"
+        "content": "        Author actualAuthor \u003d config.getAuthorList().get(0);"
       },
       {
         "lineNumber": 216,
         "author": {
           "gitId": "eugenepeh"
         },
-        "content": ""
+        "content": "        Assert.assertEquals(FIRST_AUTHOR_EMAIL_LIST.size(), actualAuthor.getEmails().size());"
       },
       {
         "lineNumber": 217,
         "author": {
-          "gitId": "-"
+          "gitId": "eugenepeh"
         },
-        "content": "    @Test"
+        "content": "        Assert.assertTrue(actualAuthor.getEmails().containsAll(FIRST_AUTHOR_EMAIL_LIST));"
       },
       {
         "lineNumber": 218,
         "author": {
-          "gitId": "-"
-        },
-        "content": "    public void groupConfig_invalidLocation_success() throws IOException {"
-      },
-      {
-        "lineNumber": 219,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        GroupConfigCsvParser groupConfigCsvParser \u003d new GroupConfigCsvParser(GROUP_CONFIG_INVALID_LOCATION_FILE);"
-      },
-      {
-        "lineNumber": 220,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        List\u003cGroupConfiguration\u003e groupConfigs \u003d groupConfigCsvParser.parse();"
-      },
-      {
-        "lineNumber": 221,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 222,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        Assert.assertEquals(1, groupConfigs.size());"
-      },
-      {
-        "lineNumber": 223,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 224,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        GroupConfiguration actualConfig \u003d groupConfigs.get(0);"
-      },
-      {
-        "lineNumber": 225,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        Assert.assertEquals(2, actualConfig.getGroupsList().size());"
-      },
-      {
-        "lineNumber": 226,
-        "author": {
-          "gitId": "-"
+          "gitId": "eugenepeh"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 227,
+        "lineNumber": 219,
         "author": {
-          "gitId": "-"
+          "gitId": "eugenepeh"
         },
         "content": ""
       },
       {
-        "lineNumber": 228,
+        "lineNumber": 220,
         "author": {
-          "gitId": "-"
+          "gitId": "eugenepeh"
         },
         "content": "    @Test"
       },
       {
+        "lineNumber": 221,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "    public void authorConfig_invalidLocation_success() throws IOException {"
+      },
+      {
+        "lineNumber": 222,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "        AuthorConfigCsvParser authorConfigCsvParser \u003d new AuthorConfigCsvParser(AUTHOR_CONFIG_INVALID_LOCATION);"
+      },
+      {
+        "lineNumber": 223,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "        List\u003cAuthorConfiguration\u003e configs \u003d authorConfigCsvParser.parse();"
+      },
+      {
+        "lineNumber": 224,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 225,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "        Assert.assertEquals(1, configs.size());"
+      },
+      {
+        "lineNumber": 226,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 227,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "        AuthorConfiguration config \u003d configs.get(0);"
+      },
+      {
+        "lineNumber": 228,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
         "lineNumber": 229,
         "author": {
-          "gitId": "-"
+          "gitId": "eugenepeh"
         },
-        "content": "    public void groupConfig_emptyLocation_success() throws IOException {"
+        "content": "        Assert.assertEquals(3, config.getAuthorList().size());"
       },
       {
         "lineNumber": 230,
         "author": {
-          "gitId": "-"
+          "gitId": "eugenepeh"
         },
-        "content": "        GroupConfigCsvParser groupConfigCsvParser \u003d new GroupConfigCsvParser(GROUP_CONFIG_EMPTY_LOCATION_FILE);"
+        "content": "    }"
       },
       {
         "lineNumber": 231,
         "author": {
-          "gitId": "-"
+          "gitId": "eugenepeh"
         },
-        "content": "        List\u003cGroupConfiguration\u003e groupConfigs \u003d groupConfigCsvParser.parse();"
+        "content": ""
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Test"
       },
       {
         "lineNumber": 233,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertEquals(1, groupConfigs.size());"
+        "content": "    public void groupConfig_invalidLocation_success() throws IOException {"
       },
       {
         "lineNumber": 234,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        GroupConfigCsvParser groupConfigCsvParser \u003d new GroupConfigCsvParser(GROUP_CONFIG_INVALID_LOCATION_FILE);"
       },
       {
         "lineNumber": 235,
         "author": {
           "gitId": "-"
         },
-        "content": "        GroupConfiguration actualConfig \u003d groupConfigs.get(0);"
+        "content": "        List\u003cGroupConfiguration\u003e groupConfigs \u003d groupConfigCsvParser.parse();"
       },
       {
         "lineNumber": 236,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertEquals(2, actualConfig.getGroupsList().size());"
+        "content": ""
       },
       {
         "lineNumber": 237,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        Assert.assertEquals(1, groupConfigs.size());"
       },
       {
         "lineNumber": 238,
@@ -85214,70 +85410,70 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "        GroupConfiguration actualConfig \u003d groupConfigs.get(0);"
       },
       {
         "lineNumber": 240,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void groupConfig_multipleLocations_success() throws IOException {"
+        "content": "        Assert.assertEquals(2, actualConfig.getGroupsList().size());"
       },
       {
         "lineNumber": 241,
         "author": {
           "gitId": "-"
         },
-        "content": "        GroupConfigCsvParser groupConfigCsvParser \u003d new GroupConfigCsvParser(GROUP_CONFIG_MULTI_LOCATION_FILE);"
+        "content": "    }"
       },
       {
         "lineNumber": 242,
         "author": {
           "gitId": "-"
         },
-        "content": "        List\u003cGroupConfiguration\u003e groupConfigs \u003d groupConfigCsvParser.parse();"
+        "content": ""
       },
       {
         "lineNumber": 243,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Test"
       },
       {
         "lineNumber": 244,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertEquals(2, groupConfigs.size());"
+        "content": "    public void groupConfig_emptyLocation_success() throws IOException {"
       },
       {
         "lineNumber": 245,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        GroupConfigCsvParser groupConfigCsvParser \u003d new GroupConfigCsvParser(GROUP_CONFIG_EMPTY_LOCATION_FILE);"
       },
       {
         "lineNumber": 246,
         "author": {
           "gitId": "-"
         },
-        "content": "        GroupConfiguration actualBetaConfig \u003d groupConfigs.get(0);"
+        "content": "        List\u003cGroupConfiguration\u003e groupConfigs \u003d groupConfigCsvParser.parse();"
       },
       {
         "lineNumber": 247,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertEquals(TEST_REPO_BETA_LOCATION, actualBetaConfig.getLocation().toString());"
+        "content": ""
       },
       {
         "lineNumber": 248,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertEquals(TEST_REPO_BETA_GROUPS, actualBetaConfig.getGroupsList());"
+        "content": "        Assert.assertEquals(1, groupConfigs.size());"
       },
       {
         "lineNumber": 249,
@@ -85291,70 +85487,70 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        GroupConfiguration actualDeltaConfig \u003d groupConfigs.get(1);"
+        "content": "        GroupConfiguration actualConfig \u003d groupConfigs.get(0);"
       },
       {
         "lineNumber": 251,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertEquals(TEST_REPO_DELTA_LOCATION, actualDeltaConfig.getLocation().toString());"
+        "content": "        Assert.assertEquals(2, actualConfig.getGroupsList().size());"
       },
       {
         "lineNumber": 252,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertEquals(TEST_REPO_DELTA_GROUPS, actualDeltaConfig.getGroupsList());"
+        "content": "    }"
       },
       {
         "lineNumber": 253,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 254,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Test"
       },
       {
         "lineNumber": 255,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "    public void groupConfig_multipleLocations_success() throws IOException {"
       },
       {
         "lineNumber": 256,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parse_multipleColumnsWithCommasAndDoubleQuotes_success() throws IOException, InvalidLocationException {"
+        "content": "        GroupConfigCsvParser groupConfigCsvParser \u003d new GroupConfigCsvParser(GROUP_CONFIG_MULTI_LOCATION_FILE);"
       },
       {
         "lineNumber": 257,
         "author": {
           "gitId": "-"
         },
-        "content": "        AuthorConfigCsvParser authorConfigCsvParser \u003d"
+        "content": "        List\u003cGroupConfiguration\u003e groupConfigs \u003d groupConfigCsvParser.parse();"
       },
       {
         "lineNumber": 258,
         "author": {
           "gitId": "-"
         },
-        "content": "                new AuthorConfigCsvParser(AUTHOR_CONFIG_COMMAS_AND_DOUBLEQUOTES_FILE);"
+        "content": ""
       },
       {
         "lineNumber": 259,
         "author": {
           "gitId": "-"
         },
-        "content": "        List\u003cAuthorConfiguration\u003e configs \u003d authorConfigCsvParser.parse();"
+        "content": "        Assert.assertEquals(2, groupConfigs.size());"
       },
       {
         "lineNumber": 260,
@@ -85368,21 +85564,21 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertEquals(1, configs.size());"
+        "content": "        GroupConfiguration actualBetaConfig \u003d groupConfigs.get(0);"
       },
       {
         "lineNumber": 262,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        Assert.assertEquals(TEST_REPO_BETA_LOCATION, actualBetaConfig.getLocation().toString());"
       },
       {
         "lineNumber": 263,
         "author": {
           "gitId": "-"
         },
-        "content": "        AuthorConfiguration config \u003d configs.get(0);"
+        "content": "        Assert.assertEquals(TEST_REPO_BETA_GROUPS, actualBetaConfig.getGroupsList());"
       },
       {
         "lineNumber": 264,
@@ -85396,210 +85592,210 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertEquals(new RepoLocation(TEST_REPO_BETA_LOCATION), config.getLocation());"
+        "content": "        GroupConfiguration actualDeltaConfig \u003d groupConfigs.get(1);"
       },
       {
         "lineNumber": 266,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertEquals(TEST_REPO_BETA_BRANCH, config.getBranch());"
+        "content": "        Assert.assertEquals(TEST_REPO_DELTA_LOCATION, actualDeltaConfig.getLocation().toString());"
       },
       {
         "lineNumber": 267,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertEquals(AUTHOR_DISPLAY_NAME_COMMAS_AND_DOUBLE_QUOTES_MAP, config.getAuthorDisplayNameMap());"
+        "content": "        Assert.assertEquals(TEST_REPO_DELTA_GROUPS, actualDeltaConfig.getGroupsList());"
       },
       {
         "lineNumber": 268,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 269,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertEquals(AUTHOR_ALIAS_COMMAS_AND_DOUBLE_QUOTES_MAP.size(), config.getAuthorList().size());"
+        "content": ""
       },
       {
         "lineNumber": 270,
         "author": {
           "gitId": "-"
         },
-        "content": "        config.getAuthorList().forEach(author -\u003e {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 271,
         "author": {
           "gitId": "-"
         },
-        "content": "            Assert.assertEquals(AUTHOR_ALIAS_COMMAS_AND_DOUBLE_QUOTES_MAP.get(author), author.getAuthorAliases());"
+        "content": "    public void parse_multipleColumnsWithCommasAndDoubleQuotes_success() throws IOException, InvalidLocationException {"
       },
       {
         "lineNumber": 272,
         "author": {
           "gitId": "-"
         },
-        "content": "        });"
+        "content": "        AuthorConfigCsvParser authorConfigCsvParser \u003d"
       },
       {
         "lineNumber": 273,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "                new AuthorConfigCsvParser(AUTHOR_CONFIG_COMMAS_AND_DOUBLEQUOTES_FILE);"
       },
       {
         "lineNumber": 274,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        List\u003cAuthorConfiguration\u003e configs \u003d authorConfigCsvParser.parse();"
       },
       {
         "lineNumber": 275,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 276,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "-"
         },
-        "content": "    public void merge_twoRepoConfigs_success() throws ParseException, IOException, HelpScreenException {"
+        "content": "        Assert.assertEquals(1, configs.size());"
       },
       {
         "lineNumber": 277,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "        FIRST_AUTHOR.setIgnoreGlobList(FIRST_AUTHOR_GLOB_LIST);"
+        "content": ""
       },
       {
         "lineNumber": 278,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "        SECOND_AUTHOR.setIgnoreGlobList(REPO_LEVEL_GLOB_LIST);"
+        "content": "        AuthorConfiguration config \u003d configs.get(0);"
       },
       {
         "lineNumber": 279,
         "author": {
           "gitId": "-"
         },
-        "content": "        SECOND_AUTHOR.setAuthorAliases(SECOND_AUTHOR_ALIASES);"
+        "content": ""
       },
       {
         "lineNumber": 280,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "        Assert.assertEquals(new RepoLocation(TEST_REPO_BETA_LOCATION), config.getLocation());"
       },
       {
         "lineNumber": 281,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "        List\u003cAuthor\u003e expectedAuthors \u003d new ArrayList\u003c\u003e();"
+        "content": "        Assert.assertEquals(TEST_REPO_BETA_BRANCH, config.getBranch());"
       },
       {
         "lineNumber": 282,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "        expectedAuthors.add(FIRST_AUTHOR);"
+        "content": "        Assert.assertEquals(AUTHOR_DISPLAY_NAME_COMMAS_AND_DOUBLE_QUOTES_MAP, config.getAuthorDisplayNameMap());"
       },
       {
         "lineNumber": 283,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "        expectedAuthors.add(SECOND_AUTHOR);"
+        "content": ""
       },
       {
         "lineNumber": 284,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "        Assert.assertEquals(AUTHOR_ALIAS_COMMAS_AND_DOUBLE_QUOTES_MAP.size(), config.getAuthorList().size());"
       },
       {
         "lineNumber": 285,
         "author": {
           "gitId": "-"
         },
-        "content": "        RepoConfiguration expectedConfig \u003d new RepoConfiguration(new RepoLocation(TEST_REPO_BETA_LOCATION),"
+        "content": "        config.getAuthorList().forEach(author -\u003e {"
       },
       {
         "lineNumber": 286,
         "author": {
           "gitId": "-"
         },
-        "content": "                TEST_REPO_BETA_BRANCH);"
+        "content": "            Assert.assertEquals(AUTHOR_ALIAS_COMMAS_AND_DOUBLE_QUOTES_MAP.get(author), author.getAuthorAliases());"
       },
       {
         "lineNumber": 287,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "        expectedConfig.setAuthorList(expectedAuthors);"
+        "content": "        });"
       },
       {
         "lineNumber": 288,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "        expectedConfig.setAuthorDisplayName(FIRST_AUTHOR, \"Nbr\");"
+        "content": "    }"
       },
       {
         "lineNumber": 289,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "        expectedConfig.setAuthorDisplayName(SECOND_AUTHOR, \"Zac\");"
+        "content": ""
       },
       {
         "lineNumber": 290,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "yong24s"
         },
-        "content": "        expectedConfig.addAuthorEmailsAndAliasesMapEntry(SECOND_AUTHOR,  Arrays.asList(\"Zachary Tang\"));"
+        "content": "    @Test"
       },
       {
         "lineNumber": 291,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "eugenepeh"
         },
-        "content": "        expectedConfig.setIgnoreGlobList(REPO_LEVEL_GLOB_LIST);"
+        "content": "    public void merge_twoRepoConfigs_success() throws ParseException, IOException, HelpScreenException {"
       },
       {
         "lineNumber": 292,
         "author": {
           "gitId": "yong24s"
         },
-        "content": ""
+        "content": "        FIRST_AUTHOR.setIgnoreGlobList(FIRST_AUTHOR_GLOB_LIST);"
       },
       {
         "lineNumber": 293,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "        String input \u003d new InputBuilder().addConfig(TEST_CONFIG_FOLDER).build();"
+        "content": "        SECOND_AUTHOR.setIgnoreGlobList(REPO_LEVEL_GLOB_LIST);"
       },
       {
         "lineNumber": 294,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "        CliArguments cliArguments \u003d ArgsParser.parse(translateCommandline(input));"
+        "content": "        SECOND_AUTHOR.setAuthorAliases(SECOND_AUTHOR_ALIASES);"
       },
       {
         "lineNumber": 295,
@@ -85613,210 +85809,210 @@
         "author": {
           "gitId": "yong24s"
         },
-        "content": "        List\u003cRepoConfiguration\u003e actualConfigs \u003d"
+        "content": "        List\u003cAuthor\u003e expectedAuthors \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 297,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "                new RepoConfigCsvParser(((ConfigCliArguments) cliArguments).getRepoConfigFilePath()).parse();"
+        "content": "        expectedAuthors.add(FIRST_AUTHOR);"
       },
       {
         "lineNumber": 298,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "        List\u003cAuthorConfiguration\u003e authorConfigs \u003d"
+        "content": "        expectedAuthors.add(SECOND_AUTHOR);"
       },
       {
         "lineNumber": 299,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "                new AuthorConfigCsvParser(((ConfigCliArguments) cliArguments).getAuthorConfigFilePath()).parse();"
+        "content": ""
       },
       {
         "lineNumber": 300,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "        RepoConfiguration.merge(actualConfigs, authorConfigs);"
+        "content": "        RepoConfiguration expectedConfig \u003d new RepoConfiguration(new RepoLocation(TEST_REPO_BETA_LOCATION),"
       },
       {
         "lineNumber": 301,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "                TEST_REPO_BETA_BRANCH);"
       },
       {
         "lineNumber": 302,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "        Assert.assertEquals(1, actualConfigs.size());"
+        "content": "        expectedConfig.setAuthorList(expectedAuthors);"
       },
       {
         "lineNumber": 303,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "        TestUtil.compareRepoConfig(expectedConfig, actualConfigs.get(0));"
+        "content": "        expectedConfig.setAuthorDisplayName(FIRST_AUTHOR, \"Nbr\");"
       },
       {
         "lineNumber": 304,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "    }"
+        "content": "        expectedConfig.setAuthorDisplayName(SECOND_AUTHOR, \"Zac\");"
       },
       {
         "lineNumber": 305,
         "author": {
-          "gitId": "-"
+          "gitId": "eugenepeh"
         },
-        "content": ""
+        "content": "        expectedConfig.addAuthorEmailsAndAliasesMapEntry(SECOND_AUTHOR,  Arrays.asList(\"Zachary Tang\"));"
       },
       {
         "lineNumber": 306,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "    @Test"
+        "content": "        expectedConfig.setIgnoreGlobList(REPO_LEVEL_GLOB_LIST);"
       },
       {
         "lineNumber": 307,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "yong24s"
         },
-        "content": "    public void merge_emptyLocation_success() throws ParseException, IOException, HelpScreenException {"
+        "content": ""
       },
       {
         "lineNumber": 308,
         "author": {
           "gitId": "-"
         },
-        "content": "        FIRST_AUTHOR.setIgnoreGlobList(FIRST_AUTHOR_GLOB_LIST);"
+        "content": "        String input \u003d new InputBuilder().addConfig(TEST_CONFIG_FOLDER).build();"
       },
       {
         "lineNumber": 309,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "        SECOND_AUTHOR.setIgnoreGlobList(REPO_LEVEL_GLOB_LIST);"
+        "content": "        CliArguments cliArguments \u003d ArgsParser.parse(translateCommandline(input));"
       },
       {
         "lineNumber": 310,
         "author": {
-          "gitId": "-"
-        },
-        "content": "        SECOND_AUTHOR.setAuthorAliases(SECOND_AUTHOR_ALIASES);"
-      },
-      {
-        "lineNumber": 311,
-        "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
         "content": ""
       },
       {
+        "lineNumber": 311,
+        "author": {
+          "gitId": "yong24s"
+        },
+        "content": "        List\u003cRepoConfiguration\u003e actualConfigs \u003d"
+      },
+      {
         "lineNumber": 312,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "        List\u003cAuthor\u003e expectedBetaAuthors \u003d new ArrayList\u003c\u003e();"
+        "content": "                new RepoConfigCsvParser(((ConfigCliArguments) cliArguments).getRepoConfigFilePath()).parse();"
       },
       {
         "lineNumber": 313,
         "author": {
           "gitId": "-"
         },
-        "content": "        expectedBetaAuthors.add(SECOND_AUTHOR);"
+        "content": "        List\u003cAuthorConfiguration\u003e authorConfigs \u003d"
       },
       {
         "lineNumber": 314,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "        expectedBetaAuthors.add(FIRST_AUTHOR);"
+        "content": "                new AuthorConfigCsvParser(((ConfigCliArguments) cliArguments).getAuthorConfigFilePath()).parse();"
       },
       {
         "lineNumber": 315,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": ""
+        "content": "        RepoConfiguration.merge(actualConfigs, authorConfigs);"
       },
       {
         "lineNumber": 316,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "        List\u003cAuthor\u003e expectedDeltaAuthors \u003d new ArrayList\u003c\u003e();"
+        "content": ""
       },
       {
         "lineNumber": 317,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "        expectedDeltaAuthors.add(FIRST_AUTHOR);"
+        "content": "        Assert.assertEquals(1, actualConfigs.size());"
       },
       {
         "lineNumber": 318,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        TestUtil.compareRepoConfig(expectedConfig, actualConfigs.get(0));"
       },
       {
         "lineNumber": 319,
         "author": {
           "gitId": "-"
         },
-        "content": "        RepoConfiguration expectedBetaConfig \u003d"
+        "content": "    }"
       },
       {
         "lineNumber": 320,
         "author": {
           "gitId": "-"
         },
-        "content": "                new RepoConfiguration(new RepoLocation(TEST_REPO_BETA_LOCATION), TEST_REPO_BETA_BRANCH);"
+        "content": ""
       },
       {
         "lineNumber": 321,
         "author": {
           "gitId": "-"
         },
-        "content": "        expectedBetaConfig.setAuthorList(expectedBetaAuthors);"
+        "content": "    @Test"
       },
       {
         "lineNumber": 322,
         "author": {
-          "gitId": "-"
+          "gitId": "eugenepeh"
         },
-        "content": "        expectedBetaConfig.setAuthorDisplayName(FIRST_AUTHOR, \"Nbr\");"
+        "content": "    public void merge_emptyLocation_success() throws ParseException, IOException, HelpScreenException {"
       },
       {
         "lineNumber": 323,
         "author": {
           "gitId": "-"
         },
-        "content": "        expectedBetaConfig.setAuthorDisplayName(SECOND_AUTHOR, \"Zac\");"
+        "content": "        FIRST_AUTHOR.setIgnoreGlobList(FIRST_AUTHOR_GLOB_LIST);"
       },
       {
         "lineNumber": 324,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "-"
         },
-        "content": "        expectedBetaConfig.addAuthorEmailsAndAliasesMapEntry(SECOND_AUTHOR,  Arrays.asList(\"Zachary Tang\"));"
+        "content": "        SECOND_AUTHOR.setIgnoreGlobList(REPO_LEVEL_GLOB_LIST);"
       },
       {
         "lineNumber": 325,
         "author": {
           "gitId": "-"
         },
-        "content": "        expectedBetaConfig.setIgnoreGlobList(REPO_LEVEL_GLOB_LIST);"
+        "content": "        SECOND_AUTHOR.setAuthorAliases(SECOND_AUTHOR_ALIASES);"
       },
       {
         "lineNumber": 326,
@@ -85830,42 +86026,42 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        RepoConfiguration expectedDeltaConfig \u003d"
+        "content": "        List\u003cAuthor\u003e expectedBetaAuthors \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 328,
         "author": {
           "gitId": "-"
         },
-        "content": "                new RepoConfiguration(new RepoLocation(TEST_REPO_DELTA_LOCATION), TEST_REPO_DELTA_BRANCH);"
+        "content": "        expectedBetaAuthors.add(SECOND_AUTHOR);"
       },
       {
         "lineNumber": 329,
         "author": {
           "gitId": "-"
         },
-        "content": "        expectedDeltaConfig.setAuthorList(expectedDeltaAuthors);"
+        "content": "        expectedBetaAuthors.add(FIRST_AUTHOR);"
       },
       {
         "lineNumber": 330,
         "author": {
           "gitId": "-"
         },
-        "content": "        expectedDeltaConfig.setAuthorDisplayName(FIRST_AUTHOR, \"Nbr\");"
+        "content": ""
       },
       {
         "lineNumber": 331,
         "author": {
           "gitId": "-"
         },
-        "content": "        expectedDeltaConfig.setStandaloneConfigIgnored(true);"
+        "content": "        List\u003cAuthor\u003e expectedDeltaAuthors \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 332,
         "author": {
           "gitId": "-"
         },
-        "content": "        expectedDeltaConfig.setFormats(TEST_REPO_DELTA_FORMATS);"
+        "content": "        expectedDeltaAuthors.add(FIRST_AUTHOR);"
       },
       {
         "lineNumber": 333,
@@ -85879,189 +86075,189 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        List\u003cRepoConfiguration\u003e expectedConfigs \u003d new ArrayList\u003c\u003e();"
+        "content": "        RepoConfiguration expectedBetaConfig \u003d"
       },
       {
         "lineNumber": 335,
         "author": {
           "gitId": "-"
         },
-        "content": "        expectedConfigs.add(expectedBetaConfig);"
+        "content": "                new RepoConfiguration(new RepoLocation(TEST_REPO_BETA_LOCATION), TEST_REPO_BETA_BRANCH);"
       },
       {
         "lineNumber": 336,
         "author": {
           "gitId": "-"
         },
-        "content": "        expectedConfigs.add(expectedDeltaConfig);"
+        "content": "        expectedBetaConfig.setAuthorList(expectedBetaAuthors);"
       },
       {
         "lineNumber": 337,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        expectedBetaConfig.setAuthorDisplayName(FIRST_AUTHOR, \"Nbr\");"
       },
       {
         "lineNumber": 338,
         "author": {
           "gitId": "-"
         },
-        "content": "        String input \u003d new InputBuilder().addConfig(MERGE_EMPTY_LOCATION_FOLDER).build();"
+        "content": "        expectedBetaConfig.setAuthorDisplayName(SECOND_AUTHOR, \"Zac\");"
       },
       {
         "lineNumber": 339,
         "author": {
-          "gitId": "-"
+          "gitId": "eugenepeh"
         },
-        "content": "        CliArguments cliArguments \u003d ArgsParser.parse(translateCommandline(input));"
+        "content": "        expectedBetaConfig.addAuthorEmailsAndAliasesMapEntry(SECOND_AUTHOR,  Arrays.asList(\"Zachary Tang\"));"
       },
       {
         "lineNumber": 340,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        expectedBetaConfig.setIgnoreGlobList(REPO_LEVEL_GLOB_LIST);"
       },
       {
         "lineNumber": 341,
         "author": {
           "gitId": "-"
         },
-        "content": "        List\u003cRepoConfiguration\u003e actualConfigs \u003d"
+        "content": ""
       },
       {
         "lineNumber": 342,
         "author": {
           "gitId": "-"
         },
-        "content": "                new RepoConfigCsvParser(((ConfigCliArguments) cliArguments).getRepoConfigFilePath()).parse();"
+        "content": "        RepoConfiguration expectedDeltaConfig \u003d"
       },
       {
         "lineNumber": 343,
         "author": {
           "gitId": "-"
         },
-        "content": "        List\u003cAuthorConfiguration\u003e authorConfigs \u003d"
+        "content": "                new RepoConfiguration(new RepoLocation(TEST_REPO_DELTA_LOCATION), TEST_REPO_DELTA_BRANCH);"
       },
       {
         "lineNumber": 344,
         "author": {
           "gitId": "-"
         },
-        "content": "                new AuthorConfigCsvParser(((ConfigCliArguments) cliArguments).getAuthorConfigFilePath()).parse();"
+        "content": "        expectedDeltaConfig.setAuthorList(expectedDeltaAuthors);"
       },
       {
         "lineNumber": 345,
         "author": {
           "gitId": "-"
         },
-        "content": "        RepoConfiguration.merge(actualConfigs, authorConfigs);"
+        "content": "        expectedDeltaConfig.setAuthorDisplayName(FIRST_AUTHOR, \"Nbr\");"
       },
       {
         "lineNumber": 346,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        expectedDeltaConfig.setStandaloneConfigIgnored(true);"
       },
       {
         "lineNumber": 347,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertEquals(2, actualConfigs.size());"
+        "content": "        expectedDeltaConfig.setFormats(TEST_REPO_DELTA_FORMATS);"
       },
       {
         "lineNumber": 348,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertEquals(expectedConfigs, actualConfigs);"
+        "content": ""
       },
       {
         "lineNumber": 349,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        List\u003cRepoConfiguration\u003e expectedConfigs \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 350,
         "author": {
           "gitId": "-"
         },
-        "content": "        TestUtil.compareRepoConfig(expectedConfigs.get(0), actualConfigs.get(0));"
+        "content": "        expectedConfigs.add(expectedBetaConfig);"
       },
       {
         "lineNumber": 351,
         "author": {
           "gitId": "-"
         },
-        "content": "        TestUtil.compareRepoConfig(expectedConfigs.get(1), actualConfigs.get(1));"
+        "content": "        expectedConfigs.add(expectedDeltaConfig);"
       },
       {
         "lineNumber": 352,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 353,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        String input \u003d new InputBuilder().addConfig(MERGE_EMPTY_LOCATION_FOLDER).build();"
       },
       {
         "lineNumber": 354,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "        CliArguments cliArguments \u003d ArgsParser.parse(translateCommandline(input));"
       },
       {
         "lineNumber": 355,
-        "author": {
-          "gitId": "eugenepeh"
-        },
-        "content": "    public void repoConfig_defaultBranch_success() throws ParseException, IOException, HelpScreenException {"
-      },
-      {
-        "lineNumber": 356,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        RepoConfiguration expectedConfig \u003d new RepoConfiguration(new RepoLocation(TEST_REPO_BETA_LOCATION),"
-      },
-      {
-        "lineNumber": 357,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "                RepoConfiguration.DEFAULT_BRANCH);"
-      },
-      {
-        "lineNumber": 358,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 356,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        List\u003cRepoConfiguration\u003e actualConfigs \u003d"
+      },
+      {
+        "lineNumber": 357,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                new RepoConfigCsvParser(((ConfigCliArguments) cliArguments).getRepoConfigFilePath()).parse();"
+      },
+      {
+        "lineNumber": 358,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        List\u003cAuthorConfiguration\u003e authorConfigs \u003d"
+      },
+      {
         "lineNumber": 359,
         "author": {
           "gitId": "-"
         },
-        "content": "        String input \u003d new InputBuilder().addConfig(TEST_EMPTY_BRANCH_CONFIG_FOLDER).build();"
+        "content": "                new AuthorConfigCsvParser(((ConfigCliArguments) cliArguments).getAuthorConfigFilePath()).parse();"
       },
       {
         "lineNumber": 360,
         "author": {
           "gitId": "-"
         },
-        "content": "        CliArguments cliArguments \u003d ArgsParser.parse(translateCommandline(input));"
+        "content": "        RepoConfiguration.merge(actualConfigs, authorConfigs);"
       },
       {
         "lineNumber": 361,
@@ -86075,206 +86271,444 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        List\u003cRepoConfiguration\u003e actualConfigs \u003d"
+        "content": "        Assert.assertEquals(2, actualConfigs.size());"
       },
       {
         "lineNumber": 363,
         "author": {
           "gitId": "-"
         },
-        "content": "                new RepoConfigCsvParser(((ConfigCliArguments) cliArguments).getRepoConfigFilePath()).parse();"
+        "content": "        Assert.assertEquals(expectedConfigs, actualConfigs);"
       },
       {
         "lineNumber": 364,
         "author": {
           "gitId": "-"
         },
-        "content": "        List\u003cAuthorConfiguration\u003e authorConfigs \u003d"
+        "content": ""
       },
       {
         "lineNumber": 365,
         "author": {
           "gitId": "-"
         },
-        "content": "                new AuthorConfigCsvParser(((ConfigCliArguments) cliArguments).getAuthorConfigFilePath()).parse();"
+        "content": "        TestUtil.compareRepoConfig(expectedConfigs.get(0), actualConfigs.get(0));"
       },
       {
         "lineNumber": 366,
         "author": {
           "gitId": "-"
         },
-        "content": "        RepoConfiguration.merge(actualConfigs, authorConfigs);"
+        "content": "        TestUtil.compareRepoConfig(expectedConfigs.get(1), actualConfigs.get(1));"
       },
       {
         "lineNumber": 367,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 368,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertEquals(1, actualConfigs.size());"
+        "content": ""
       },
       {
         "lineNumber": 369,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertEquals(expectedConfig.getBranch(), actualConfigs.get(0).getBranch());"
+        "content": "    @Test"
       },
       {
         "lineNumber": 370,
         "author": {
-          "gitId": "-"
+          "gitId": "eugenepeh"
         },
-        "content": "        Assert.assertEquals(expectedConfig.getBranch(), authorConfigs.get(0).getBranch());"
+        "content": "    public void repoConfig_defaultBranch_success() throws ParseException, IOException, HelpScreenException {"
       },
       {
         "lineNumber": 371,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        RepoConfiguration expectedConfig \u003d new RepoConfiguration(new RepoLocation(TEST_REPO_BETA_LOCATION),"
       },
       {
         "lineNumber": 372,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "                RepoConfiguration.DEFAULT_BRANCH);"
       },
       {
         "lineNumber": 373,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 374,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void repoConfig_overrideKeyword_success() throws ParseException, IOException, HelpScreenException {"
+        "content": "        String input \u003d new InputBuilder().addConfig(TEST_EMPTY_BRANCH_CONFIG_FOLDER).build();"
       },
       {
         "lineNumber": 375,
         "author": {
           "gitId": "-"
         },
-        "content": "        RepoConfigCsvParser repoConfigCsvParser \u003d new RepoConfigCsvParser(REPO_CONFIG_OVERRIDE_KEYWORD_FILE);"
+        "content": "        CliArguments cliArguments \u003d ArgsParser.parse(translateCommandline(input));"
       },
       {
         "lineNumber": 376,
         "author": {
           "gitId": "-"
         },
-        "content": "        List\u003cRepoConfiguration\u003e configs \u003d repoConfigCsvParser.parse();"
+        "content": ""
       },
       {
         "lineNumber": 377,
         "author": {
           "gitId": "-"
         },
-        "content": "        RepoConfiguration config \u003d configs.get(0);"
+        "content": "        List\u003cRepoConfiguration\u003e actualConfigs \u003d"
       },
       {
         "lineNumber": 378,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "                new RepoConfigCsvParser(((ConfigCliArguments) cliArguments).getRepoConfigFilePath()).parse();"
       },
       {
         "lineNumber": 379,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertEquals(1, configs.size());"
+        "content": "        List\u003cAuthorConfiguration\u003e authorConfigs \u003d"
       },
       {
         "lineNumber": 380,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertEquals(new RepoLocation(TEST_REPO_BETA_LOCATION), config.getLocation());"
+        "content": "                new AuthorConfigCsvParser(((ConfigCliArguments) cliArguments).getAuthorConfigFilePath()).parse();"
       },
       {
         "lineNumber": 381,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertEquals(TEST_REPO_BETA_BRANCH, config.getBranch());"
+        "content": "        RepoConfiguration.merge(actualConfigs, authorConfigs);"
       },
       {
         "lineNumber": 382,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertEquals(TEST_REPO_BETA_CONFIG_FORMATS, config.getFileTypeManager().getFormats());"
+        "content": ""
       },
       {
         "lineNumber": 383,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertFalse(config.isStandaloneConfigIgnored());"
+        "content": "        Assert.assertEquals(1, actualConfigs.size());"
       },
       {
         "lineNumber": 384,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertEquals(CommitHash.convertStringsToCommits(TEST_REPO_BETA_CONFIG_IGNORED_COMMITS),"
+        "content": "        Assert.assertEquals(expectedConfig.getBranch(), actualConfigs.get(0).getBranch());"
       },
       {
         "lineNumber": 385,
         "author": {
           "gitId": "-"
         },
-        "content": "                config.getIgnoreCommitList());"
+        "content": "        Assert.assertEquals(expectedConfig.getBranch(), authorConfigs.get(0).getBranch());"
       },
       {
         "lineNumber": 386,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 387,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertTrue(config.isFormatsOverriding());"
+        "content": ""
       },
       {
         "lineNumber": 388,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertTrue(config.isIgnoreGlobListOverriding());"
+        "content": "    @Test"
       },
       {
         "lineNumber": 389,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assert.assertTrue(config.isIgnoreCommitListOverriding());"
+        "content": "    public void repoConfig_overrideKeyword_success() throws ParseException, IOException, HelpScreenException {"
       },
       {
         "lineNumber": 390,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        RepoConfigCsvParser repoConfigCsvParser \u003d new RepoConfigCsvParser(REPO_CONFIG_OVERRIDE_KEYWORD_FILE);"
       },
       {
         "lineNumber": 391,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        List\u003cRepoConfiguration\u003e configs \u003d repoConfigCsvParser.parse();"
+      },
+      {
+        "lineNumber": 392,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        RepoConfiguration config \u003d configs.get(0);"
+      },
+      {
+        "lineNumber": 393,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 394,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertEquals(1, configs.size());"
+      },
+      {
+        "lineNumber": 395,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertEquals(new RepoLocation(TEST_REPO_BETA_LOCATION), config.getLocation());"
+      },
+      {
+        "lineNumber": 396,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertEquals(TEST_REPO_BETA_BRANCH, config.getBranch());"
+      },
+      {
+        "lineNumber": 397,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertEquals(TEST_REPO_BETA_CONFIG_FORMATS, config.getFileTypeManager().getFormats());"
+      },
+      {
+        "lineNumber": 398,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertFalse(config.isStandaloneConfigIgnored());"
+      },
+      {
+        "lineNumber": 399,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertEquals(CommitHash.convertStringsToCommits(TEST_REPO_BETA_CONFIG_IGNORED_COMMITS),"
+      },
+      {
+        "lineNumber": 400,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                config.getIgnoreCommitList());"
+      },
+      {
+        "lineNumber": 401,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 402,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertTrue(config.isFormatsOverriding());"
+      },
+      {
+        "lineNumber": 403,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertTrue(config.isIgnoreGlobListOverriding());"
+      },
+      {
+        "lineNumber": 404,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertTrue(config.isIgnoreCommitListOverriding());"
+      },
+      {
+        "lineNumber": 405,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 406,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 407,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 408,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void repoConfig_redundantLines_success() throws ParseException, IOException {"
+      },
+      {
+        "lineNumber": 409,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        RepoConfigCsvParser repoConfigCsvParser \u003d new RepoConfigCsvParser(REPO_CONFIG_REDUNDANT_LINES_FILE);"
+      },
+      {
+        "lineNumber": 410,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        List\u003cRepoConfiguration\u003e configs \u003d repoConfigCsvParser.parse();"
+      },
+      {
+        "lineNumber": 411,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 412,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertEquals(3, configs.size());"
+      },
+      {
+        "lineNumber": 413,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        RepoConfiguration betaConfig \u003d configs.get(0);"
+      },
+      {
+        "lineNumber": 414,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        RepoConfiguration charlieConfig \u003d configs.get(1);"
+      },
+      {
+        "lineNumber": 415,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        RepoConfiguration deltaConfig \u003d configs.get(2);"
+      },
+      {
+        "lineNumber": 416,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 417,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertEquals(new RepoLocation(TEST_REPO_BETA_LOCATION), betaConfig.getLocation());"
+      },
+      {
+        "lineNumber": 418,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertEquals(TEST_REPO_BETA_BRANCH, betaConfig.getBranch());"
+      },
+      {
+        "lineNumber": 419,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertEquals(new RepoLocation(TEST_REPO_CHARLIE_LOCATION), charlieConfig.getLocation());"
+      },
+      {
+        "lineNumber": 420,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertEquals(TEST_REPO_CHARLIE_BRANCH, charlieConfig.getBranch());"
+      },
+      {
+        "lineNumber": 421,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertEquals(new RepoLocation(TEST_REPO_DELTA_LOCATION), deltaConfig.getLocation());"
+      },
+      {
+        "lineNumber": 422,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertEquals(TEST_REPO_DELTA_BRANCH, deltaConfig.getBranch());"
+      },
+      {
+        "lineNumber": 423,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Assert.assertTrue(deltaConfig.isStandaloneConfigIgnored());"
+      },
+      {
+        "lineNumber": 424,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 425,
         "author": {
           "gitId": "yong24s"
         },
@@ -86285,7 +86719,7 @@
       "yong24s": 54,
       "yamidark": 55,
       "eugenepeh": 36,
-      "-": 246
+      "-": 280
     }
   },
   {
