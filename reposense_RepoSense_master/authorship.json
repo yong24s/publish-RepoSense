@@ -54557,1342 +54557,1384 @@
       {
         "lineNumber": 13,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "import java.util.logging.Level;"
+        "content": "import java.util.StringJoiner;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "import java.util.logging.Logger;"
+        "content": "import java.util.logging.Level;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "import java.util.stream.Collectors;"
+        "content": "import java.util.logging.Logger;"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "yong24s"
         },
-        "content": ""
+        "content": "import java.util.stream.Collectors;"
       },
       {
         "lineNumber": 17,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "import org.apache.commons.csv.CSVFormat;"
+        "content": ""
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "-"
         },
-        "content": "import org.apache.commons.csv.CSVRecord;"
+        "content": "import org.apache.commons.csv.CSVFormat;"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import org.apache.commons.csv.CSVRecord;"
       },
       {
         "lineNumber": 20,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "import reposense.system.LogsManager;"
+        "content": ""
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "yong24s"
         },
-        "content": ""
+        "content": "import reposense.system.LogsManager;"
       },
       {
         "lineNumber": 22,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
-        "content": " * Contains CSV parsing related functionalities."
+        "content": "/**"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
-        "content": " */"
+        "content": " * Contains CSV parsing related functionalities."
       },
       {
         "lineNumber": 25,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "public abstract class CsvParser\u003cT\u003e {"
+        "content": " */"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "    protected static final String COLUMN_VALUES_SEPARATOR \u003d \";\";"
+        "content": "public abstract class CsvParser\u003cT\u003e {"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "    protected static final Logger logger \u003d LogsManager.getLogger(CsvParser.class);"
+        "content": "    protected static final String COLUMN_VALUES_SEPARATOR \u003d \";\";"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "yong24s"
         },
-        "content": ""
+        "content": "    protected static final Logger logger \u003d LogsManager.getLogger(CsvParser.class);"
       },
       {
         "lineNumber": 29,
+        "author": {
+          "gitId": "yong24s"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
         "content": "    private static final String OVERRIDE_KEYWORD \u003d \"override:\";"
       },
       {
-        "lineNumber": 30,
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private static final String MESSAGE_EMPTY_LINE \u003d \"[EMPTY LINE]\";"
+      },
+      {
+        "lineNumber": 32,
         "author": {
           "gitId": "yong24s"
         },
         "content": "    private static final String MESSAGE_UNABLE_TO_READ_CSV_FILE \u003d \"Unable to read the supplied CSV file.\";"
       },
       {
-        "lineNumber": 31,
+        "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
         "content": "    private static final String MESSAGE_MALFORMED_LINE_FORMAT \u003d \"Line %d in CSV file, %s, is malformed.\\n\""
       },
       {
-        "lineNumber": 32,
+        "lineNumber": 34,
         "author": {
           "gitId": "eugenepeh"
         },
         "content": "            + \"Content: %s\";"
       },
       {
-        "lineNumber": 33,
+        "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
         "content": "    private static final String MESSAGE_LINE_PARSE_EXCEPTION_FORMAT \u003d \"Error parsing line %d in CSV file, %s.\\n\""
       },
       {
-        "lineNumber": 34,
+        "lineNumber": 36,
         "author": {
           "gitId": "eugenepeh"
         },
         "content": "            + \"Content: %s\\n\""
       },
       {
-        "lineNumber": 35,
+        "lineNumber": 37,
         "author": {
           "gitId": "eugenepeh"
         },
         "content": "            + \"Error: %s\";"
       },
       {
-        "lineNumber": 36,
+        "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
         "content": "    private static final String MESSAGE_EMPTY_CSV_FORMAT \u003d \"The CSV file, %s, is empty.\";"
       },
       {
-        "lineNumber": 37,
+        "lineNumber": 39,
         "author": {
           "gitId": "yong24s"
         },
         "content": ""
-      },
-      {
-        "lineNumber": 38,
-        "author": {
-          "gitId": "yong24s"
-        },
-        "content": "    private Path csvFilePath;"
-      },
-      {
-        "lineNumber": 39,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    private int numOfLinesBeforeFirstRecord \u003d 0;"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "yong24s"
         },
-        "content": ""
+        "content": "    private Path csvFilePath;"
       },
       {
         "lineNumber": 41,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": "    /**"
+        "content": "    private int numOfLinesBeforeFirstRecord \u003d 0;"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "     * @throws IOException if {@code csvFilePath} is an invalid path."
+        "content": ""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "yamidark"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "    public CsvParser(Path csvFilePath) throws IOException {"
+        "content": "     * @throws IOException if {@code csvFilePath} is an invalid path."
       },
       {
         "lineNumber": 45,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "yong24s"
+        },
+        "content": "    public CsvParser(Path csvFilePath) throws IOException {"
+      },
+      {
+        "lineNumber": 47,
         "author": {
           "gitId": "yong24s"
         },
         "content": "        if (csvFilePath \u003d\u003d null || !Files.exists(csvFilePath)) {"
       },
       {
-        "lineNumber": 46,
+        "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
         "content": "            throw new IOException(\"Csv file does not exists in given path.\\n\""
       },
       {
-        "lineNumber": 47,
+        "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
         "content": "                    + \"Use \u0027-help\u0027 to list all the available subcommands and some concept guides.\");"
       },
       {
-        "lineNumber": 48,
-        "author": {
-          "gitId": "yong24s"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 49,
-        "author": {
-          "gitId": "yong24s"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 50,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "        this.csvFilePath \u003d csvFilePath;"
+        "content": "        }"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "yong24s"
         },
-        "content": ""
+        "content": "        this.csvFilePath \u003d csvFilePath;"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "    /**"
+        "content": "    }"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "     * @throws IOException if there are error accessing the given csv file."
+        "content": ""
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "    public List\u003cT\u003e parse() throws IOException {"
+        "content": "     * @throws IOException if there are error accessing the given csv file."
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "        List\u003cT\u003e results \u003d new ArrayList\u003c\u003e();"
+        "content": "     */"
       },
       {
         "lineNumber": 58,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "        Iterable\u003cCSVRecord\u003e records;"
+        "content": "    public List\u003cT\u003e parse() throws IOException {"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "yong24s"
         },
-        "content": ""
+        "content": "        List\u003cT\u003e results \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "        try (BufferedReader csvReader \u003d new BufferedReader(new FileReader(csvFilePath.toFile()))) {"
+        "content": "        Iterable\u003cCSVRecord\u003e records;"
       },
       {
         "lineNumber": 61,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "            String[] header \u003d getHeader(csvReader);"
+        "content": ""
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "            records \u003d CSVFormat.DEFAULT.withIgnoreEmptyLines(false).withHeader(header).parse(csvReader);"
+        "content": "        try (BufferedReader csvReader \u003d new BufferedReader(new FileReader(csvFilePath.toFile()))) {"
       },
       {
         "lineNumber": 63,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "            String[] header \u003d getHeader(csvReader);"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "            for (CSVRecord record : records) {"
+        "content": "            records \u003d CSVFormat.DEFAULT.withIgnoreEmptyLines(false).withHeader(header).parse(csvReader);"
       },
       {
         "lineNumber": 65,
+        "author": {
+          "gitId": "yong24s"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            for (CSVRecord record : records) {"
+      },
+      {
+        "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
         "content": "                if (isLineMalformed(record)) {"
       },
       {
-        "lineNumber": 66,
+        "lineNumber": 68,
         "author": {
           "gitId": "yong24s"
         },
         "content": "                    continue;"
       },
       {
-        "lineNumber": 67,
+        "lineNumber": 69,
         "author": {
           "gitId": "yong24s"
         },
         "content": "                }"
-      },
-      {
-        "lineNumber": 68,
-        "author": {
-          "gitId": "eugenepeh"
-        },
-        "content": "                try {"
-      },
-      {
-        "lineNumber": 69,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "                    processLine(results, record);"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "eugenepeh"
         },
-        "content": "                } catch (ParseException pe) {"
+        "content": "                try {"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": "                    logger.warning(String.format(MESSAGE_LINE_PARSE_EXCEPTION_FORMAT, getLineNumber(record),"
+        "content": "                    processLine(results, record);"
       },
       {
         "lineNumber": 72,
         "author": {
-          "gitId": "-"
+          "gitId": "eugenepeh"
         },
-        "content": "                            csvFilePath.getFileName(), getRowContentAsRawString(record), pe.getMessage()));"
+        "content": "                } catch (ParseException pe) {"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": "                } catch (IllegalArgumentException iae) {"
+        "content": "                    logger.warning(String.format(MESSAGE_LINE_PARSE_EXCEPTION_FORMAT, getLineNumber(record),"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "                    logger.log(Level.WARNING, iae.getMessage(), iae);"
+        "content": "                            csvFilePath.getFileName(), getRowContentAsRawString(record), pe.getMessage()));"
       },
       {
         "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                } catch (IllegalArgumentException iae) {"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    logger.log(Level.WARNING, iae.getMessage(), iae);"
+      },
+      {
+        "lineNumber": 77,
         "author": {
           "gitId": "eugenepeh"
         },
         "content": "                }"
       },
       {
-        "lineNumber": 76,
+        "lineNumber": 78,
         "author": {
           "gitId": "yong24s"
         },
         "content": "            }"
       },
       {
-        "lineNumber": 77,
+        "lineNumber": 79,
         "author": {
           "gitId": "yong24s"
         },
         "content": "        } catch (IOException ioe) {"
       },
       {
-        "lineNumber": 78,
+        "lineNumber": 80,
         "author": {
           "gitId": "yong24s"
         },
         "content": "            throw new IOException(MESSAGE_UNABLE_TO_READ_CSV_FILE, ioe);"
       },
       {
-        "lineNumber": 79,
+        "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
         "content": "        } catch (InvalidCsvException ice) {"
       },
       {
-        "lineNumber": 80,
+        "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
         "content": "            throw new IOException(ice.getMessage(), ice);"
       },
       {
-        "lineNumber": 81,
-        "author": {
-          "gitId": "yong24s"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 82,
-        "author": {
-          "gitId": "yong24s"
-        },
-        "content": "        return results;"
-      },
-      {
         "lineNumber": 83,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "yong24s"
         },
-        "content": ""
+        "content": "        return results;"
       },
       {
         "lineNumber": 85,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "    /**"
+        "content": "    }"
       },
       {
         "lineNumber": 86,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "     * Returns the header of a CSV file, which is assumed to be the first non-empty / non-whitespace line in the file."
+        "content": ""
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "     * The line is split into an array of Strings, using the comma symbol as delimiter."
+        "content": "    /**"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "     *"
+        "content": "     * Returns the header of a CSV file, which is assumed to be the first non-empty / non-whitespace line in the file."
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @throws IOException if there is an error accessing the file."
+        "content": "     * The line is split into an array of Strings, using the comma symbol as delimiter."
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @throws InvalidCsvException if the file has only empty or blank lines."
+        "content": "     *"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * @throws IOException if there is an error accessing the file."
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
-        "content": "    private String[] getHeader(BufferedReader reader) throws IOException, InvalidCsvException {"
+        "content": "     * @throws InvalidCsvException if the file has only empty or blank lines."
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": "        String currentLine \u003d \"\";"
+        "content": "     */"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private String[] getHeader(BufferedReader reader) throws IOException, InvalidCsvException {"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
-        "content": "        // read from file until we encounter a line that is neither blank nor empty"
+        "content": "        String currentLine \u003d \"\";"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "-"
         },
-        "content": "        while (currentLine.isEmpty()) {"
+        "content": ""
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": "            currentLine \u003d Optional.ofNullable(reader.readLine())"
+        "content": "        // read from file until we encounter a line that is neither blank nor empty"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": "                    .map(String::trim)"
+        "content": "        while (currentLine.isEmpty()) {"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": "                    .orElseThrow(() -\u003e new InvalidCsvException(String.format("
+        "content": "            currentLine \u003d Optional.ofNullable(reader.readLine())"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
-        "content": "                            MESSAGE_EMPTY_CSV_FORMAT, csvFilePath.getFileName())));"
+        "content": "                    .map(String::trim)"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "                    .orElseThrow(() -\u003e new InvalidCsvException(String.format("
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": "            numOfLinesBeforeFirstRecord++;"
+        "content": "                            MESSAGE_EMPTY_CSV_FORMAT, csvFilePath.getFileName())));"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": "        return currentLine.split(\",\");"
+        "content": "            numOfLinesBeforeFirstRecord++;"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        return currentLine.split(\",\");"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "    }"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns true if {@code record} does not contain the same number of columns as the header or contains missing"
+        "content": ""
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "     * values at the mandatory columns in CSV format."
+        "content": "    /**"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * Returns true if {@code record} does not contain the same number of columns as the header or contains missing"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "    private boolean isLineMalformed(CSVRecord record) {"
+        "content": "     * values at the mandatory columns in CSV format."
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (!record.isConsistent()) {"
+        "content": "     */"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": "            logger.warning(String.format(MESSAGE_MALFORMED_LINE_FORMAT, getLineNumber(record),"
+        "content": "    private boolean isLineMalformed(CSVRecord record) {"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
-        "content": "                    csvFilePath.getFileName(), getRowContentAsRawString(record)));"
+        "content": "        if (!record.isConsistent()) {"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": "            return true;"
+        "content": "            logger.warning(String.format(MESSAGE_MALFORMED_LINE_FORMAT, getLineNumber(record),"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "                    csvFilePath.getFileName(), getRowContentAsRawString(record)));"
       },
       {
         "lineNumber": 117,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "        for (int position : mandatoryPositions()) {"
+        "content": "            return true;"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": "            if (record.get(position).isEmpty()) {"
+        "content": "        }"
       },
       {
         "lineNumber": 119,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "                logger.warning(String.format(MESSAGE_MALFORMED_LINE_FORMAT, getLineNumber(record),"
+        "content": "        for (int position : mandatoryPositions()) {"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": "                        csvFilePath.getFileName(), getRowContentAsRawString(record)));"
+        "content": "            if (record.get(position).isEmpty()) {"
       },
       {
         "lineNumber": 121,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "                return true;"
+        "content": "                logger.warning(String.format(MESSAGE_MALFORMED_LINE_FORMAT, getLineNumber(record),"
       },
       {
         "lineNumber": 122,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "            }"
+        "content": "                        csvFilePath.getFileName(), getRowContentAsRawString(record)));"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "        }"
+        "content": "                return true;"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "        return false;"
+        "content": "            }"
       },
       {
         "lineNumber": 125,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 126,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": ""
+        "content": "        return false;"
       },
       {
         "lineNumber": 127,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "    /**"
+        "content": "    }"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns the value of {@code record} at {@code colNum}."
+        "content": ""
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected String get(final CSVRecord record, int colNum) {"
+        "content": "     * Returns the value of {@code record} at {@code colNum}."
       },
       {
         "lineNumber": 131,
+        "author": {
+          "gitId": "yong24s"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    protected String get(final CSVRecord record, int colNum) {"
+      },
+      {
+        "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
         "content": "        return record.get(colNum).trim();"
       },
       {
-        "lineNumber": 132,
+        "lineNumber": 134,
         "author": {
           "gitId": "yong24s"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 133,
+        "lineNumber": 135,
         "author": {
           "gitId": "yong24s"
         },
         "content": ""
-      },
-      {
-        "lineNumber": 134,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 135,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     * Returns the value of {@code record} at {@code colNum} if present, or"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
-        "content": "     * returns {@code defaultValue} otherwise."
+        "content": "    /**"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * Returns the value of {@code record} at {@code colNum} if present, or"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected String getOrDefault(final CSVRecord record, int colNum, String defaultValue) {"
+        "content": "     * returns {@code defaultValue} otherwise."
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "        return get(record, colNum).isEmpty() ? defaultValue : get(record, colNum);"
+        "content": "     */"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    protected String getOrDefault(final CSVRecord record, int colNum, String defaultValue) {"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        return get(record, colNum).isEmpty() ? defaultValue : get(record, colNum);"
       },
       {
         "lineNumber": 142,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "    /**"
+        "content": "    }"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns the value of {@code record} at {@code colNum} as a {@code List},"
+        "content": ""
       },
       {
         "lineNumber": 144,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "     * delimited by {@code COLUMN_VALUES_SEPARATOR} if it is in {@code record} and not empty, or"
+        "content": "    /**"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
-        "content": "     * returns an empty {@code List} otherwise."
+        "content": "     * Returns the value of {@code record} at {@code colNum} as a {@code List},"
       },
       {
         "lineNumber": 146,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * delimited by {@code COLUMN_VALUES_SEPARATOR} if it is in {@code record} and not empty, or"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected List\u003cString\u003e getAsList(final CSVRecord record, int colNum) {"
+        "content": "     * returns an empty {@code List} otherwise."
       },
       {
         "lineNumber": 148,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "        if (get(record, colNum).isEmpty()) {"
+        "content": "     */"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "-"
         },
-        "content": "            return Collections.emptyList();"
+        "content": "    protected List\u003cString\u003e getAsList(final CSVRecord record, int colNum) {"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "        if (get(record, colNum).isEmpty()) {"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "-"
         },
-        "content": "        return Arrays.stream(get(record, colNum).split(COLUMN_VALUES_SEPARATOR))"
+        "content": "            return Collections.emptyList();"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "-"
         },
-        "content": "                .map(String::trim)"
+        "content": "        }"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "-"
         },
-        "content": "                .collect(Collectors.toList());"
+        "content": "        return Arrays.stream(get(record, colNum).split(COLUMN_VALUES_SEPARATOR))"
       },
       {
         "lineNumber": 154,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                .map(String::trim)"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                .collect(Collectors.toList());"
+      },
+      {
+        "lineNumber": 156,
         "author": {
           "gitId": "yong24s"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 155,
+        "lineNumber": 157,
         "author": {
           "gitId": "yong24s"
         },
         "content": ""
-      },
-      {
-        "lineNumber": 156,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 157,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     * Returns the values in {@code record} as a list with the {@link CsvParser#OVERRIDE_KEYWORD} prefix removed."
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns an empty list if {@code record} at {@code colNum} is empty."
+        "content": "    /**"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * Returns the values in {@code record} as a list with the {@link CsvParser#OVERRIDE_KEYWORD} prefix removed."
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected List\u003cString\u003e getAsListWithoutOverridePrefix(final CSVRecord record, int colNum) {"
+        "content": "     * Returns an empty list if {@code record} at {@code colNum} is empty."
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": "        List\u003cString\u003e data \u003d getAsList(record, colNum);"
+        "content": "     */"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (isElementOverridingStandaloneConfig(record, colNum)) {"
+        "content": "    protected List\u003cString\u003e getAsListWithoutOverridePrefix(final CSVRecord record, int colNum) {"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
-        "content": "            data.set(0, data.get(0).replaceFirst(OVERRIDE_KEYWORD, \"\"));"
+        "content": "        List\u003cString\u003e data \u003d getAsList(record, colNum);"
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
-        "content": "            data.removeIf(String::isEmpty);"
+        "content": "        if (isElementOverridingStandaloneConfig(record, colNum)) {"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            data.set(0, data.get(0).replaceFirst(OVERRIDE_KEYWORD, \"\"));"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
-        "content": "        return data;"
+        "content": "            data.removeIf(String::isEmpty);"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        return data;"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "-"
         },
-        "content": "    private long getLineNumber(final CSVRecord record) {"
+        "content": ""
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "-"
         },
-        "content": "        return  record.getRecordNumber() + numOfLinesBeforeFirstRecord;"
+        "content": ""
       },
       {
         "lineNumber": 172,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private long getLineNumber(final CSVRecord record) {"
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return  record.getRecordNumber() + numOfLinesBeforeFirstRecord;"
+      },
+      {
+        "lineNumber": 174,
         "author": {
           "gitId": "yong24s"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 173,
+        "lineNumber": 175,
         "author": {
           "gitId": "yong24s"
         },
         "content": ""
-      },
-      {
-        "lineNumber": 174,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 175,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     * Returns true if the {@code record} at {@code colNum} is prefixed with the override keyword."
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected boolean isElementOverridingStandaloneConfig(final CSVRecord record, int colNum) {"
+        "content": "     * Returns true if the {@code record} at {@code colNum} is prefixed with the override keyword."
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "-"
         },
-        "content": "        return get(record, colNum).startsWith(OVERRIDE_KEYWORD);"
+        "content": "     */"
       },
       {
         "lineNumber": 179,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    protected boolean isElementOverridingStandaloneConfig(final CSVRecord record, int colNum) {"
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return get(record, colNum).startsWith(OVERRIDE_KEYWORD);"
+      },
+      {
+        "lineNumber": 181,
         "author": {
           "gitId": "yong24s"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 180,
+        "lineNumber": 182,
         "author": {
           "gitId": "yamidark"
         },
         "content": ""
-      },
-      {
-        "lineNumber": 181,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 182,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     * Returns the contents of {@code record} as a raw string."
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "-"
         },
-        "content": "    private String getRowContentAsRawString(final CSVRecord record) {"
+        "content": "     * Returns the contents of {@code record} as a raw string."
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "-"
         },
-        "content": "        StringBuilder inputRowString \u003d new StringBuilder();"
+        "content": "     */"
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "-"
         },
-        "content": "        for (int colNum \u003d 0; colNum \u003c record.size(); colNum++) {"
+        "content": "    private String getRowContentAsRawString(final CSVRecord record) {"
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "-"
         },
-        "content": "            inputRowString.append(get(record, colNum)).append(\",\");"
+        "content": "        StringJoiner inputRowString \u003d new StringJoiner(\",\");"
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "        for (String value : record) {"
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "-"
         },
-        "content": "        return inputRowString.toString();"
+        "content": "            inputRowString.add(value);"
       },
       {
         "lineNumber": 190,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 191,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        String contentAsString \u003d inputRowString.toString();"
       },
       {
         "lineNumber": 192,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (contentAsString.trim().isEmpty()) {"
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            contentAsString \u003d MESSAGE_EMPTY_LINE;"
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return contentAsString;"
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 198,
         "author": {
           "gitId": "yamidark"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 193,
+        "lineNumber": 199,
         "author": {
           "gitId": "yong24s"
         },
         "content": "     * Gets the list of positions that are mandatory for verification."
       },
       {
-        "lineNumber": 194,
+        "lineNumber": 200,
         "author": {
           "gitId": "yamidark"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 195,
+        "lineNumber": 201,
         "author": {
           "gitId": "yong24s"
         },
         "content": "    protected abstract int[] mandatoryPositions();"
       },
       {
-        "lineNumber": 196,
+        "lineNumber": 202,
         "author": {
           "gitId": "yong24s"
         },
         "content": ""
       },
       {
-        "lineNumber": 197,
+        "lineNumber": 203,
         "author": {
           "gitId": "yong24s"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 198,
+        "lineNumber": 204,
         "author": {
           "gitId": "yong24s"
         },
         "content": "     * Processes the csv file line by line."
       },
       {
-        "lineNumber": 199,
+        "lineNumber": 205,
         "author": {
           "gitId": "-"
         },
         "content": "     * All CsvParsers must use {@link CsvParser#get}, {@link CsvParser#getOrDefault},"
       },
       {
-        "lineNumber": 200,
+        "lineNumber": 206,
         "author": {
           "gitId": "-"
         },
         "content": "     * {@link CsvParser#getAsList} or {@link CsvParser#getAsListWithoutOverridePrefix} to read contents in"
       },
       {
-        "lineNumber": 201,
+        "lineNumber": 207,
         "author": {
           "gitId": "-"
         },
         "content": "     * {@code record} and add created objects into {@code results}."
       },
       {
-        "lineNumber": 202,
+        "lineNumber": 208,
         "author": {
           "gitId": "yong24s"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 203,
+        "lineNumber": 209,
         "author": {
           "gitId": "-"
         },
         "content": "    protected abstract void processLine(List\u003cT\u003e results, final CSVRecord record) throws ParseException;"
       },
       {
-        "lineNumber": 204,
+        "lineNumber": 210,
         "author": {
           "gitId": "yong24s"
         },
@@ -55903,7 +55945,7 @@
       "yong24s": 69,
       "yamidark": 7,
       "eugenepeh": 6,
-      "-": 122
+      "-": 128
     }
   },
   {
