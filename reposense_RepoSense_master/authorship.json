@@ -629,11 +629,60 @@
           "gitId": "eugenepeh"
         },
         "content": "We welcome pull requests. Please read the [contribution guidelines](docs/Process.md#how-to-contribute-to-the-reposense-repository) before starting work on one."
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "## Acknowledgements"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "The web previews of RepoSense is powered by Netlify."
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "\u003ca href\u003d\"https://www.netlify.com\"\u003e"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "  \u003cimg src\u003d\"https://www.netlify.com/img/global/badges/netlify-color-bg.svg\"/\u003e"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "\u003c/a\u003e"
       }
     ],
     "authorContributionMap": {
       "yamidark": 1,
-      "eugenepeh": 14,
+      "eugenepeh": 21,
       "-": 11
     }
   },

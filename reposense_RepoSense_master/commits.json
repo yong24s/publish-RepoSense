@@ -1996,6 +1996,20 @@
             "deletions": 12
           }
         ]
+      },
+      {
+        "insertions": 7,
+        "deletions": 0,
+        "date": "2019-12-24",
+        "commitResults": [
+          {
+            "hash": "4b4ff38a69ce3a2b1732d2e5fc6e48be43c693a4",
+            "messageTitle": "README: add acknowledgements section (#978)",
+            "messageBody": "It is required for us to acknowledge the use of free services.\r\n\r\nAs part of the requirement to apply for the Open Source Plan from\r\nNetlify, let\u0027s add a section to feature the usage of their services on\r\nREADME.",
+            "insertions": 7,
+            "deletions": 0
+          }
+        ]
       }
     ]
   },
@@ -2004,7 +2018,7 @@
     "AdityaA1998": 373,
     "yamidark": 1722,
     "yong24s": 1841,
-    "eugenepeh": 2265
+    "eugenepeh": 2272
   },
   "authorFileTypeContributionMap": {
     "ongspxm": {
@@ -2048,17 +2062,17 @@
       "jade": 0,
       "java": 1437,
       "js": 350,
-      "md": 215,
+      "md": 222,
       "scss": 225,
       "yml": 30
     }
   },
   "authorContributionVariance": {
-    "ongspxm": 2501.6104,
-    "AdityaA1998": 308.49905,
-    "yamidark": 9785.236,
-    "yong24s": 2976.4675,
-    "eugenepeh": 3.28216224E8
+    "ongspxm": 1975.0608,
+    "AdityaA1998": 243.26703,
+    "yamidark": 7718.11,
+    "yong24s": 2356.5625,
+    "eugenepeh": 2.58431536E8
   },
   "authorDisplayNameMap": {
     "ongspxm": "Metta",
