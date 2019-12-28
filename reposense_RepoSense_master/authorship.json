@@ -16230,7 +16230,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "          height: 100%;"
+        "content": "          height: auto;"
       },
       {
         "lineNumber": 616,
