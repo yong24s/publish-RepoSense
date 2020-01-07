@@ -67987,630 +67987,630 @@
         "author": {
           "gitId": "-"
         },
-        "content": "import org.junit.Assert;"
+        "content": "import org.junit.After;"
       },
       {
         "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import org.junit.Assert;"
+      },
+      {
+        "lineNumber": 17,
         "author": {
           "gitId": "yong24s"
         },
         "content": "import org.junit.Before;"
       },
       {
-        "lineNumber": 17,
+        "lineNumber": 18,
         "author": {
           "gitId": "-"
         },
         "content": "import org.junit.Test;"
       },
       {
-        "lineNumber": 18,
+        "lineNumber": 19,
         "author": {
           "gitId": "eugenepeh"
         },
         "content": ""
       },
       {
-        "lineNumber": 19,
+        "lineNumber": 20,
         "author": {
           "gitId": "eugenepeh"
         },
         "content": "import net.sourceforge.argparse4j.helper.HelpScreenException;"
       },
       {
-        "lineNumber": 20,
+        "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
         "content": "import reposense.model.AuthorConfiguration;"
       },
       {
-        "lineNumber": 21,
+        "lineNumber": 22,
         "author": {
           "gitId": "yamidark"
         },
         "content": "import reposense.model.CliArguments;"
       },
       {
-        "lineNumber": 22,
+        "lineNumber": 23,
         "author": {
           "gitId": "yong24s"
         },
         "content": "import reposense.model.ConfigCliArguments;"
       },
       {
-        "lineNumber": 23,
+        "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
         "content": "import reposense.model.GroupConfiguration;"
       },
       {
-        "lineNumber": 24,
+        "lineNumber": 25,
         "author": {
           "gitId": "yamidark"
         },
         "content": "import reposense.model.RepoConfiguration;"
       },
       {
-        "lineNumber": 25,
+        "lineNumber": 26,
         "author": {
           "gitId": "yong24s"
         },
         "content": "import reposense.parser.ArgsParser;"
       },
       {
-        "lineNumber": 26,
+        "lineNumber": 27,
         "author": {
           "gitId": "yong24s"
         },
         "content": "import reposense.parser.AuthorConfigCsvParser;"
       },
       {
-        "lineNumber": 27,
+        "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
         "content": "import reposense.parser.GroupConfigCsvParser;"
       },
       {
-        "lineNumber": 28,
+        "lineNumber": 29,
         "author": {
           "gitId": "yamidark"
         },
         "content": "import reposense.parser.ParseException;"
       },
       {
-        "lineNumber": 29,
+        "lineNumber": 30,
         "author": {
           "gitId": "yong24s"
         },
         "content": "import reposense.parser.RepoConfigCsvParser;"
       },
       {
-        "lineNumber": 30,
+        "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
         "content": "import reposense.parser.SinceDateArgumentType;"
       },
       {
-        "lineNumber": 31,
+        "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
         "content": "import reposense.report.ErrorSummary;"
       },
       {
-        "lineNumber": 32,
+        "lineNumber": 33,
         "author": {
           "gitId": "yamidark"
         },
         "content": "import reposense.report.ReportGenerator;"
       },
       {
-        "lineNumber": 33,
+        "lineNumber": 34,
         "author": {
           "gitId": "eugenepeh"
         },
         "content": "import reposense.util.FileUtil;"
       },
       {
-        "lineNumber": 34,
+        "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
         "content": "import reposense.util.InputBuilder;"
       },
       {
-        "lineNumber": 35,
+        "lineNumber": 36,
         "author": {
           "gitId": "eugenepeh"
         },
         "content": "import reposense.util.TestUtil;"
       },
       {
-        "lineNumber": 36,
+        "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 37,
+        "lineNumber": 38,
         "author": {
           "gitId": "yamidark"
         },
         "content": "public class ConfigSystemTest {"
       },
       {
-        "lineNumber": 38,
+        "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
         "content": "    private static final String FT_TEMP_DIR \u003d \"ft_temp\";"
       },
       {
-        "lineNumber": 39,
+        "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
         "content": "    private static final String EXPECTED_FOLDER \u003d \"expected\";"
       },
       {
-        "lineNumber": 40,
+        "lineNumber": 41,
         "author": {
           "gitId": "yamidark"
         },
         "content": "    private static final List\u003cString\u003e TESTING_FILE_FORMATS \u003d Arrays.asList(\"java\", \"adoc\");"
       },
       {
-        "lineNumber": 41,
+        "lineNumber": 42,
         "author": {
           "gitId": "AdityaA1998"
         },
         "content": "    private static final String TEST_REPORT_GENERATED_TIME \u003d \"Tue Jul 24 17:45:15 SGT 2018\";"
       },
       {
-        "lineNumber": 42,
+        "lineNumber": 43,
         "author": {
           "gitId": "eugenepeh"
         },
         "content": ""
-      },
-      {
-        "lineNumber": 43,
-        "author": {
-          "gitId": "yong24s"
-        },
-        "content": "    @Before"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "    public void setUp() throws IOException {"
+        "content": "    @Before"
       },
       {
         "lineNumber": 45,
+        "author": {
+          "gitId": "yong24s"
+        },
+        "content": "    public void setUp() throws IOException {"
+      },
+      {
+        "lineNumber": 46,
         "author": {
           "gitId": "yamidark"
         },
         "content": "        FileUtil.deleteDirectory(FT_TEMP_DIR);"
       },
       {
-        "lineNumber": 46,
+        "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
         "content": "        ErrorSummary.getInstance().clearErrorList();"
       },
       {
-        "lineNumber": 47,
+        "lineNumber": 48,
         "author": {
           "gitId": "yamidark"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 48,
+        "lineNumber": 49,
         "author": {
           "gitId": "yamidark"
         },
         "content": ""
-      },
-      {
-        "lineNumber": 49,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    /**"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "     * System test with a specified until date and a {@link SinceDateArgumentType#FIRST_COMMIT_DATE_SHORTHAND}"
+        "content": "    @After"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": "     * since date to capture from the first commit."
+        "content": "    public void tearDown() throws IOException {"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "        FileUtil.deleteDirectory(FT_TEMP_DIR);"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "    }"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void testSinceBeginningDateRange() throws IOException, URISyntaxException, ParseException,"
+        "content": ""
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "            HelpScreenException {"
+        "content": "    /**"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "        generateReport(getInputWithDates(SinceDateArgumentType.FIRST_COMMIT_DATE_SHORTHAND, \"2/3/2019\"));"
+        "content": "     * System test with a specified until date and a {@link SinceDateArgumentType#FIRST_COMMIT_DATE_SHORTHAND}"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "        Path actualFiles \u003d Paths.get(getClass().getClassLoader()"
+        "content": "     * since date to capture from the first commit."
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "                .getResource(\"sinceBeginningDateRange/expected\").toURI());"
+        "content": "     */"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "        verifyAllJson(actualFiles, FT_TEMP_DIR);"
+        "content": "    @Test"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    public void testSinceBeginningDateRange() throws IOException, URISyntaxException, ParseException,"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            HelpScreenException {"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "        generateReport(getInputWithDates(SinceDateArgumentType.FIRST_COMMIT_DATE_SHORTHAND, \"2/3/2019\"));"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void test30DaysFromUntilDate() throws URISyntaxException, HelpScreenException, ParseException, IOException {"
+        "content": "        Path actualFiles \u003d Paths.get(getClass().getClassLoader()"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "        generateReport(getInputWithUntilDate(\"1/11/2017\"));"
+        "content": "                .getResource(\"sinceBeginningDateRange/expected\").toURI());"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": "        Path actualFiles \u003d Paths.get(getClass().getClassLoader()"
+        "content": "        verifyAllJson(actualFiles, FT_TEMP_DIR);"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": "                .getResource(\"30daysFromUntilDate/expected\").toURI());"
+        "content": "    }"
       },
       {
         "lineNumber": 67,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "        verifyAllJson(actualFiles, FT_TEMP_DIR);"
+        "content": ""
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    @Test"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public void test30DaysFromUntilDate() throws URISyntaxException, HelpScreenException, ParseException, IOException {"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "        generateReport(getInputWithUntilDate(\"1/11/2017\"));"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": "     * System test with a specified since date and until date."
+        "content": "        Path actualFiles \u003d Paths.get(getClass().getClassLoader()"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "                .getResource(\"30daysFromUntilDate/expected\").toURI());"
       },
       {
         "lineNumber": 73,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    @Test"
-      },
-      {
-        "lineNumber": 74,
-        "author": {
-          "gitId": "eugenepeh"
-        },
-        "content": "    public void testDateRange() throws IOException, URISyntaxException, ParseException, HelpScreenException {"
-      },
-      {
-        "lineNumber": 75,
-        "author": {
-          "gitId": "yong24s"
-        },
-        "content": "        generateReport(getInputWithDates(\"1/9/2017\", \"30/10/2017\"));"
-      },
-      {
-        "lineNumber": 76,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        Path actualFiles \u003d Paths.get(getClass().getClassLoader().getResource(\"dateRange/expected\").toURI());"
-      },
-      {
-        "lineNumber": 77,
         "author": {
           "gitId": "yong24s"
         },
         "content": "        verifyAllJson(actualFiles, FT_TEMP_DIR);"
       },
       {
-        "lineNumber": 78,
+        "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 79,
+        "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 80,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    private String getInputWithUntilDate(String untilDate) {"
-      },
-      {
-        "lineNumber": 81,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        return String.format(\"--until %s\", untilDate);"
-      },
-      {
-        "lineNumber": 82,
-        "author": {
-          "gitId": "yong24s"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 83,
-        "author": {
-          "gitId": "yong24s"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 84,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    private String getInputWithDates(String sinceDate, String untilDate) {"
-      },
-      {
-        "lineNumber": 85,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        return String.format(\"--since %s --until %s\", sinceDate, untilDate);"
-      },
-      {
-        "lineNumber": 86,
-        "author": {
-          "gitId": "yong24s"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 87,
-        "author": {
-          "gitId": "yong24s"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 88,
+        "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 89,
+        "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Generates the testing report to be compared with expected report."
+        "content": "     * System test with a specified since date and until date."
       },
       {
-        "lineNumber": 90,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     * @throws IOException if there is error in parsing csv file."
-      },
-      {
-        "lineNumber": 91,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     * @throws URISyntaxException if the path fo config folder cannot be converted to URI."
-      },
-      {
-        "lineNumber": 92,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     * @throws ParseException if the string argument fails to parse to a {@code CliArguments} object."
-      },
-      {
-        "lineNumber": 93,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     * @throws HelpScreenException if given args contain the --help flag. Help message will be printed out"
-      },
-      {
-        "lineNumber": 94,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     * by the {@code ArgumentParser} hence this is to signal to the caller that the program is safe to exit."
-      },
-      {
-        "lineNumber": 95,
+        "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 96,
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 80,
         "author": {
           "gitId": "eugenepeh"
         },
-        "content": "    private void generateReport(String inputDates)"
+        "content": "    public void testDateRange() throws IOException, URISyntaxException, ParseException, HelpScreenException {"
       },
       {
-        "lineNumber": 97,
-        "author": {
-          "gitId": "eugenepeh"
-        },
-        "content": "            throws IOException, URISyntaxException, ParseException, HelpScreenException {"
-      },
-      {
-        "lineNumber": 98,
+        "lineNumber": 81,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "        Path configFolder \u003d Paths.get(getClass().getClassLoader().getResource(\"repo-config.csv\").toURI()).getParent();"
+        "content": "        generateReport(getInputWithDates(\"1/9/2017\", \"30/10/2017\"));"
       },
       {
-        "lineNumber": 99,
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Path actualFiles \u003d Paths.get(getClass().getClassLoader().getResource(\"dateRange/expected\").toURI());"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "yong24s"
+        },
+        "content": "        verifyAllJson(actualFiles, FT_TEMP_DIR);"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private String getInputWithUntilDate(String untilDate) {"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return String.format(\"--until %s\", untilDate);"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "yong24s"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 89,
         "author": {
           "gitId": "yong24s"
         },
         "content": ""
       },
       {
-        "lineNumber": 100,
+        "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private String getInputWithDates(String sinceDate, String untilDate) {"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return String.format(\"--since %s --until %s\", sinceDate, untilDate);"
+      },
+      {
+        "lineNumber": 92,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "        String formats \u003d String.join(\" \", TESTING_FILE_FORMATS);"
+        "content": "    }"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "yong24s"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Generates the testing report to be compared with expected report."
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @throws IOException if there is error in parsing csv file."
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @throws URISyntaxException if the path fo config folder cannot be converted to URI."
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @throws ParseException if the string argument fails to parse to a {@code CliArguments} object."
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @throws HelpScreenException if given args contain the --help flag. Help message will be printed out"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * by the {@code ArgumentParser} hence this is to signal to the caller that the program is safe to exit."
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": "        String input \u003d new InputBuilder().addConfig(configFolder)"
+        "content": "     */"
       },
       {
         "lineNumber": 102,
         "author": {
-          "gitId": "-"
+          "gitId": "eugenepeh"
         },
-        "content": "                .addFormats(formats)"
+        "content": "    private void generateReport(String inputDates)"
       },
       {
         "lineNumber": 103,
         "author": {
-          "gitId": "-"
+          "gitId": "eugenepeh"
         },
-        "content": "                .add(inputDates)"
+        "content": "            throws IOException, URISyntaxException, ParseException, HelpScreenException {"
       },
       {
         "lineNumber": 104,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "                .build();"
+        "content": "        Path configFolder \u003d Paths.get(getClass().getClassLoader().getResource(\"repo-config.csv\").toURI()).getParent();"
       },
       {
         "lineNumber": 105,
@@ -68624,367 +68624,409 @@
         "author": {
           "gitId": "yong24s"
         },
-        "content": "        CliArguments cliArguments \u003d ArgsParser.parse(translateCommandline(input));"
+        "content": "        String formats \u003d String.join(\" \", TESTING_FILE_FORMATS);"
       },
       {
         "lineNumber": 107,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "        String input \u003d new InputBuilder().addConfig(configFolder)"
       },
       {
         "lineNumber": 108,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "        List\u003cRepoConfiguration\u003e repoConfigs \u003d"
+        "content": "                .addFormats(formats)"
       },
       {
         "lineNumber": 109,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "                new RepoConfigCsvParser(((ConfigCliArguments) cliArguments).getRepoConfigFilePath()).parse();"
+        "content": "                .add(inputDates)"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": "        List\u003cAuthorConfiguration\u003e authorConfigs \u003d"
+        "content": "                .build();"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "                new AuthorConfigCsvParser(((ConfigCliArguments) cliArguments).getAuthorConfigFilePath()).parse();"
+        "content": ""
       },
       {
         "lineNumber": 112,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "        List\u003cGroupConfiguration\u003e groupConfigs \u003d"
+        "content": "        CliArguments cliArguments \u003d ArgsParser.parse(translateCommandline(input));"
       },
       {
         "lineNumber": 113,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "                new GroupConfigCsvParser(((ConfigCliArguments) cliArguments).getGroupConfigFilePath()).parse();"
+        "content": ""
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "yong24s"
         },
-        "content": ""
+        "content": "        List\u003cRepoConfiguration\u003e repoConfigs \u003d"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "        RepoConfiguration.merge(repoConfigs, authorConfigs);"
+        "content": "                new RepoConfigCsvParser(((ConfigCliArguments) cliArguments).getRepoConfigFilePath()).parse();"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": "        RepoConfiguration.setGroupConfigsToRepos(repoConfigs, groupConfigs);"
+        "content": "        List\u003cAuthorConfiguration\u003e authorConfigs \u003d"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "yong24s"
         },
-        "content": ""
+        "content": "                new AuthorConfigCsvParser(((ConfigCliArguments) cliArguments).getAuthorConfigFilePath()).parse();"
       },
       {
         "lineNumber": 118,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "        RepoConfiguration.setFormatsToRepoConfigs(repoConfigs, cliArguments.getFormats());"
+        "content": "        List\u003cGroupConfiguration\u003e groupConfigs \u003d"
       },
       {
         "lineNumber": 119,
         "author": {
-          "gitId": "yong24s"
+          "gitId": "-"
         },
-        "content": "        RepoConfiguration.setDatesToRepoConfigs("
+        "content": "                new GroupConfigCsvParser(((ConfigCliArguments) cliArguments).getGroupConfigFilePath()).parse();"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "yong24s"
         },
-        "content": "                repoConfigs, cliArguments.getSinceDate(), cliArguments.getUntilDate());"
+        "content": ""
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "yong24s"
         },
-        "content": ""
+        "content": "        RepoConfiguration.merge(repoConfigs, authorConfigs);"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": "        ReportGenerator.generateReposReport(repoConfigs, FT_TEMP_DIR, TEST_REPORT_GENERATED_TIME,"
+        "content": "        RepoConfiguration.setGroupConfigsToRepos(repoConfigs, groupConfigs);"
       },
       {
         "lineNumber": 123,
         "author": {
-          "gitId": "-"
-        },
-        "content": "                cliArguments.getSinceDate(), cliArguments.getUntilDate(),"
-      },
-      {
-        "lineNumber": 124,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "                cliArguments.isSinceDateProvided(), cliArguments.isUntilDateProvided());"
-      },
-      {
-        "lineNumber": 125,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 126,
-        "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
         "content": ""
       },
       {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "yong24s"
+        },
+        "content": "        RepoConfiguration.setFormatsToRepoConfigs(repoConfigs, cliArguments.getFormats());"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "yong24s"
+        },
+        "content": "        RepoConfiguration.setDatesToRepoConfigs("
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "yong24s"
+        },
+        "content": "                repoConfigs, cliArguments.getSinceDate(), cliArguments.getUntilDate());"
+      },
+      {
         "lineNumber": 127,
         "author": {
-          "gitId": "-"
+          "gitId": "yong24s"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Verifies all JSON files in {@code actualDirectory} with {@code expectedDirectory}"
+        "content": "        ReportGenerator.generateReposReport(repoConfigs, FT_TEMP_DIR, TEST_REPORT_GENERATED_TIME,"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "                cliArguments.getSinceDate(), cliArguments.getUntilDate(),"
       },
       {
         "lineNumber": 130,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": "    private void verifyAllJson(Path expectedDirectory, String actualRelative) {"
+        "content": "                cliArguments.isSinceDateProvided(), cliArguments.isUntilDateProvided());"
       },
       {
         "lineNumber": 131,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "        try (Stream\u003cPath\u003e pathStream \u003d Files.list(expectedDirectory)) {"
-      },
-      {
-        "lineNumber": 132,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "            for (Path filePath : pathStream.collect(Collectors.toList())) {"
-      },
-      {
-        "lineNumber": 133,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "                if (Files.isDirectory(filePath)) {"
-      },
-      {
-        "lineNumber": 134,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "                    verifyAllJson(filePath, actualRelative);"
-      },
-      {
-        "lineNumber": 135,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "                }"
-      },
-      {
-        "lineNumber": 136,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "                if (filePath.toString().endsWith(\".json\")) {"
-      },
-      {
-        "lineNumber": 137,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "                    String relativeDirectory \u003d filePath.toAbsolutePath().toString().split(EXPECTED_FOLDER)[1];"
-      },
-      {
-        "lineNumber": 138,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "                    assertJson(filePath, relativeDirectory, actualRelative);"
-      },
-      {
-        "lineNumber": 139,
-        "author": {
-          "gitId": "eugenepeh"
-        },
-        "content": "                }"
-      },
-      {
-        "lineNumber": 140,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            }"
-      },
-      {
-        "lineNumber": 141,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "        } catch (IOException ioe) {"
-      },
-      {
-        "lineNumber": 142,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "            ioe.printStackTrace();"
-      },
-      {
-        "lineNumber": 143,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 145,
+        "lineNumber": 132,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 146,
+        "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 147,
+        "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Asserts the correctness of given JSON file."
+        "content": "     * Verifies all JSON files in {@code actualDirectory} with {@code expectedDirectory}"
       },
       {
-        "lineNumber": 148,
+        "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "    private void verifyAllJson(Path expectedDirectory, String actualRelative) {"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "        try (Stream\u003cPath\u003e pathStream \u003d Files.list(expectedDirectory)) {"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "            for (Path filePath : pathStream.collect(Collectors.toList())) {"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "                if (Files.isDirectory(filePath)) {"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "                    verifyAllJson(filePath, actualRelative);"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "                if (filePath.toString().endsWith(\".json\")) {"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "                    String relativeDirectory \u003d filePath.toAbsolutePath().toString().split(EXPECTED_FOLDER)[1];"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "                    assertJson(filePath, relativeDirectory, actualRelative);"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "        } catch (IOException ioe) {"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "            ioe.printStackTrace();"
+      },
+      {
         "lineNumber": 149,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "    private void assertJson(Path expectedJson, String expectedPosition, String actualRelative) {"
-      },
-      {
-        "lineNumber": 150,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "        Path actualJson \u003d Paths.get(actualRelative, expectedPosition);"
-      },
-      {
-        "lineNumber": 151,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "        Assert.assertTrue(Files.exists(actualJson));"
-      },
-      {
-        "lineNumber": 152,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        try {"
-      },
-      {
-        "lineNumber": 153,
-        "author": {
-          "gitId": "eugenepeh"
-        },
-        "content": "            Assert.assertTrue(TestUtil.compareFileContents(expectedJson, actualJson));"
-      },
-      {
-        "lineNumber": 154,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        } catch (IOException e) {"
-      },
-      {
-        "lineNumber": 155,
-        "author": {
-          "gitId": "eugenepeh"
-        },
-        "content": "            Assert.fail(e.getMessage());"
-      },
-      {
-        "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
         "content": "        }"
       },
       {
-        "lineNumber": 157,
+        "lineNumber": 150,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Asserts the correctness of given JSON file."
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "    private void assertJson(Path expectedJson, String expectedPosition, String actualRelative) {"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "        Path actualJson \u003d Paths.get(actualRelative, expectedPosition);"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "        Assert.assertTrue(Files.exists(actualJson));"
+      },
+      {
         "lineNumber": 158,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "            Assert.assertTrue(TestUtil.compareFileContents(expectedJson, actualJson));"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "            Assert.fail(e.getMessage());"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
@@ -68996,7 +69038,7 @@
       "yong24s": 32,
       "yamidark": 30,
       "eugenepeh": 15,
-      "-": 80
+      "-": 86
     }
   },
   {
