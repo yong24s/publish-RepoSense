@@ -25099,9 +25099,9 @@
       {
         "lineNumber": 349,
         "author": {
-          "gitId": "ongspxm"
+          "gitId": "-"
         },
-        "content": "      if (hash.since) {"
+        "content": "      if (hash.since \u0026\u0026 dateFormatRegex.test(hash.since)) {"
       },
       {
         "lineNumber": 350,
@@ -25120,9 +25120,9 @@
       {
         "lineNumber": 352,
         "author": {
-          "gitId": "ongspxm"
+          "gitId": "-"
         },
-        "content": "      if (hash.until) {"
+        "content": "      if (hash.until \u0026\u0026 dateFormatRegex.test(hash.until)) {"
       },
       {
         "lineNumber": 353,
@@ -28262,9 +28262,9 @@
       }
     ],
     "authorContributionMap": {
-      "ongspxm": 172,
+      "ongspxm": 170,
       "eugenepeh": 174,
-      "-": 454
+      "-": 456
     }
   },
   {
