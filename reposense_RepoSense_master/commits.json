@@ -2014,11 +2014,11 @@
     ]
   },
   "authorFinalContributionMap": {
-    "ongspxm": 625,
-    "AdityaA1998": 373,
+    "ongspxm": 590,
+    "AdityaA1998": 368,
     "yamidark": 1621,
     "yong24s": 1774,
-    "eugenepeh": 2227
+    "eugenepeh": 2189
   },
   "authorFileTypeContributionMap": {
     "ongspxm": {
@@ -2027,7 +2027,7 @@
       "java": 91,
       "js": 382,
       "md": 67,
-      "scss": 80,
+      "scss": 45,
       "yml": 0
     },
     "AdityaA1998": {
@@ -2036,7 +2036,7 @@
       "java": 359,
       "js": 2,
       "md": 5,
-      "scss": 5,
+      "scss": 0,
       "yml": 0
     },
     "yamidark": {
@@ -2063,7 +2063,7 @@
       "java": 1393,
       "js": 350,
       "md": 222,
-      "scss": 224,
+      "scss": 186,
       "yml": 30
     }
   },
