@@ -563,9 +563,9 @@
       {
         "lineNumber": 17,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "-"
         },
-        "content": "* [**User Guide**](https://github.com/reposense/RepoSense/blob/release/docs/UserGuide.md)"
+        "content": "* **User Guide** [[**Current Build**]](https://github.com/reposense/RepoSense/blob/master/docs/UserGuide.md) [[**Latest Release**]](https://github.com/reposense/RepoSense/blob/release/docs/UserGuide.md)"
       },
       {
         "lineNumber": 18,
@@ -682,8 +682,8 @@
     ],
     "authorContributionMap": {
       "yamidark": 1,
-      "eugenepeh": 21,
-      "-": 11
+      "eugenepeh": 20,
+      "-": 12
     }
   },
   {
@@ -16807,7 +16807,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    getRepoSenseVersionLink() {"
+        "content": "    getUserGuideVersionLink() {"
       },
       {
         "lineNumber": 258,
@@ -16842,35 +16842,35 @@
         "author": {
           "gitId": "-"
         },
-        "content": "      if (version.startsWith(\u0027v\u0027)) {"
+        "content": "      return `https://github.com/reposense/RepoSense/blob/${version}/docs/UserGuide.md`;"
       },
       {
         "lineNumber": 263,
         "author": {
           "gitId": "-"
         },
-        "content": "        return `https://github.com/reposense/RepoSense/releases/tag/${version}`;"
+        "content": "    },"
       },
       {
         "lineNumber": 264,
         "author": {
           "gitId": "-"
         },
-        "content": "      }"
+        "content": ""
       },
       {
         "lineNumber": 265,
         "author": {
           "gitId": "-"
         },
-        "content": "      return `https://github.com/reposense/RepoSense/commits/${version}`;"
+        "content": "    receiveDates(dates) {"
       },
       {
         "lineNumber": 266,
         "author": {
           "gitId": "-"
         },
-        "content": "    },"
+        "content": "      const [minDate, maxDate] \u003d dates;"
       },
       {
         "lineNumber": 267,
@@ -16884,91 +16884,91 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    receiveDates(dates) {"
+        "content": "      if (this.tabType \u003d\u003d\u003d \u0027authorship\u0027) {"
       },
       {
         "lineNumber": 269,
         "author": {
           "gitId": "-"
         },
-        "content": "      const [minDate, maxDate] \u003d dates;"
+        "content": "        this.renderAuthorShipTabHash(minDate, maxDate);"
       },
       {
         "lineNumber": 270,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "      }"
       },
       {
         "lineNumber": 271,
         "author": {
           "gitId": "-"
         },
-        "content": "      if (this.tabType \u003d\u003d\u003d \u0027authorship\u0027) {"
-      },
-      {
-        "lineNumber": 272,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        this.renderAuthorShipTabHash(minDate, maxDate);"
-      },
-      {
-        "lineNumber": 273,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "      }"
-      },
-      {
-        "lineNumber": 274,
-        "author": {
-          "gitId": "-"
-        },
         "content": "    },"
       },
       {
-        "lineNumber": 275,
+        "lineNumber": 272,
         "author": {
           "gitId": "eugenepeh"
         },
         "content": "  },"
       },
       {
-        "lineNumber": 276,
+        "lineNumber": 273,
         "author": {
           "gitId": "eugenepeh"
         },
         "content": "  components: {"
       },
       {
-        "lineNumber": 277,
+        "lineNumber": 274,
         "author": {
           "gitId": "ongspxm"
         },
         "content": "    v_zoom: window.vZoom,"
       },
       {
-        "lineNumber": 278,
+        "lineNumber": 275,
         "author": {
           "gitId": "eugenepeh"
         },
         "content": "    v_summary: window.vSummary,"
       },
       {
-        "lineNumber": 279,
+        "lineNumber": 276,
         "author": {
           "gitId": "eugenepeh"
         },
         "content": "    v_authorship: window.vAuthorship,"
       },
       {
-        "lineNumber": 280,
+        "lineNumber": 277,
         "author": {
           "gitId": "-"
         },
         "content": "    CircleSpinner: window.VueLoadingSpinner.Circle,"
+      },
+      {
+        "lineNumber": 278,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "  },"
+      },
+      {
+        "lineNumber": 279,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "  created() {"
+      },
+      {
+        "lineNumber": 280,
+        "author": {
+          "gitId": "eugenepeh"
+        },
+        "content": "    this.updateReportDir();"
       },
       {
         "lineNumber": 281,
@@ -16980,75 +16980,54 @@
       {
         "lineNumber": 282,
         "author": {
-          "gitId": "eugenepeh"
-        },
-        "content": "  created() {"
-      },
-      {
-        "lineNumber": 283,
-        "author": {
-          "gitId": "eugenepeh"
-        },
-        "content": "    this.updateReportDir();"
-      },
-      {
-        "lineNumber": 284,
-        "author": {
-          "gitId": "eugenepeh"
-        },
-        "content": "  },"
-      },
-      {
-        "lineNumber": 285,
-        "author": {
           "gitId": "-"
         },
         "content": "  updated() {"
       },
       {
-        "lineNumber": 286,
+        "lineNumber": 283,
         "author": {
           "gitId": "-"
         },
         "content": "    this.$nextTick(() \u003d\u003e {"
       },
       {
-        "lineNumber": 287,
+        "lineNumber": 284,
         "author": {
           "gitId": "-"
         },
         "content": "      if (window.$(\u0027tabs-wrapper\u0027)) {"
       },
       {
-        "lineNumber": 288,
+        "lineNumber": 285,
         "author": {
           "gitId": "-"
         },
         "content": "        window.$(\u0027tabs-wrapper\u0027).style.flex \u003d `0 0 ${flexWidth * 100}%`;"
       },
       {
-        "lineNumber": 289,
+        "lineNumber": 286,
         "author": {
           "gitId": "-"
         },
         "content": "      }"
       },
       {
-        "lineNumber": 290,
+        "lineNumber": 287,
         "author": {
           "gitId": "-"
         },
         "content": "    });"
       },
       {
-        "lineNumber": 291,
+        "lineNumber": 288,
         "author": {
           "gitId": "-"
         },
         "content": "  },"
       },
       {
-        "lineNumber": 292,
+        "lineNumber": 289,
         "author": {
           "gitId": "eugenepeh"
         },
@@ -17058,7 +17037,7 @@
     "authorContributionMap": {
       "ongspxm": 68,
       "eugenepeh": 56,
-      "-": 168
+      "-": 165
     }
   },
   {
