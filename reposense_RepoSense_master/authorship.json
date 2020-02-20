@@ -27550,399 +27550,399 @@
       {
         "lineNumber": 3,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": "import java.io.BufferedReader;"
+        "content": "import java.nio.file.Files;"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "yamidark"
         },
-        "content": "import java.io.FileReader;"
+        "content": "import java.nio.file.Path;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "yamidark"
         },
-        "content": "import java.io.IOException;"
-      },
-      {
-        "lineNumber": 6,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "import java.nio.file.Files;"
-      },
-      {
-        "lineNumber": 7,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "import java.nio.file.Path;"
-      },
-      {
-        "lineNumber": 8,
-        "author": {
-          "gitId": "yamidark"
-        },
         "content": "import java.nio.file.PathMatcher;"
       },
       {
-        "lineNumber": 9,
+        "lineNumber": 6,
         "author": {
           "gitId": "yamidark"
         },
         "content": "import java.nio.file.Paths;"
       },
       {
-        "lineNumber": 10,
+        "lineNumber": 7,
         "author": {
           "gitId": "-"
         },
         "content": "import java.time.ZoneId;"
       },
       {
-        "lineNumber": 11,
+        "lineNumber": 8,
         "author": {
           "gitId": "-"
         },
         "content": "import java.time.ZoneOffset;"
       },
       {
-        "lineNumber": 12,
+        "lineNumber": 9,
         "author": {
           "gitId": "yamidark"
         },
         "content": "import java.util.HashMap;"
       },
       {
-        "lineNumber": 13,
+        "lineNumber": 10,
         "author": {
           "gitId": "-"
         },
         "content": "import java.util.TimeZone;"
       },
       {
-        "lineNumber": 14,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "import java.util.logging.Level;"
-      },
-      {
-        "lineNumber": 15,
+        "lineNumber": 11,
         "author": {
           "gitId": "yamidark"
         },
         "content": "import java.util.logging.Logger;"
       },
       {
-        "lineNumber": 16,
+        "lineNumber": 12,
         "author": {
           "gitId": "yamidark"
         },
         "content": ""
       },
       {
-        "lineNumber": 17,
+        "lineNumber": 13,
         "author": {
           "gitId": "yamidark"
         },
         "content": "import reposense.authorship.analyzer.AnnotatorAnalyzer;"
       },
       {
-        "lineNumber": 18,
+        "lineNumber": 14,
         "author": {
           "gitId": "yamidark"
         },
         "content": "import reposense.authorship.model.FileInfo;"
       },
       {
-        "lineNumber": 19,
+        "lineNumber": 15,
         "author": {
           "gitId": "yamidark"
         },
         "content": "import reposense.authorship.model.FileResult;"
       },
       {
-        "lineNumber": 20,
+        "lineNumber": 16,
         "author": {
           "gitId": "yamidark"
         },
         "content": "import reposense.authorship.model.LineInfo;"
       },
       {
-        "lineNumber": 21,
+        "lineNumber": 17,
         "author": {
           "gitId": "eugenepeh"
         },
         "content": "import reposense.git.GitBlame;"
       },
       {
-        "lineNumber": 22,
+        "lineNumber": 18,
         "author": {
           "gitId": "yamidark"
         },
         "content": "import reposense.model.Author;"
       },
       {
-        "lineNumber": 23,
+        "lineNumber": 19,
         "author": {
           "gitId": "-"
         },
         "content": "import reposense.model.CommitHash;"
       },
       {
-        "lineNumber": 24,
+        "lineNumber": 20,
         "author": {
           "gitId": "yamidark"
         },
         "content": "import reposense.model.RepoConfiguration;"
       },
       {
-        "lineNumber": 25,
+        "lineNumber": 21,
         "author": {
           "gitId": "yamidark"
         },
         "content": "import reposense.system.LogsManager;"
       },
       {
-        "lineNumber": 26,
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import reposense.util.FileUtil;"
+      },
+      {
+        "lineNumber": 23,
         "author": {
           "gitId": "yamidark"
         },
         "content": ""
       },
       {
-        "lineNumber": 27,
+        "lineNumber": 24,
         "author": {
           "gitId": "yamidark"
         },
         "content": "/**"
       },
       {
-        "lineNumber": 28,
+        "lineNumber": 25,
         "author": {
           "gitId": "yamidark"
         },
         "content": " * Analyzes the target and information given in the {@code FileInfo}."
       },
       {
-        "lineNumber": 29,
+        "lineNumber": 26,
         "author": {
           "gitId": "yamidark"
         },
         "content": " */"
       },
       {
-        "lineNumber": 30,
+        "lineNumber": 27,
         "author": {
           "gitId": "yamidark"
         },
         "content": "public class FileInfoAnalyzer {"
       },
       {
-        "lineNumber": 31,
+        "lineNumber": 28,
         "author": {
           "gitId": "yamidark"
         },
         "content": "    private static final Logger logger \u003d LogsManager.getLogger(FileInfoAnalyzer.class);"
       },
       {
-        "lineNumber": 32,
+        "lineNumber": 29,
         "author": {
           "gitId": "yamidark"
         },
         "content": ""
       },
       {
-        "lineNumber": 33,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "    private static final String REUSED_TAG \u003d \"//@reused\";"
-      },
-      {
-        "lineNumber": 34,
+        "lineNumber": 30,
         "author": {
           "gitId": "yamidark"
         },
         "content": "    private static final int AUTHOR_NAME_OFFSET \u003d \"author \".length();"
       },
       {
-        "lineNumber": 35,
+        "lineNumber": 31,
         "author": {
           "gitId": "eugenepeh"
         },
         "content": "    private static final int AUTHOR_EMAIL_OFFSET \u003d \"author-mail \".length();"
       },
       {
-        "lineNumber": 36,
+        "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
         "content": "    private static final int AUTHOR_TIME_OFFSET \u003d \"author-time \".length();"
       },
       {
-        "lineNumber": 37,
+        "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
         "content": "    private static final int AUTHOR_TIMEZONE_OFFSET \u003d \"author-tz \".length();"
       },
       {
-        "lineNumber": 38,
+        "lineNumber": 34,
         "author": {
           "gitId": "yamidark"
         },
         "content": "    private static final int FULL_COMMIT_HASH_LENGTH \u003d 40;"
       },
       {
-        "lineNumber": 39,
+        "lineNumber": 35,
         "author": {
           "gitId": "yamidark"
         },
         "content": ""
       },
       {
-        "lineNumber": 40,
+        "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
         "content": "    private static final String MESSAGE_FILE_MISSING \u003d \"Unable to analyze the file located at \\\"%s\\\" \""
       },
       {
-        "lineNumber": 41,
+        "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
         "content": "            + \"as the file is missing from your system. Skipping this file.\";"
       },
       {
-        "lineNumber": 42,
+        "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 43,
+        "lineNumber": 39,
         "author": {
           "gitId": "yamidark"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 44,
+        "lineNumber": 40,
         "author": {
           "gitId": "yamidark"
         },
         "content": "     * Analyzes the lines of the file, given in the {@code fileInfo}, that has changed in the time period provided"
       },
       {
-        "lineNumber": 45,
+        "lineNumber": 41,
         "author": {
           "gitId": "yamidark"
         },
         "content": "     * by {@code config}."
       },
       {
-        "lineNumber": 46,
+        "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns null if the file contains the reused tag, the file is missing from the local system, or none of the"
+        "content": "     * Returns null if the file is missing from the local system, or none of the"
       },
       {
-        "lineNumber": 47,
+        "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
         "content": "     * {@code Author} specified in {@code config} contributed to the file in {@code fileInfo}."
       },
       {
-        "lineNumber": 48,
+        "lineNumber": 44,
         "author": {
           "gitId": "yamidark"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 49,
+        "lineNumber": 45,
         "author": {
           "gitId": "yamidark"
         },
         "content": "    public static FileResult analyzeFile(RepoConfiguration config, FileInfo fileInfo) {"
       },
       {
-        "lineNumber": 50,
+        "lineNumber": 46,
         "author": {
           "gitId": "yamidark"
         },
         "content": "        String relativePath \u003d fileInfo.getPath();"
       },
       {
-        "lineNumber": 51,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "        if (isReused(config.getRepoRoot(), relativePath)) {"
-      },
-      {
-        "lineNumber": 52,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "            return null;"
-      },
-      {
-        "lineNumber": 53,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 54,
+        "lineNumber": 47,
         "author": {
           "gitId": "yamidark"
         },
         "content": ""
       },
       {
-        "lineNumber": 55,
+        "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
         "content": "        if (Files.notExists(Paths.get(config.getRepoRoot(), relativePath))) {"
       },
       {
-        "lineNumber": 56,
+        "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
         "content": "            logger.severe(String.format(MESSAGE_FILE_MISSING, relativePath));"
       },
       {
-        "lineNumber": 57,
+        "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
         "content": "            return null;"
       },
       {
-        "lineNumber": 58,
+        "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
         "content": "        }"
       },
       {
-        "lineNumber": 59,
+        "lineNumber": 52,
         "author": {
           "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (FileUtil.isEmptyFile(config.getRepoRoot(), relativePath)) {"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return null;"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "        aggregateBlameAuthorInfo(config, fileInfo);"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        fileInfo.setFileType(config.getFileType(fileInfo.getPath()));"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "yamidark"
         },
         "content": ""
       },
@@ -27951,70 +27951,70 @@
         "author": {
           "gitId": "yamidark"
         },
-        "content": "        aggregateBlameAuthorInfo(config, fileInfo);"
-      },
-      {
-        "lineNumber": 61,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        fileInfo.setFileType(config.getFileType(fileInfo.getPath()));"
-      },
-      {
-        "lineNumber": 62,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 63,
-        "author": {
-          "gitId": "yamidark"
-        },
         "content": "        if (config.isAnnotationOverwrite()) {"
       },
       {
-        "lineNumber": 64,
+        "lineNumber": 61,
         "author": {
           "gitId": "eugenepeh"
         },
         "content": "            AnnotatorAnalyzer.aggregateAnnotationAuthorInfo(fileInfo, config.getAuthorEmailsAndAliasesMap());"
       },
       {
-        "lineNumber": 65,
+        "lineNumber": 62,
         "author": {
           "gitId": "yamidark"
         },
         "content": "        }"
       },
       {
-        "lineNumber": 66,
+        "lineNumber": 63,
         "author": {
           "gitId": "yamidark"
         },
         "content": ""
       },
       {
-        "lineNumber": 67,
+        "lineNumber": 64,
         "author": {
           "gitId": "yamidark"
         },
         "content": "        if (!config.getAuthorList().isEmpty() \u0026\u0026 fileInfo.isAllAuthorsIgnored(config.getAuthorList())) {"
       },
       {
-        "lineNumber": 68,
+        "lineNumber": 65,
         "author": {
           "gitId": "yamidark"
         },
         "content": "            return null;"
       },
       {
-        "lineNumber": 69,
+        "lineNumber": 66,
         "author": {
           "gitId": "yamidark"
         },
         "content": "        }"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "        return generateFileResult(fileInfo);"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "    }"
       },
       {
         "lineNumber": 70,
@@ -28028,570 +28028,437 @@
         "author": {
           "gitId": "yamidark"
         },
-        "content": "        return generateFileResult(fileInfo);"
+        "content": "    /**"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "yamidark"
         },
-        "content": "    }"
+        "content": "     * Generates and returns a {@code FileResult} with the authorship results from {@code fileInfo} consolidated."
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "yamidark"
         },
-        "content": ""
+        "content": "     */"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "yamidark"
         },
-        "content": "    /**"
+        "content": "    private static FileResult generateFileResult(FileInfo fileInfo) {"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "yamidark"
         },
-        "content": "     * Generates and returns a {@code FileResult} with the authorship results from {@code fileInfo} consolidated."
+        "content": "        HashMap\u003cAuthor, Integer\u003e authorContributionMap \u003d new HashMap\u003c\u003e();"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "yamidark"
         },
-        "content": "     */"
+        "content": "        for (LineInfo line : fileInfo.getLines()) {"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "yamidark"
         },
-        "content": "    private static FileResult generateFileResult(FileInfo fileInfo) {"
+        "content": "            Author author \u003d line.getAuthor();"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "yamidark"
         },
-        "content": "        HashMap\u003cAuthor, Integer\u003e authorContributionMap \u003d new HashMap\u003c\u003e();"
+        "content": "            authorContributionMap.put(author, authorContributionMap.getOrDefault(author, 0) + 1);"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "yamidark"
         },
-        "content": "        for (LineInfo line : fileInfo.getLines()) {"
-      },
-      {
-        "lineNumber": 80,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "            Author author \u003d line.getAuthor();"
-      },
-      {
-        "lineNumber": 81,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "            authorContributionMap.put(author, authorContributionMap.getOrDefault(author, 0) + 1);"
-      },
-      {
-        "lineNumber": 82,
-        "author": {
-          "gitId": "yamidark"
-        },
         "content": "        }"
       },
       {
-        "lineNumber": 83,
+        "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
         "content": "        return new FileResult(fileInfo.getPath(), fileInfo.getFileType(), fileInfo.getLines(), authorContributionMap);"
       },
       {
-        "lineNumber": 84,
+        "lineNumber": 81,
         "author": {
           "gitId": "yamidark"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 85,
+        "lineNumber": 82,
         "author": {
           "gitId": "yamidark"
         },
         "content": ""
       },
       {
-        "lineNumber": 86,
+        "lineNumber": 83,
         "author": {
           "gitId": "yamidark"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 87,
+        "lineNumber": 84,
         "author": {
           "gitId": "yamidark"
         },
         "content": "     * Sets the {@code Author} for each line in {@code fileInfo} based on the git blame analysis on the file."
       },
       {
-        "lineNumber": 88,
+        "lineNumber": 85,
         "author": {
           "gitId": "yamidark"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 89,
+        "lineNumber": 86,
         "author": {
           "gitId": "yamidark"
         },
         "content": "    private static void aggregateBlameAuthorInfo(RepoConfiguration config, FileInfo fileInfo) {"
       },
       {
-        "lineNumber": 90,
+        "lineNumber": 87,
         "author": {
           "gitId": "yamidark"
         },
         "content": "        String blameResults \u003d getGitBlameResult(config, fileInfo.getPath());"
       },
       {
-        "lineNumber": 91,
+        "lineNumber": 88,
         "author": {
           "gitId": "yamidark"
         },
         "content": "        String[] blameResultLines \u003d blameResults.split(\"\\n\");"
       },
       {
-        "lineNumber": 92,
+        "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
         "content": "        Path filePath \u003d Paths.get(fileInfo.getPath());"
       },
       {
-        "lineNumber": 93,
+        "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
         "content": "        Long sinceDateInMs \u003d config.getSinceDate().getTime();"
       },
       {
-        "lineNumber": 94,
+        "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
         "content": "        Long untilDateInMs \u003d config.getUntilDate().getTime();"
       },
       {
-        "lineNumber": 95,
+        "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
         "content": "        int systemRawOffset \u003d TimeZone.getTimeZone(ZoneId.systemDefault()).getRawOffset();"
       },
       {
-        "lineNumber": 96,
+        "lineNumber": 93,
         "author": {
           "gitId": "yamidark"
         },
         "content": ""
       },
       {
-        "lineNumber": 97,
+        "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
         "content": "        for (int lineCount \u003d 0; lineCount \u003c blameResultLines.length; lineCount +\u003d 5) {"
       },
       {
-        "lineNumber": 98,
+        "lineNumber": 95,
         "author": {
           "gitId": "yamidark"
         },
         "content": "            String commitHash \u003d blameResultLines[lineCount].substring(0, FULL_COMMIT_HASH_LENGTH);"
       },
       {
-        "lineNumber": 99,
+        "lineNumber": 96,
         "author": {
           "gitId": "eugenepeh"
         },
         "content": "            String authorName \u003d blameResultLines[lineCount + 1].substring(AUTHOR_NAME_OFFSET);"
       },
       {
-        "lineNumber": 100,
+        "lineNumber": 97,
         "author": {
           "gitId": "eugenepeh"
         },
         "content": "            String authorEmail \u003d blameResultLines[lineCount + 2]"
       },
       {
-        "lineNumber": 101,
+        "lineNumber": 98,
         "author": {
           "gitId": "eugenepeh"
         },
         "content": "                    .substring(AUTHOR_EMAIL_OFFSET).replaceAll(\"\u003c|\u003e\", \"\");"
       },
       {
-        "lineNumber": 102,
+        "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
         "content": "            Long commitDateInMs \u003d Long.parseLong(blameResultLines[lineCount + 3].substring(AUTHOR_TIME_OFFSET)) * 1000;"
       },
       {
-        "lineNumber": 103,
+        "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
         "content": "            String authorTimeZone \u003d blameResultLines[lineCount + 4].substring(AUTHOR_TIMEZONE_OFFSET);"
       },
       {
-        "lineNumber": 104,
+        "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
         "content": "            Author author \u003d config.getAuthor(authorName, authorEmail);"
       },
       {
-        "lineNumber": 105,
+        "lineNumber": 102,
         "author": {
           "gitId": "yamidark"
         },
         "content": ""
       },
       {
-        "lineNumber": 106,
+        "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
         "content": "            int authorRawOffset \u003d TimeZone.getTimeZone(ZoneOffset.of(authorTimeZone)).getRawOffset();"
       },
       {
-        "lineNumber": 107,
+        "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
         "content": "            if (systemRawOffset !\u003d authorRawOffset) {"
       },
       {
-        "lineNumber": 108,
+        "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
         "content": "                // adjust commit date according to difference in timezone"
       },
       {
-        "lineNumber": 109,
+        "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
         "content": "                commitDateInMs +\u003d authorRawOffset - systemRawOffset;"
       },
       {
-        "lineNumber": 110,
+        "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
         "content": "            }"
       },
       {
-        "lineNumber": 111,
+        "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 112,
+        "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
         "content": "            if (!fileInfo.isFileLineTracked(lineCount / 5) || isAuthorIgnoringFile(author, filePath)"
       },
       {
-        "lineNumber": 113,
+        "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
         "content": "                    || CommitHash.isInsideCommitList(commitHash, config.getIgnoreCommitList())"
       },
       {
-        "lineNumber": 114,
+        "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
         "content": "                    || commitDateInMs \u003c sinceDateInMs || commitDateInMs \u003e untilDateInMs) {"
       },
       {
-        "lineNumber": 115,
+        "lineNumber": 112,
         "author": {
           "gitId": "eugenepeh"
         },
         "content": "                author \u003d Author.UNKNOWN_AUTHOR;"
       },
       {
-        "lineNumber": 116,
+        "lineNumber": 113,
         "author": {
           "gitId": "yamidark"
         },
         "content": "            }"
       },
       {
-        "lineNumber": 117,
+        "lineNumber": 114,
         "author": {
           "gitId": "yamidark"
         },
         "content": ""
       },
       {
-        "lineNumber": 118,
+        "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
         "content": "            fileInfo.setLineAuthor(lineCount / 5, author);"
       },
       {
-        "lineNumber": 119,
+        "lineNumber": 116,
         "author": {
           "gitId": "yamidark"
         },
         "content": "        }"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "    /**"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "yamidark"
         },
-        "content": "    }"
+        "content": "     * Returns the analysis result from running git blame on {@code filePath}."
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "yamidark"
         },
-        "content": ""
+        "content": "     */"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "yamidark"
         },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 123,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "     * Returns the analysis result from running git blame on {@code filePath}."
-      },
-      {
-        "lineNumber": 124,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 125,
-        "author": {
-          "gitId": "yamidark"
-        },
         "content": "    private static String getGitBlameResult(RepoConfiguration config, String filePath) {"
       },
       {
-        "lineNumber": 126,
+        "lineNumber": 123,
         "author": {
           "gitId": "eugenepeh"
         },
         "content": "        return GitBlame.blame(config.getRepoRoot(), filePath);"
       },
       {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "yamidark"
+        },
+        "content": "    /**"
+      },
+      {
         "lineNumber": 127,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 128,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 129,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 130,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "     * Returns true if the first line in the file at {@code repoRoot}\u0027s {@code relativePath} contains the reused tag."
-      },
-      {
-        "lineNumber": 131,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 132,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "    private static boolean isReused(String repoRoot, String relativePath) {"
-      },
-      {
-        "lineNumber": 133,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "        Path path \u003d Paths.get(repoRoot, relativePath);"
-      },
-      {
-        "lineNumber": 134,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "        try (BufferedReader br \u003d new BufferedReader(new FileReader(path.toFile()))) {"
-      },
-      {
-        "lineNumber": 135,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "            String firstLine \u003d br.readLine();"
-      },
-      {
-        "lineNumber": 136,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "            if (firstLine \u003d\u003d null || firstLine.contains(REUSED_TAG)) {"
-      },
-      {
-        "lineNumber": 137,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "                return true;"
-      },
-      {
-        "lineNumber": 138,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "            }"
-      },
-      {
-        "lineNumber": 139,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "        } catch (IOException ioe) {"
-      },
-      {
-        "lineNumber": 140,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "            logger.log(Level.WARNING, ioe.getMessage(), ioe);"
-      },
-      {
-        "lineNumber": 141,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 142,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "        return false;"
-      },
-      {
-        "lineNumber": 143,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 144,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 145,
-        "author": {
-          "gitId": "yamidark"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
         "content": "     * Returns true if the {@code author} is ignoring the {@code filePath} based on its ignore glob list."
       },
       {
-        "lineNumber": 147,
+        "lineNumber": 128,
         "author": {
           "gitId": "yamidark"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 148,
+        "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
         "content": "    private static boolean isAuthorIgnoringFile(Author author, Path filePath) {"
       },
       {
-        "lineNumber": 149,
+        "lineNumber": 130,
         "author": {
           "gitId": "yamidark"
         },
         "content": "        PathMatcher ignoreGlobMatcher \u003d author.getIgnoreGlobMatcher();"
       },
       {
-        "lineNumber": 150,
+        "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
         "content": "        return ignoreGlobMatcher.matches(filePath);"
       },
       {
-        "lineNumber": 151,
+        "lineNumber": 132,
         "author": {
           "gitId": "yamidark"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 152,
+        "lineNumber": 133,
         "author": {
           "gitId": "yamidark"
         },
@@ -28599,9 +28466,9 @@
       }
     ],
     "authorContributionMap": {
-      "yamidark": 104,
+      "yamidark": 80,
       "eugenepeh": 8,
-      "-": 40
+      "-": 45
     }
   },
   {
@@ -65052,138 +64919,166 @@
       {
         "lineNumber": 214,
         "author": {
-          "gitId": "AdityaA1998"
+          "gitId": "-"
         },
-        "content": "    /**"
+        "content": "    public static boolean isEmptyFile(String directoryPath, String relativeFilePath) {"
       },
       {
         "lineNumber": 215,
         "author": {
-          "gitId": "AdityaA1998"
+          "gitId": "-"
         },
-        "content": "     * Returns a list of {@code Path} of {@code fileTypes} contained in the given {@code directoryPath} directory."
+        "content": "        return (new File(directoryPath, relativeFilePath).length() \u003d\u003d 0);"
       },
       {
         "lineNumber": 216,
         "author": {
-          "gitId": "AdityaA1998"
+          "gitId": "-"
         },
-        "content": "     */"
+        "content": "    }"
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static List\u003cPath\u003e getFilePaths(Path directoryPath, String... fileTypes) throws IOException {"
+        "content": ""
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "AdityaA1998"
         },
-        "content": "        return Files.walk(directoryPath)"
+        "content": "    /**"
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "AdityaA1998"
         },
-        "content": "                .filter(p -\u003e FileUtil.isFileTypeInPath(p, fileTypes) || Files.isDirectory(p))"
+        "content": "     * Returns a list of {@code Path} of {@code fileTypes} contained in the given {@code directoryPath} directory."
       },
       {
         "lineNumber": 220,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "                .collect(Collectors.toList());"
-      },
-      {
-        "lineNumber": 221,
-        "author": {
-          "gitId": "AdityaA1998"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 222,
-        "author": {
-          "gitId": "AdityaA1998"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 223,
-        "author": {
-          "gitId": "AdityaA1998"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 224,
-        "author": {
-          "gitId": "AdityaA1998"
-        },
-        "content": "     * Returns true if the {@code path} contains one of the {@code fileTypes} extension."
-      },
-      {
-        "lineNumber": 225,
         "author": {
           "gitId": "AdityaA1998"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 226,
+        "lineNumber": 221,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private static List\u003cPath\u003e getFilePaths(Path directoryPath, String... fileTypes) throws IOException {"
+      },
+      {
+        "lineNumber": 222,
         "author": {
           "gitId": "AdityaA1998"
         },
-        "content": "    private static boolean isFileTypeInPath(Path path, String... fileTypes) {"
+        "content": "        return Files.walk(directoryPath)"
       },
       {
-        "lineNumber": 227,
+        "lineNumber": 223,
         "author": {
           "gitId": "AdityaA1998"
         },
-        "content": "        return Arrays.stream(fileTypes).anyMatch(path.toString()::endsWith);"
+        "content": "                .filter(p -\u003e FileUtil.isFileTypeInPath(p, fileTypes) || Files.isDirectory(p))"
       },
       {
-        "lineNumber": 228,
+        "lineNumber": 224,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                .collect(Collectors.toList());"
+      },
+      {
+        "lineNumber": 225,
         "author": {
           "gitId": "AdityaA1998"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 229,
+        "lineNumber": 226,
         "author": {
           "gitId": "AdityaA1998"
         },
         "content": ""
       },
       {
+        "lineNumber": 227,
+        "author": {
+          "gitId": "AdityaA1998"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 228,
+        "author": {
+          "gitId": "AdityaA1998"
+        },
+        "content": "     * Returns true if the {@code path} contains one of the {@code fileTypes} extension."
+      },
+      {
+        "lineNumber": 229,
+        "author": {
+          "gitId": "AdityaA1998"
+        },
+        "content": "     */"
+      },
+      {
         "lineNumber": 230,
+        "author": {
+          "gitId": "AdityaA1998"
+        },
+        "content": "    private static boolean isFileTypeInPath(Path path, String... fileTypes) {"
+      },
+      {
+        "lineNumber": 231,
+        "author": {
+          "gitId": "AdityaA1998"
+        },
+        "content": "        return Arrays.stream(fileTypes).anyMatch(path.toString()::endsWith);"
+      },
+      {
+        "lineNumber": 232,
+        "author": {
+          "gitId": "AdityaA1998"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 233,
+        "author": {
+          "gitId": "AdityaA1998"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 234,
         "author": {
           "gitId": "-"
         },
         "content": "    private static String attachJsPrefix(String original, String prefix) {"
       },
       {
-        "lineNumber": 231,
+        "lineNumber": 235,
         "author": {
           "gitId": "-"
         },
         "content": "        return \"var \" + prefix + \" \u003d \" + original;"
       },
       {
-        "lineNumber": 232,
+        "lineNumber": 236,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 233,
+        "lineNumber": 237,
         "author": {
           "gitId": "-"
         },
@@ -65195,7 +65090,7 @@
       "yamidark": 21,
       "yong24s": 17,
       "eugenepeh": 12,
-      "-": 136
+      "-": 140
     }
   },
   {
