@@ -38221,268 +38221,268 @@
       {
         "lineNumber": 6,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "-"
         },
-        "content": "import java.util.regex.Matcher;"
+        "content": "import java.util.Optional;"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "eugenepeh"
         },
-        "content": "import java.util.regex.Pattern;"
+        "content": "import java.util.regex.Matcher;"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "eugenepeh"
         },
-        "content": ""
+        "content": "import java.util.regex.Pattern;"
       },
       {
         "lineNumber": 9,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "eugenepeh"
         },
-        "content": "import reposense.authorship.model.FileInfo;"
+        "content": ""
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "yamidark"
         },
-        "content": "import reposense.authorship.model.LineInfo;"
+        "content": "import reposense.authorship.model.FileInfo;"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "yamidark"
         },
-        "content": "import reposense.model.Author;"
+        "content": "import reposense.authorship.model.LineInfo;"
       },
       {
         "lineNumber": 12,
         "author": {
-          "gitId": "-"
+          "gitId": "yamidark"
         },
-        "content": ""
+        "content": "import reposense.model.Author;"
       },
       {
         "lineNumber": 13,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "yamidark"
         },
-        "content": " * Analyzes the authorship of a {@code FileInfo} using the given annotations on the file."
+        "content": "/**"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "yamidark"
         },
-        "content": " */"
+        "content": " * Analyzes the authorship of a {@code FileInfo} using the given annotations on the file."
       },
       {
         "lineNumber": 16,
         "author": {
-          "gitId": "-"
+          "gitId": "yamidark"
         },
-        "content": "public class AnnotatorAnalyzer {"
+        "content": " */"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final String AUTHOR_TAG \u003d \"@@author\";"
+        "content": "public class AnnotatorAnalyzer {"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final String REGEX_AUTHOR_NAME_FORMAT \u003d \"([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9])\";"
+        "content": "    private static final String AUTHOR_TAG \u003d \"@@author\";"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final Pattern PATTERN_AUTHOR_NAME_FORMAT \u003d Pattern.compile(REGEX_AUTHOR_NAME_FORMAT);"
+        "content": "    private static final String REGEX_AUTHOR_NAME_FORMAT \u003d \"([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9])\";"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final int MATCHER_GROUP_AUTHOR_NAME \u003d 1;"
+        "content": "    private static final Pattern PATTERN_AUTHOR_NAME_FORMAT \u003d Pattern.compile(REGEX_AUTHOR_NAME_FORMAT);"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private static final int MATCHER_GROUP_AUTHOR_NAME \u003d 1;"
       },
       {
         "lineNumber": 22,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "yamidark"
         },
-        "content": "     * Overrides the authorship information in {@code fileInfo} based on annotations given on the file."
+        "content": "    /**"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "yamidark"
         },
-        "content": "     */"
+        "content": "     * Overrides the authorship information in {@code fileInfo} based on annotations given on the file."
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "yamidark"
         },
-        "content": "    public static void aggregateAnnotationAuthorInfo(FileInfo fileInfo, Map\u003cString, Author\u003e authorAliasMap) {"
+        "content": "     */"
       },
       {
         "lineNumber": 26,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "yamidark"
         },
-        "content": "        Author currentAuthor \u003d Author.UNKNOWN_AUTHOR;"
+        "content": "    public static void aggregateAnnotationAuthorInfo(FileInfo fileInfo, Map\u003cString, Author\u003e authorAliasMap) {"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": "        Path filePath \u003d Paths.get(fileInfo.getPath());"
+        "content": "        Optional\u003cAuthor\u003e currentAnnotatedAuthor \u003d Optional.empty();"
       },
       {
         "lineNumber": 28,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": "        for (LineInfo lineInfo : fileInfo.getLines()) {"
+        "content": "        Path filePath \u003d Paths.get(fileInfo.getPath());"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "yamidark"
         },
-        "content": "            if (lineInfo.getContent().contains(AUTHOR_TAG)) {"
+        "content": "        for (LineInfo lineInfo : fileInfo.getLines()) {"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "yamidark"
         },
-        "content": "                Author newAuthor \u003d findAuthorInLine(lineInfo.getContent(), authorAliasMap);"
+        "content": "            if (lineInfo.getContent().contains(AUTHOR_TAG)) {"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "                Optional\u003cAuthor\u003e newAnnotatedAuthor \u003d findAuthorInLine(lineInfo.getContent(), authorAliasMap);"
       },
       {
         "lineNumber": 32,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "-"
         },
-        "content": "                if (newAuthor.equals(Author.UNKNOWN_AUTHOR)) {"
+        "content": ""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": "                    //end of an author tag should belong to this author too."
+        "content": "                if (!newAnnotatedAuthor.isPresent()) {"
       },
       {
         "lineNumber": 34,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": "                    lineInfo.setAuthor(currentAuthor);"
+        "content": "                    // end of an author tag should belong to the current author too."
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "                } else if (newAuthor.isIgnoringFile(filePath)) {"
+        "content": "                    // if an end author tag was used without a corresponding starting tag, attribute the"
       },
       {
         "lineNumber": 36,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "-"
         },
-        "content": "                    newAuthor \u003d Author.UNKNOWN_AUTHOR;"
+        "content": "                    // line to UNKNOWN_AUTHOR"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "                }"
+        "content": "                    lineInfo.setAuthor(currentAnnotatedAuthor.orElse(Author.UNKNOWN_AUTHOR));"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "                } else if (newAnnotatedAuthor.get().isIgnoringFile(filePath)) {"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "                //set a new author"
+        "content": "                    newAnnotatedAuthor \u003d Optional.empty();"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "                currentAuthor \u003d newAuthor;"
+        "content": "                }"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "            }"
+        "content": ""
       },
       {
         "lineNumber": 42,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "-"
         },
-        "content": "            if (!currentAuthor.equals(Author.UNKNOWN_AUTHOR)) {"
+        "content": "                //set a new author"
       },
       {
         "lineNumber": 43,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": "                lineInfo.setAuthor(currentAuthor);"
+        "content": "                currentAnnotatedAuthor \u003d newAnnotatedAuthor;"
       },
       {
         "lineNumber": 44,
@@ -38496,262 +38496,283 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            currentAnnotatedAuthor.ifPresent(lineInfo::setAuthor);"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Extracts the author name from the given {@code line}, finds the corresponding {@code Author}"
+        "content": "    /**"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "     * in {@code authorAliasMap},and returns the result."
+        "content": "     * Extracts the author name from the given {@code line}, finds the corresponding {@code Author}"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @return {@code Author#UNKNOWN_AUTHOR} if no matching {@code Author} is found."
+        "content": "     * in {@code authorAliasMap}, and returns this {@code Author} stored in an {@code Optional}."
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * @return {@code Optional.of(Author#UNKNOWN_AUTHOR)} if no matching {@code Author} is found,"
       },
       {
         "lineNumber": 53,
         "author": {
-          "gitId": "yamidark"
+          "gitId": "-"
         },
-        "content": "    private static Author findAuthorInLine(String line, Map\u003cString, Author\u003e authorAliasMap) {"
+        "content": "     *         {@code Optional.empty()} if an end author tag is used (i.e. \"@@author\"),"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "        try {"
+        "content": "     *         or if the extracted author name is too short."
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "            String[] split \u003d line.split(AUTHOR_TAG);"
+        "content": "     */"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "            String name \u003d extractAuthorName(split[1]);"
+        "content": "    private static Optional\u003cAuthor\u003e findAuthorInLine(String line, Map\u003cString, Author\u003e authorAliasMap) {"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "            if (name \u003d\u003d null) {"
+        "content": "        try {"
       },
       {
         "lineNumber": 58,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "-"
         },
-        "content": "                return Author.UNKNOWN_AUTHOR;"
+        "content": "            String[] split \u003d line.split(AUTHOR_TAG);"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "            }"
+        "content": "            String name \u003d extractAuthorName(split[1]);"
       },
       {
         "lineNumber": 60,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "-"
         },
-        "content": "            return authorAliasMap.getOrDefault(name, Author.UNKNOWN_AUTHOR);"
+        "content": "            if (name \u003d\u003d null) {"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": "        } catch (ArrayIndexOutOfBoundsException e) {"
+        "content": "                return Optional.empty();"
       },
       {
         "lineNumber": 62,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "-"
         },
-        "content": "            return Author.UNKNOWN_AUTHOR;"
+        "content": "            }"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            return Optional.of(authorAliasMap.getOrDefault(name, Author.UNKNOWN_AUTHOR));"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        } catch (ArrayIndexOutOfBoundsException e) {"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return Optional.empty();"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "        }"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Extracts the name that follows the specific format."
+        "content": "    }"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": "     *"
+        "content": ""
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @return an empty string if no such author was found, the new author name otherwise"
+        "content": "    /**"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * Extracts the name that follows the specific format."
       },
       {
         "lineNumber": 71,
         "author": {
-          "gitId": "eugenepeh"
+          "gitId": "-"
         },
-        "content": "    private static String extractAuthorName(String authorTagParameters) {"
+        "content": "     *"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "        String trimmedParameters \u003d authorTagParameters.trim();"
+        "content": "     * @return an empty string if no such author was found, the new author name otherwise"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": "        Matcher matcher \u003d PATTERN_AUTHOR_NAME_FORMAT.matcher(trimmedParameters);"
+        "content": "     */"
       },
       {
         "lineNumber": 74,
         "author": {
-          "gitId": "-"
+          "gitId": "eugenepeh"
         },
-        "content": ""
+        "content": "    private static String extractAuthorName(String authorTagParameters) {"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "        boolean foundMatch \u003d matcher.find();"
+        "content": "        String trimmedParameters \u003d authorTagParameters.trim();"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (!foundMatch) {"
+        "content": "        Matcher matcher \u003d PATTERN_AUTHOR_NAME_FORMAT.matcher(trimmedParameters);"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "            return null;"
+        "content": ""
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "        boolean foundMatch \u003d matcher.find();"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        if (!foundMatch) {"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": "        return matcher.group(MATCHER_GROUP_AUTHOR_NAME);"
+        "content": "            return null;"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return matcher.group(MATCHER_GROUP_AUTHOR_NAME);"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
@@ -38759,9 +38780,9 @@
       }
     ],
     "authorContributionMap": {
-      "yamidark": 18,
-      "eugenepeh": 11,
-      "-": 53
+      "yamidark": 14,
+      "eugenepeh": 4,
+      "-": 67
     }
   },
   {

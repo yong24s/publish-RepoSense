@@ -2541,9 +2541,9 @@
   "authorFinalContributionMap": {
     "ongspxm": 577,
     "jamessspanggg": 1175,
-    "yamidark": 1585,
+    "yamidark": 1581,
     "yong24s": 1757,
-    "eugenepeh": 2144
+    "eugenepeh": 2137
   },
   "authorFileTypeContributionMap": {
     "ongspxm": {
@@ -2567,7 +2567,7 @@
     "yamidark": {
       "gradle": 28,
       "pug": 0,
-      "java": 1413,
+      "java": 1409,
       "js": 3,
       "md": 140,
       "scss": 0,
@@ -2585,7 +2585,7 @@
     "eugenepeh": {
       "gradle": 8,
       "pug": 27,
-      "java": 1381,
+      "java": 1374,
       "js": 350,
       "md": 221,
       "scss": 127,
