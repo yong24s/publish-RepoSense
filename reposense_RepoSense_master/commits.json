@@ -1101,6 +1101,34 @@
             "deletions": 38
           }
         ]
+      },
+      {
+        "insertions": 261,
+        "deletions": 82,
+        "date": "2020-03-29",
+        "commitResults": [
+          {
+            "hash": "eac21ab589ebcdf79f596a94d7ff3f9c7a09e3e9",
+            "messageTitle": "[#779] Restore zoom tab (#830)",
+            "messageBody": "The zoom tab hashes are not encoded in the URL when zoom tab is \r\nopened.\r\n\r\nZoom tab will not be restorable with the URL after reloading the \r\npage.\r\n\r\nLet\u0027s add the encoding of zoom tab hashes to the URL make the zoom \r\ntab restorable after reloading the page.",
+            "insertions": 245,
+            "deletions": 79
+          },
+          {
+            "hash": "f39df542959252e9d3b88c247f11fa0c2574afe3",
+            "messageTitle": "[#873] Enable view commits option when merge group (#1100)",
+            "messageBody": "The view commits option is not available when merge group option is \r\nchecked.\r\n\r\nLet\u0027s enable the view option when merge group, as the zoom in \r\nfunction is already working with merged ramps. Let\u0027s also fix the \r\nregression from #1106 that removes the github icon when merge group \r\nand `filterGroupSelection` is \u0027groupByRepos\u0027.",
+            "insertions": 11,
+            "deletions": 1
+          },
+          {
+            "hash": "0e39bb7ffa5094e13fb120a36e3c2666f2566572",
+            "messageTitle": "[#1087] Update badges in README (#1194)",
+            "messageBody": "RepoSense\u0027s Netlify badge icon is a custom icon. We are missing \r\nacknowledgment to Surge as well.\r\n\r\nLet\u0027s update the badge to Netlify\u0027s official badge that reflects our\r\nNetlify deployment status. Let\u0027s also acknowledge Surge in helping \r\nwith our web previews.",
+            "insertions": 5,
+            "deletions": 2
+          }
+        ]
       }
     ],
     "yamidark": [
@@ -2567,29 +2595,29 @@
     ]
   },
   "authorFinalContributionMap": {
-    "ongspxm": 577,
-    "jamessspanggg": 1193,
+    "ongspxm": 572,
+    "jamessspanggg": 1427,
     "yamidark": 1579,
     "yong24s": 1756,
-    "eugenepeh": 2136
+    "eugenepeh": 2127
   },
   "authorFileTypeContributionMap": {
     "ongspxm": {
       "gradle": 5,
-      "pug": 51,
+      "pug": 49,
       "java": 91,
-      "js": 354,
+      "js": 351,
       "md": 67,
       "scss": 9,
       "yml": 0
     },
     "jamessspanggg": {
       "gradle": 0,
-      "pug": 64,
+      "pug": 80,
       "java": 331,
-      "js": 381,
-      "md": 39,
-      "scss": 370,
+      "js": 590,
+      "md": 44,
+      "scss": 374,
       "yml": 8
     },
     "yamidark": {
@@ -2614,18 +2642,18 @@
       "gradle": 8,
       "pug": 27,
       "java": 1373,
-      "js": 350,
-      "md": 221,
+      "js": 343,
+      "md": 219,
       "scss": 127,
       "yml": 30
     }
   },
   "authorContributionVariance": {
-    "ongspxm": 1734.3174,
-    "jamessspanggg": 3786.4602,
-    "yamidark": 6710.638,
-    "yong24s": 2052.5422,
-    "eugenepeh": 2.24508016E8
+    "ongspxm": 1721.9661,
+    "jamessspanggg": 3923.1023,
+    "yamidark": 6662.5474,
+    "yong24s": 2038.1442,
+    "eugenepeh": 2.22889296E8
   },
   "authorDisplayNameMap": {
     "ongspxm": "Metta",
