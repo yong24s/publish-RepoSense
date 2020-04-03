@@ -68967,73 +68967,10 @@
         "author": {
           "gitId": "-"
         },
-        "content": ""
-      },
-      {
-        "lineNumber": 136,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    public static void setConsoleHandlerLevel(Level level) {"
-      },
-      {
-        "lineNumber": 137,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        currentConsoleLogLevel \u003d level;"
-      },
-      {
-        "lineNumber": 138,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 139,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 140,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    public static void setFileConsoleHandlerLevel(Level level) {"
-      },
-      {
-        "lineNumber": 141,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        currentFileLogLevel \u003d level;"
-      },
-      {
-        "lineNumber": 142,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 143,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 144,
-        "author": {
-          "gitId": "-"
-        },
         "content": "}"
       },
       {
-        "lineNumber": 145,
+        "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
@@ -69042,7 +68979,7 @@
     ],
     "authorContributionMap": {
       "yamidark": 1,
-      "-": 144
+      "-": 135
     }
   },
   {
@@ -70983,34 +70920,6 @@
         "author": {
           "gitId": "-"
         },
-        "content": ""
-      },
-      {
-        "lineNumber": 234,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    private static String attachJsPrefix(String original, String prefix) {"
-      },
-      {
-        "lineNumber": 235,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        return \"var \" + prefix + \" \u003d \" + original;"
-      },
-      {
-        "lineNumber": 236,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 237,
-        "author": {
-          "gitId": "-"
-        },
         "content": "}"
       }
     ],
@@ -71018,7 +70927,7 @@
       "yamidark": 21,
       "yong24s": 17,
       "eugenepeh": 12,
-      "-": 187
+      "-": 183
     }
   },
   {
