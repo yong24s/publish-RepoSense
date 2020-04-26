@@ -1,18 +1,13 @@
-Apr 07, 2020 4:13:46 PM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from https://github.com/reposense/RepoSense.git...
-Apr 07, 2020 4:13:46 PM reposense.report.RepoCloner waitForCloneProcess
-INFO: Waiting for cloning of https://github.com/reposense/RepoSense.git to complete...
-Apr 07, 2020 4:13:47 PM reposense.report.RepoCloner waitForCloneProcess
-INFO: Cloning of https://github.com/reposense/RepoSense.git completed!
-Apr 07, 2020 4:13:47 PM reposense.report.ReportGenerator analyzeRepos
-INFO: [1/1] Analyzing https://github.com/reposense/RepoSense.git (master)...
-Apr 07, 2020 4:13:48 PM reposense.commits.CommitInfoExtractor extractCommitInfos
-INFO: Extracting commits info for https://github.com/reposense/RepoSense.git (master)...
-Apr 07, 2020 4:13:48 PM reposense.commits.CommitInfoAnalyzer analyzeCommits
-INFO: Analyzing commits info for https://github.com/reposense/RepoSense.git (master)...
-Apr 07, 2020 4:13:48 PM reposense.authorship.FileInfoExtractor extractFileInfos
-INFO: Extracting relevant file info from https://github.com/reposense/RepoSense.git (master)...
-Apr 07, 2020 4:13:52 PM reposense.report.ReportGenerator analyzeRepo
-INFO: Analysis of https://github.com/reposense/RepoSense.git (master) completed!
-Apr 07, 2020 4:13:52 PM reposense.report.ReportGenerator generateReposReport
-INFO: The report is generated at /home/travis/build/yong24s/publish-RepoSense/reposense-report
+Apr 26, 2020 4:23:37 PM reposense.RepoSense main
+WARNING: Wrong number of columns in header of CSV file, repo-config.csv. 
+Number of columns in header: 6
+Expected number of columns: 7
+reposense.parser.InvalidCsvException: Wrong number of columns in header of CSV file, repo-config.csv. 
+Number of columns in header: 6
+Expected number of columns: 7
+	at reposense.parser.CsvParser.validateHeader(CsvParser.java:220)
+	at reposense.parser.CsvParser.getHeader(CsvParser.java:120)
+	at reposense.parser.CsvParser.parse(CsvParser.java:74)
+	at reposense.RepoSense.getRepoConfigurations(RepoSense.java:98)
+	at reposense.RepoSense.main(RepoSense.java:58)
+
