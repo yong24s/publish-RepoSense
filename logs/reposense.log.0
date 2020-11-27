@@ -1,4 +1,4 @@
-Nov 26, 2020 7:27:28 PM reposense.RepoSense main
+Nov 27, 2020 7:05:27 PM reposense.RepoSense main
 WARNING: Wrong number of columns in header of CSV file, repo-config.csv. 
 Number of columns in header: 6
 Expected number of columns: 7
@@ -8,6 +8,6 @@ Expected number of columns: 7
 	at reposense.parser.CsvParser.validateHeader(CsvParser.java:220)
 	at reposense.parser.CsvParser.getHeader(CsvParser.java:120)
 	at reposense.parser.CsvParser.parse(CsvParser.java:74)
-	at reposense.RepoSense.getRepoConfigurations(RepoSense.java:109)
-	at reposense.RepoSense.main(RepoSense.java:64)
+	at reposense.RepoSense.getRepoConfigurations(RepoSense.java:98)
+	at reposense.RepoSense.main(RepoSense.java:58)
 
