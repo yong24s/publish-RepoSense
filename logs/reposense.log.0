@@ -1,31 +1,13 @@
-May 11, 2021 7:36:29 PM reposense.parser.CsvParser validateHeader
-INFO: Parsed header of CSV file, repo-config.csv, and recognized columns: Ignore Commit List,  Repository's Location,  Branch,  File formats,  Ignore Glob List,  Ignore standalone config
-May 11, 2021 7:36:29 PM reposense.parser.CsvParser validateHeader
-INFO: Parsed header of CSV file, author-config.csv, and recognized columns: Repository's Location,  Author's GitHub ID,  Branch,  Author's Display Name,  Ignore Glob List,  Author's Git Author Name
-May 11, 2021 7:36:29 PM reposense.RepoSense getRepoConfigurations
-WARNING: No valid configurations in the author-config.csv.
-reposense.parser.InvalidCsvException: No valid configurations in the author-config.csv.
-	at reposense.parser.CsvParser.parse(CsvParser.java:106)
-	at reposense.RepoSense.getRepoConfigurations(RepoSense.java:113)
-	at reposense.RepoSense.main(RepoSense.java:60)
+May 12, 2021 7:31:59 PM reposense.RepoSense main
+WARNING: Wrong number of columns in header of CSV file, repo-config.csv. 
+Number of columns in header: 6
+Expected number of columns: 7
+reposense.parser.InvalidCsvException: Wrong number of columns in header of CSV file, repo-config.csv. 
+Number of columns in header: 6
+Expected number of columns: 7
+	at reposense.parser.CsvParser.validateHeader(CsvParser.java:220)
+	at reposense.parser.CsvParser.getHeader(CsvParser.java:120)
+	at reposense.parser.CsvParser.parse(CsvParser.java:74)
+	at reposense.RepoSense.getRepoConfigurations(RepoSense.java:109)
+	at reposense.RepoSense.main(RepoSense.java:64)
 
-May 11, 2021 7:36:29 PM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from https://github.com/reposense/RepoSense.git...
-May 11, 2021 7:36:29 PM reposense.report.RepoCloner waitForCloneProcess
-INFO: Waiting for cloning of https://github.com/reposense/RepoSense.git to complete...
-May 11, 2021 7:36:33 PM reposense.report.RepoCloner waitForCloneProcess
-INFO: Cloning of https://github.com/reposense/RepoSense.git completed!
-May 11, 2021 7:36:33 PM reposense.report.ReportGenerator analyzeRepos
-INFO: [1/1] Analyzing https://github.com/reposense/RepoSense.git (master)...
-May 11, 2021 7:36:34 PM reposense.commits.CommitInfoExtractor extractCommitInfos
-INFO: Extracting commits info for https://github.com/reposense/RepoSense.git (master)...
-May 11, 2021 7:36:34 PM reposense.commits.CommitInfoAnalyzer analyzeCommits
-INFO: Analyzing commits info for https://github.com/reposense/RepoSense.git (master)...
-May 11, 2021 7:36:34 PM reposense.authorship.FileInfoExtractor extractTextFileInfos
-INFO: Extracting relevant file info from https://github.com/reposense/RepoSense.git (master)...
-May 11, 2021 7:36:40 PM reposense.report.ReportGenerator analyzeRepo
-INFO: Analysis of https://github.com/reposense/RepoSense.git (master) completed!
-May 11, 2021 7:36:40 PM reposense.report.ReportGenerator generateReposReport
-INFO: The report is generated at /home/travis/build/yong24s/publish-RepoSense/reposense-report
-May 11, 2021 7:36:40 PM reposense.RepoSense main
-INFO: Elapsed processing time: 11.09 second(s)
